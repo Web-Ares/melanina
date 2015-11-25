@@ -338,11 +338,14 @@ a.btn:hover {
     bottom: 0;
     z-index: 1;
 }
-#swiffycontainer {
-    width: 100%;
-    padding-bottom: 53.5%;
+#swiffycontainer:before {
+    content: '';
+    background: #B8DBE6;
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
     z-index: 1;
 }
 #swiffycontainer > div {
