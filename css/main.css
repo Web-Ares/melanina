@@ -73,17 +73,50 @@
     min-height: 100%;
     min-width: 320px;
     font-family: "panton", sans-serif;
-    background-color: #ebece7;
     overflow: hidden;
     z-index: 1;
+    background: #B8DBE6 url("../img/bg-site.png") no-repeat top center;
+}
+.site_main {
+    background: #B8DBE6;
+}
+.site:before {
+    content: '';
+    background: url("../img/sun.png") no-repeat;
+    width: 64px;
+    height: 97px;
+    position: absolute;
+    top: 137px;
+    right: 0;
+    background-size: contain;
 }
 .site__content {
     position: relative;
     z-index: 2;
 }
+.site_air .site__content:before {
+    content: '';
+    background: url("../img/air.png") no-repeat;
+    width: 26px;
+    height: 94px;
+    position: absolute;
+    top: 51px;
+    left: 13px;
+    background-size: contain;
+}
+.site_bird .site__content:after {
+    content: '';
+    background: url("../img/bird.png") no-repeat;
+    width: 37px;
+    height: 18px;
+    position: absolute;
+    top: 13px;
+    left: 38px;
+    background-size: contain;
+}
 .site__header {
     position: relative;
-    height: 100px;
+    height: 50px;
     z-index: 3;
     max-width: 1260px;
     margin: 0 auto;
@@ -99,6 +132,20 @@
     margin: 0 15px;
     font-size: 11px;
 }
+.site__wrap {
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.site__title {
+    font-size: 12px;
+    font-weight: 400;
+    color: #525251;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "ph_500_regular_caps", sans-serif;
+    padding: 22px 0 18px;
+}
 /* --------------- /site --------------- */
 
 /* --------------- logo --------------- */
@@ -112,13 +159,47 @@
 }
 /* --------------- /logo --------------- */
 
+/* --------------- btn --------------- */
+.btn,
+a.btn:visited {
+    min-width: 90px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-size: 7px;
+    color: #525251;
+    font-family: "panton-bold", sans-serif;
+    padding: 11px 19px;
+}
+a.btn:hover {
+    background: #fff;
+}
+.btn_2 {
+    background: #d7ebf1;
+}
+.btn_2:hover {
+    background: #fff;
+}
+.btn_3 {
+    background: #fff;
+}
+.btn_3:hover {
+    background: #d7ebf1 !important;
+}
+/* --------------- /btn --------------- */
+
 /* --------------- menu --------------- */
 .menu {
     position: absolute;
     top: 0;
     right: 0;
     font-size: 15px;
-    font-family: "panton-semibold", sans-serif;
+    font-family: "panton-bold", sans-serif;
 }
 .menu__wrap {
     position: absolute;
@@ -129,6 +210,7 @@
     transition: margin .3s ease;
     width: 300px;
     background: #c2e1ea;
+    border-bottom: 1px solid #fff;
 }
 .menu.active  .menu__wrap{
     margin-left: -300px;
@@ -196,6 +278,82 @@
 }
 /* --------------- /menu --------------- */
 
+/* --------------- strategy --------------- */
+.strategy {
+    position: relative;
+    min-height: 251px;
+    overflow: hidden;
+}
+.strategy__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.strategy p {
+    font-size: 13px;
+    color: #525251;
+    line-height: 18px;
+    margin-bottom: 24px;
+}
+.strategy strong {
+    color: #88b900;
+    font-family: "panton-bold", sans-serif;
+    font-weight: 400;
+}
+.strategy__btns {
+    font-family: "ph_500_regular_caps", sans-serif;
+    color: #525251;
+    font-size: 10px;
+    text-align: justify;
+}
+.strategy__btns:after {
+    display: inline-block;
+    width: 100%;
+    content: '';
+}
+.strategy__btns .btn {
+    vertical-align: middle;
+}
+/* --------------- /strategy --------------- */
+
+/* --------------- swiffycontainer --------------- */
+#swiffycontainer {
+    width: 100%;
+    padding-bottom: 53.5%;
+    position: absolute;
+    bottom: -14px;
+}
+#swiffycontainer > div {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}
+/* --------------- /swiffycontainer --------------- */
+
+/* --------------- solutions --------------- */
+.solutions {
+    background: #ebece7 url("../img/line1.png") no-repeat;
+    text-align: center;
+}
+.solutions .site__title {
+    padding-bottom: 21px;
+}
+.solutions p {
+    font-size: 13px;
+    color: #525251;
+    line-height: 18px;
+    margin-bottom: 24px;
+}
+.solutions strong {
+    color: #88b900;
+    font-family: "panton-bold", sans-serif;
+    font-weight: 400;
+}
+/* --------------- /solutions --------------- */
+
 /* --------------- footer --------------- */
 .footer__menu{
     font-family: "panton-bold", sans-serif;
@@ -217,11 +375,67 @@
 }
 /* --------------- /footer --------------- */
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
+
+    /* --------------- site --------------- */
+    .site__header {
+        height: 100px;
+    }
+    .site__title {
+        font-size: 25px;
+        padding: 22px 0 18px;
+    }
+    /* --------------- /site --------------- */
+
+    /* --------------- btn --------------- */
+    .btn,
+    a.btn:visited {
+        min-width: 180px;
+        height: 60px;
+        border: 2px solid #fff;
+        border-radius: 30px;
+        font-size: 13px;
+        padding: 22px 38px;
+    }
+    /* --------------- /btn --------------- */
+
+    /* --------------- swiffycontainer --------------- */
+    #swiffycontainer {
+        width: 100%;
+        padding-bottom: 53.5%;
+        position: relative;
+        bottom: auto;
+    }
+    /* --------------- /swiffycontainer --------------- */
+
+    /* --------------- strategy --------------- */
+    .strategy {
+    }
+    .strategy__wrap {
+    }
+    .strategy p {
+        font-size: 27px;
+        line-height: normal;
+    }
+    .strategy strong {
+    }
+    .strategy__btns {
+        font-size: 20px;
+        text-align: center;
+    }
+    .strategy__btns .btn {
+        margin: 0 10px;
+    }
+    .strategy__btns:after {
+        display: none;
+    }
+    /* --------------- /strategy --------------- */
+
 
 }
 
 @media (min-width: 1260px) {
+
     /* --------------- site --------------- */
     .site:after {
         content: '';
@@ -229,6 +443,11 @@
         clear: both;
         width: 100%;
         height: 320px;
+    }
+    .site:before {
+        width: 125px;
+        height: 191px;
+        top: 197px;
     }
     .site__header {
         height: 170px;
@@ -239,6 +458,9 @@
         right: 0;
         bottom: 0;
         height: 320px;
+    }
+    .site__title {
+        font-size: 25px;
     }
     /* --------------- /site --------------- */
 
@@ -282,6 +504,38 @@
         display: none;
     }
     /* --------------- /menu --------------- */
+
+    /* --------------- solutions --------------- */
+    .solutions {
+    }
+    .solutions p {
+        font-size: 30px;
+    }
+    .solutions strong {
+    }
+    /* --------------- /solutions --------------- */
+
+    /* --------------- strategy --------------- */
+    .strategy {
+    }
+    .strategy__wrap {
+    }
+    .strategy p {
+        font-size: 35px;
+    }
+    .strategy strong {
+    }
+    .strategy__btns {
+        font-size: 20px;
+        text-align: center;
+    }
+    .strategy__btns .btn {
+        margin: 0 10px;
+    }
+    .strategy__btns:after {
+        display: none;
+    }
+    /* --------------- /strategy --------------- */
 
     /* --------------- copyright --------------- */
     .copyright{
