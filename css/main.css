@@ -65,7 +65,7 @@
 .site {
     position: relative;
     min-height: 100%;
-    min-width: 1000px;
+    min-width: 320px;
     font-family: "panton", sans-serif;
     background-color: #ebece7;
     overflow: hidden;
@@ -79,6 +79,8 @@
     position: relative;
     height: 100px;
     z-index: 3;
+    max-width: 1260px;
+    margin: 0 auto;
 }
 .site__footer {
     position: relative;
@@ -96,8 +98,11 @@
 /* --------------- logo --------------- */
 .logo {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 16px;
+    left: 15px;
+}
+.logo__desktop {
+    display: none;
 }
 /* --------------- /logo --------------- */
 
@@ -117,15 +122,15 @@
     -webkit-transition: margin .3s ease;
     transition: margin .3s ease;
     width: 300px;
-    background: #202020;
+    background: #c2e1ea;
 }
 .menu.active  .menu__wrap{
     margin-left: -300px;
 }
 .menu a,
 .menu a:visited {
-    font-size: 14px;
-    color: #fff;
+    font-size: 15px;
+    color: #535251;
     display: block;
     text-transform: uppercase;
     -webkit-transition: color .3s ease;
@@ -134,51 +139,53 @@
     padding: 10px 10px;
 }
 .menu a:hover {
-    color: #f36523;
+    text-decoration: underline;
 }
 .menu__btn {
     border: none;
     padding: 0;
     position: absolute;
-    top: 12px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
+    top: 14px;
+    right: 15px;
+    width: 23px;
+    height: 23px;
     background: none;
 }
 .menu__btn > span {
     display: block;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background: #fff;
     position: relative;
+    border-radius: 2px;
 }
 .menu__btn > span:before,
 .menu__btn > span:after {
     display: block;
     width: 100%;
-    height: 4px;
+    height: 3px;
     position: absolute;
     background: #fff;
     left: 0;
     content: '';
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+    border-radius: 2px;
 }
 .menu__btn > span:before {
-    bottom: 200%;
+    bottom: 230%;
 }
 .menu__btn > span:after {
-    top: 200%;
+    top: 230%;
 }
 .menu.active .menu__btn > span:before {
     transform: rotate(45deg);
-    margin: 3% 37%;
+    margin: 0 28%;
     width: 75%;
 }
 .menu.active .menu__btn > span:after {
     transform: rotate(-45deg);
-    margin: 3% 37%;
+    margin: 0 28%;
     width: 75%;
 }
 /* --------------- /menu --------------- */
@@ -193,7 +200,7 @@
 
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
     /* --------------- site --------------- */
     .site:after {
         content: '';
@@ -201,6 +208,9 @@
         clear: both;
         width: 100%;
         height: 100px;
+    }
+    .site__header {
+        height: 170px;
     }
     .site__footer {
         position: absolute;
@@ -210,6 +220,47 @@
         height: 320px;
     }
     /* --------------- /site --------------- */
+
+    /* --------------- logo --------------- */
+    .logo {
+        left: 0;
+        top: 93px;
+    }
+    .logo__mobile {
+        display: none;
+    }
+    .logo__desktop {
+        display: block;
+    }
+    /* --------------- /logo --------------- */
+
+    /* --------------- menu --------------- */
+    .menu {
+        top: 100px;
+    }
+    .menu__wrap {
+        left: auto;
+        top: auto;
+        background: transparent;
+        width: 638px;
+        text-align: justify;
+        position: relative;
+    }
+    .menu__wrap:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+    .menu a {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0;
+        border: none;
+    }
+    .menu__btn {
+        display: none;
+    }
+    /* --------------- /menu --------------- */
 
     /* --------------- copyright --------------- */
     .copyright{
