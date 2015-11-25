@@ -268,6 +268,9 @@ a.btn:hover {
     transition: all .3s ease;
     border-radius: 2px;
 }
+.menu.active .menu__btn > span {
+    background: transparent;
+}
 .menu__btn > span:before {
     bottom: 230%;
 }
@@ -276,13 +279,11 @@ a.btn:hover {
 }
 .menu.active .menu__btn > span:before {
     transform: rotate(45deg);
-    margin: 0 28%;
-    width: 75%;
+    bottom: 0;
 }
 .menu.active .menu__btn > span:after {
     transform: rotate(-45deg);
-    margin: 0 28%;
-    width: 75%;
+    top: 0;
 }
 /* --------------- /menu --------------- */
 
@@ -502,14 +503,6 @@ a.btn:hover {
     }
     .menu__btn > span:after {
         top: 300%;
-    }
-    .menu.active .menu__btn > span:before {
-        margin: 0 27%;
-        width: 100%;
-    }
-    .menu.active .menu__btn > span:after {
-        margin: 0 27%;
-        width: 100%;
     }
     /* --------------- /menu --------------- */
 
