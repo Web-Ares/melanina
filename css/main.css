@@ -372,13 +372,12 @@ a.btn:hover {
     position: relative;
     display: inline-block;
     margin-left: 20px;
-    border-bottom: 1px solid transparent;
     color: #525251;
     transition: border-bottom-color .3s ease;
     -webkit-transition: border-bottom-color .3s ease;
 }
 .footer__menu a:hover{
-    border-bottom-color: #525251;
+    text-decoration: underline;
 }
 .footer__menu a:first-child{
     margin-left: 0;
@@ -521,7 +520,7 @@ a.btn:hover {
         right: 0;
         bottom: 0;
         height: 320px;
-        padding-top: 82px;
+        padding-top: 77px;
         background: url("../img/bg-footer.png") no-repeat -115px 100%;
     }
     .site__title {
@@ -610,6 +609,7 @@ a.btn:hover {
     /* --------------- copyright --------------- */
     .copyright{
         display: block;
+        margin-bottom: 19px;
         font-size: 15px;
         line-height: 20px;
     }
@@ -617,21 +617,43 @@ a.btn:hover {
 
     /* --------------- footer --------------- */
     .footer__info{
+        margin-right: 113px;
+        padding-top: 5px;
+        line-height: 21px;
     }
     .footer__menu{
+        margin-right: 127px;
     }
     .footer__menu a{
         display: block;
         margin-left: 0;
         font-size: 15px;
-        line-height: 30px;
+        line-height: 29px;
+    }
+    .footer__menu a:hover{
+        text-decoration: underline;
     }
     .footer__menu a:before{
         display: none;
     }
     .footer__navigation{
         display: inline-block;
+        margin-right: 50px;
         vertical-align: top;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .footer__navigation:last-child{
+        margin-right: 0;
+    }
+    .footer__navigation a{
+        color: #535251;
+    }
+    .footer__navigation dt{
+        margin-bottom: 13px;
+        font: 12px/30px "panton-bold", sans-serif;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
     }
     .footer__phone,
     .footer__email,
@@ -642,6 +664,7 @@ a.btn:hover {
         cursor: default;
     }
     .footer__email{
+        margin-bottom: 13px;
         font-size: 13px;
     }
     .footer__skype{
