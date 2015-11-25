@@ -291,9 +291,13 @@ a.btn:hover {
     position: relative;
     min-height: 251px;
     overflow: hidden;
+    padding-bottom: 53.534183%;
 }
 .strategy__wrap {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 2;
     text-align: center;
 }
@@ -313,7 +317,7 @@ a.btn:hover {
     color: #525251;
     font-size: 10px;
     text-align: justify;
-    width: 320px;
+    width: 290px;
     margin: 0 auto 10px;
 }
 .strategy__btns > span {
@@ -333,10 +337,11 @@ a.btn:hover {
 /* --------------- swiffycontainer --------------- */
 #swiffycontainer {
     width: 100%;
-    padding-bottom: 53.5%;
+    padding-bottom: 53.534183%;
     position: absolute;
     bottom: 0;
     z-index: 1;
+    background: #B8DBE6;
 }
 #swiffycontainer:before {
     content: '';
@@ -526,7 +531,7 @@ a.btn:hover {
         border: 2px solid #fff;
         border-radius: 30px;
         font-size: 13px;
-        padding: 22px 38px;
+        padding: 22px 44px;
     }
     /* --------------- /btn --------------- */
 
@@ -534,7 +539,8 @@ a.btn:hover {
     .strategy {
         min-height: 503px;
     }
-    .strategy__wrap {
+    .strategy__wrap .site__wrap {
+        max-width: 910px;
     }
     .strategy p {
         font-size: 27px;
@@ -546,12 +552,13 @@ a.btn:hover {
     .strategy__btns {
         font-size: 20px;
         margin-bottom: 50px;
-        width: 640px;
+        width: 580px;
     }
     /* --------------- /strategy --------------- */
 
     /* --------------- solutions --------------- */
-    .solutions {
+    .solutions .site__title {
+        padding-bottom: 38px;
     }
     .solutions p {
         font-size: 27px;
@@ -579,7 +586,7 @@ a.btn:hover {
         top: 197px;
     }
     .site__header {
-        height: 170px;
+        height: 209px;
     }
     .site__footer {
         position: absolute;
@@ -592,6 +599,7 @@ a.btn:hover {
     }
     .site__title {
         font-size: 25px;
+        padding: 55px 0 35px;
     }
     .site__footer-layout{
         width: 1260px;
@@ -613,6 +621,12 @@ a.btn:hover {
     }
     /* --------------- /logo --------------- */
 
+    /* --------------- btn --------------- */
+    .btn {
+        padding: 22px 53px;
+    }
+    /* --------------- /btn --------------- */
+
     /* --------------- menu --------------- */
     .menu {
         top: 100px;
@@ -624,6 +638,7 @@ a.btn:hover {
         width: 638px;
         text-align: justify;
         position: relative;
+        border: none;
     }
     .menu__wrap:after {
         content: '';
@@ -646,8 +661,16 @@ a.btn:hover {
     }
     .solutions p {
         font-size: 30px;
+        line-height: 45px;
+        margin-bottom: 42px;
     }
     .solutions strong {
+    }
+    .solutions .site__title {
+        padding-bottom: 50px;
+    }
+    .solutions .site__wrap {
+        max-width: 1000px;
     }
     /* --------------- /solutions --------------- */
 
@@ -658,10 +681,12 @@ a.btn:hover {
     }
     .strategy p {
         font-size: 35px;
+        line-height: 50px;
     }
     .strategy strong {
     }
     .strategy__btns {
+        width: 620px;
     }
     /* --------------- /strategy --------------- */
 
