@@ -42,6 +42,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: "panton-bold";
+    src: url("../fonts/panton-bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: "panton-semibold";
     src: url("../fonts/panton-semibold.woff") format("woff");
     font-weight: normal;
@@ -103,6 +109,21 @@
 /* --------------- /logo --------------- */
 
 /* --------------- footer --------------- */
+.footer__menu{
+    font-family: "panton-bold", sans-serif;
+}
+.footer__menu a{
+    position: relative;
+    display: inline-block;
+    margin-left: 45px;
+    color: #525251;
+}
+.footer__menu a:before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: #b7b7b4;
+}
 .footer__navigation{
     display: none;
 }
@@ -119,7 +140,7 @@
         display: block;
         clear: both;
         width: 100%;
-        height: 100px;
+        height: 320px;
     }
     .site__footer {
         position: absolute;
@@ -132,11 +153,22 @@
 
     /* --------------- copyright --------------- */
     .copyright{
-        display: inline-block;
+        display: block;
+        font-size: 15px;
+        line-height: 20px;
     }
     /* --------------- /copyright --------------- */
 
     /* --------------- footer --------------- */
+    .footer__menu a{
+        display: block;
+        margin-left: 0;
+        font-size: 15px;
+        line-height: 30px;
+    }
+    .footer__menu a:before{
+        display: none;
+    }
     .footer__navigation{
         display: inline-block;
     }
