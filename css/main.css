@@ -126,14 +126,15 @@
 }
 .site__footer {
     position: relative;
-    background: url("../img/bg-footer.png") no-repeat 50% 100%;
+    padding-top: 14px;
     z-index: 2;
 }
 .site__footer-layout {
-    width: 100%;
+    width: 320px;
     max-width: 1260px;
-    margin: 0 15px;
-    font-size: 11px;
+    margin: 0 auto;
+    padding: 0 12px;
+    font-size: 6px;
 }
 .site__wrap {
     max-width: 1290px;
@@ -373,28 +374,92 @@ a.btn:hover {
 /* --------------- /solutions --------------- */
 
 /* --------------- footer --------------- */
+.footer__info{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 26px;
+    font-family: "panton-bold", sans-serif;
+    line-height: 7px;
+}
 .footer__menu{
+    display: inline-block;
+    vertical-align: top;
     font-family: "panton-bold", sans-serif;
 }
 .footer__menu a{
     position: relative;
     display: inline-block;
-    margin-left: 45px;
+    margin-left: 20px;
     color: #525251;
+    transition: border-bottom-color .3s ease;
+    -webkit-transition: border-bottom-color .3s ease;
+}
+.footer__menu a:hover{
+    text-decoration: underline;
+}
+.footer__menu a:first-child{
+    margin-left: 0;
 }
 .footer__menu a:before{
     content: '';
     position: absolute;
+    top: 2px;
+    left: -13px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     background-color: #b7b7b4;
 }
-.footer__navigation{
+.footer__menu a:first-child:before{
+    display: none;
+}
+.footer__navigation, .footer__phone,
+.footer__email, .footer__skype{
     display: none;
 }
 /* --------------- /footer --------------- */
 
 @media (min-width: 640px) {
+    /* --------------- site --------------- */
+    .site__header {
+        height: 100px;
+    }
+    .site__title {
+        font-size: 25px;
+        padding: 22px 0 18px;
+    }
+    .site__footer{
+        padding-top: 30px;
+    }
+    .site__footer-layout {
+        width: 768px;
+        font-size: 11px;
+    }
+    /* --------------- /site --------------- */
 
+    /* --------------- copyright --------------- */
+    .copyright{
+        line-height: 14px;
+    }
+    .copyright span{
+        display: block;
+    }
+    /* --------------- /copyright --------------- */
+
+    /* --------------- footer --------------- */
+    .footer__info{
+        margin-right: 59px;
+    }
+    .footer__menu a{
+        margin-left: 44px;
+    }
+    .footer__menu a:before{
+        top: 3px;
+        left: -28px;
+        width: 6px;
+        height: 6px;
+    }
+    /* --------------- /footer --------------- */
     /* --------------- site --------------- */
     .site__header {
         height: 100px;
@@ -490,7 +555,7 @@ a.btn:hover {
         line-height: 36px;
         margin-bottom: 48px;
     }
-    /* --------------- /solutions --------------- */
+    /* --------------- /strategy --------------- */
 
 
 }
@@ -519,9 +584,16 @@ a.btn:hover {
         right: 0;
         bottom: 0;
         height: 320px;
+        padding-top: 77px;
+        background: url("../img/bg-footer.png") no-repeat -115px 100%;
     }
     .site__title {
         font-size: 25px;
+    }
+    .site__footer-layout{
+        width: 1260px;
+        margin: 0 auto;
+        padding: 0;
     }
     /* --------------- /site --------------- */
 
@@ -593,24 +665,77 @@ a.btn:hover {
     /* --------------- copyright --------------- */
     .copyright{
         display: block;
+        margin-bottom: 19px;
         font-size: 15px;
         line-height: 20px;
     }
     /* --------------- /copyright --------------- */
 
     /* --------------- footer --------------- */
+    .footer__info{
+        margin-right: 113px;
+        padding-top: 5px;
+        line-height: 21px;
+    }
+    .footer__menu{
+        margin-right: 127px;
+    }
     .footer__menu a{
         display: block;
         margin-left: 0;
         font-size: 15px;
-        line-height: 30px;
+        line-height: 29px;
+    }
+    .footer__menu a:hover{
+        text-decoration: underline;
     }
     .footer__menu a:before{
         display: none;
     }
     .footer__navigation{
         display: inline-block;
+        margin-right: 50px;
+        vertical-align: top;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .footer__navigation:last-child{
+        margin-right: 0;
+    }
+    .footer__navigation a{
+        color: #535251;
+    }
+    .footer__navigation dt{
+        margin-bottom: 13px;
+        font: 12px/30px "panton-bold", sans-serif;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+    }
+    .footer__phone,
+    .footer__email,
+    .footer__skype{
+        display: block;
+        font-size: 15px;
+        color: #525251;
+        cursor: default;
+    }
+    .footer__email{
+        margin-bottom: 13px;
+        font-size: 13px;
+    }
+    .footer__skype{
+        position: relative;
+        padding-left: 30px;
+        font-size: 13px;
+    }
+    .footer__skype:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: url("../img/icons-skype.png") no-repeat 0 0;
     }
     /* --------------- /footer --------------- */
 }
-
