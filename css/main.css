@@ -403,17 +403,14 @@ a.btn:hover {
 /* --------------- /footer --------------- */
 
 @media (min-width: 640px) {
-/* --------------- copyright --------------- */
-.copyright{
-
-}
-.copyright span{
-    display: block;
-}
-/* --------------- /copyright --------------- */
-
-@media (min-width: 768px) {
     /* --------------- site --------------- */
+    .site__header {
+        height: 100px;
+    }
+    .site__title {
+        font-size: 25px;
+        padding: 22px 0 18px;
+    }
     .site__footer{
         padding-top: 30px;
     }
@@ -426,6 +423,9 @@ a.btn:hover {
     /* --------------- copyright --------------- */
     .copyright{
         line-height: 14px;
+    }
+    .copyright span{
+        display: block;
     }
     /* --------------- /copyright --------------- */
 
@@ -496,12 +496,9 @@ a.btn:hover {
         display: none;
     }
     /* --------------- /strategy --------------- */
-
-
 }
 
 @media (min-width: 1290px) {
-
     /* --------------- site --------------- */
     .site:after {
         content: '';
