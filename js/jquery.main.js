@@ -1,9 +1,11 @@
 $(function(){
 
-    var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
-        swiffyobject, {  });
+    if ($('.strategy').length) {
+        var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
+            swiffyobject, {  });
 
-    stage.start();
+        stage.start();
+    }
 
     $('.menu__btn').on({
         'click':function(){
