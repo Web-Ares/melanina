@@ -435,7 +435,10 @@ a.btn:hover {
     }
     .site__title {
         font-size: 25px;
-        padding: 22px 0 18px;
+        padding: 44px 0 36px;
+    }
+    .site__wrap {
+        padding: 0 30px;
     }
     .site__footer{
         padding-top: 30px;
@@ -443,42 +446,6 @@ a.btn:hover {
     .site__footer-layout {
         width: 768px;
         font-size: 11px;
-    }
-    /* --------------- /site --------------- */
-
-    /* --------------- copyright --------------- */
-    .copyright{
-        line-height: 14px;
-    }
-    .copyright span{
-        display: block;
-    }
-    /* --------------- /copyright --------------- */
-
-    /* --------------- footer --------------- */
-    .footer__info{
-        margin-right: 59px;
-    }
-    .footer__menu a{
-        margin-left: 44px;
-    }
-    .footer__menu a:before{
-        top: 3px;
-        left: -28px;
-        width: 6px;
-        height: 6px;
-    }
-    /* --------------- /footer --------------- */
-    /* --------------- site --------------- */
-    .site__header {
-        height: 100px;
-    }
-    .site__title {
-        font-size: 25px;
-        padding: 44px 0 36px;
-    }
-    .site__wrap {
-        padding: 0 30px;
     }
     /* --------------- /site --------------- */
 
@@ -560,7 +527,29 @@ a.btn:hover {
     }
     /* --------------- /strategy --------------- */
 
+    /* --------------- copyright --------------- */
+    .copyright{
+        line-height: 14px;
+    }
+    .copyright span{
+        display: block;
+    }
+    /* --------------- /copyright --------------- */
 
+    /* --------------- footer --------------- */
+    .footer__info{
+        margin-right: 59px;
+    }
+    .footer__menu a{
+        margin-left: 44px;
+    }
+    .footer__menu a:before{
+        top: 3px;
+        left: -28px;
+        width: 6px;
+        height: 6px;
+    }
+    /* --------------- /footer --------------- */
 }
 
 @media (min-width: 1320px) {
@@ -725,6 +714,9 @@ a.btn:hover {
     }
     .footer__navigation a{
         color: #535251;
+    }
+    .footer__navigation a:hover{
+        text-decoration: underline;
     }
     .footer__navigation dt{
         margin-bottom: 13px;
