@@ -482,6 +482,85 @@ a.btn:hover {
 .service__preview p {
     font-family: "panton-regular-italic", sans-serif;
 }
+.service__wrap {
+    position: relative;
+    color: #525251;
+    max-width: 320px;
+    margin: 0 auto;
+}
+.service__wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.service__wrap li {
+    position: relative;
+    margin-bottom: 90px;
+    height: 150px;
+}
+.service__wrap li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    background-image: url("../img/line2.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: auto 100%;
+    z-index: 1;
+}
+.service__wrap li:nth-child(even):before {
+    background-position: top right;
+    left: auto;
+    right: 0;
+}
+.service__wrap li:nth-child(odd) .service__item:nth-child(odd) > span:first-child,
+.service__wrap li:nth-child(even) .service__item:nth-child(even) > span:first-child {
+    padding-top: 5px;
+}
+.service__wrap li:nth-child(odd) .service__item:nth-child(even) > span:nth-child(even),
+.service__wrap li:nth-child(even) .service__item:nth-child(odd) > span:nth-child(even) {
+    padding-top: 5px;
+}
+.service__item {
+    margin: 0 15px 0 0;
+    position: relative;
+    z-index: 2;
+}
+.service__item:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.service__item:nth-child(even) {
+    margin: 0 0 0 15px;
+}
+.service__item > span {
+    width: 50%;
+    float: left;
+    height: 120px;
+    text-align: center;
+    font-size: 9px;
+    padding: 0 15px;
+}
+.service__item > span:before {
+    content: attr(data-num);
+    font-family: "panton-bold", sans-serif;
+    color: #ffba00;
+    font-size: 10px;
+    text-align: center;
+    padding: 8px 0;
+    background: url("../img/services-circle.png") no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: 0 auto 5px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 /* --------------- /service --------------- */
 
 /* --------------- complaisance --------------- */
@@ -713,6 +792,54 @@ a.btn:hover {
     }
     /* --------------- /strategy --------------- */
 
+    /* --------------- service --------------- */
+    .service {
+
+    }
+    .service__preview {
+    }
+    .service__preview:before {
+    }
+    .service__preview p {
+    }
+    .service__wrap {
+        max-width: 580px;
+    }
+    .service__wrap:after {
+    }
+    .service__wrap li {
+        margin-bottom: 150px;
+        height: 200px;
+    }
+    .service__wrap li:nth-child(odd) .service__item:nth-child(odd) > span:first-child,
+    .service__wrap li:nth-child(even) .service__item:nth-child(even) > span:first-child {
+        padding-top: 15px;
+    }
+    .service__wrap li:nth-child(odd) .service__item:nth-child(even) > span:nth-child(even),
+    .service__wrap li:nth-child(even) .service__item:nth-child(odd) > span:nth-child(even) {
+        padding-top: 15px;
+    }
+    .service__item {
+        margin: 0 15px 0 0;
+    }
+    .service__item:nth-child(even) {
+        margin: 0 0 0 15px;
+    }
+    .service__item > span {
+        margin-top: -20px;
+        height: 190px;
+        font-size: 18px;
+    }
+    .service__item > span:before {
+        content: attr(data-num);
+        font-size: 20px;
+        padding: 16px 0;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 10px;
+    }
+    /* --------------- /service --------------- */
+
     /* --------------- complaisance --------------- */
     .complaisance{
         background: url("../img/bg-decorate.jpg") repeat-x 0 100%/auto 134px, url("../img/bg-mini-blog.png") no-repeat 50% 100% #d9ecf0;
@@ -901,6 +1028,64 @@ a.btn:hover {
         width: 620px;
     }
     /* --------------- /strategy --------------- */
+
+    /* --------------- service --------------- */
+    .service {
+
+    }
+    .service__preview {
+    }
+    .service__preview:before {
+    }
+    .service__preview p {
+    }
+    .service__wrap {
+        max-width: 1260px;
+    }
+    .service__wrap:after {
+    }
+    .service__wrap:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url("../img/line2.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: contain;
+        z-index: 1;
+    }
+    .service__wrap li {
+        margin-bottom: 45px;
+    }
+    .service__wrap li:before {
+        display: none;
+    }
+    .service__wrap li:nth-child(odd) .service__item:nth-child(odd) > span:first-child,
+    .service__wrap li:nth-child(even) .service__item:nth-child(even) > span:first-child {
+        padding-top: 0;
+    }
+    .service__wrap li:nth-child(odd) .service__item:nth-child(even) > span:nth-child(even),
+    .service__wrap li:nth-child(even) .service__item:nth-child(odd) > span:nth-child(even) {
+        padding-top: 0;
+    }
+    .service__item {
+        margin: 0;
+        float: left;
+        width: 50%;
+    }
+    .service__item:nth-child(even) {
+        margin: 0;
+    }
+    .service__item > span {
+        padding: 0 35px;
+        margin: 0;
+    }
+    .service__item > span:before {
+    }
+    /* --------------- /service --------------- */
 
     /* --------------- complaisance --------------- */
     .complaisance{
