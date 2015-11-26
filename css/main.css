@@ -76,6 +76,7 @@
     overflow: hidden;
     z-index: 1;
     background: #B8DBE6 url("../img/bg-site.png") no-repeat top center;
+    background-size: contain;
 }
 .site_main {
     background: #B8DBE6;
@@ -106,6 +107,7 @@
     top: 102px;
     left: 13px;
     background-size: contain;
+    z-index: 1;
 }
 .site_bird .site__content:after {
     content: '';
@@ -133,7 +135,7 @@
 .site__footer:before{
     content: '';
     position: absolute;
-    top: 0;
+    top: -5px;
     left: 0;
     right: 0;
     height: 5px;
@@ -150,15 +152,18 @@
     max-width: 1290px;
     margin: 0 auto;
     padding: 0 15px;
+    position: relative;
+    z-index: 2;
 }
 .site__title {
     font-size: 12px;
+    line-height: 18px;
     font-weight: 400;
     color: #525251;
     text-align: center;
     text-transform: uppercase;
     font-family: "ph_500_regular_caps", sans-serif;
-    padding: 22px 0 18px;
+    padding: 19px 0 15px;
 }
 /* --------------- /site --------------- */
 
@@ -491,13 +496,20 @@ a.btn_4:hover:after{
 
 /* --------------- service --------------- */
 .service {
-
+    padding: 18px 0 0 0;
+}
+.service__title {
+    font-size: 25px;
+    color: #82c500;
+    font-family: "panton-semibold", sans-serif;
+    font-weight: 400;
+    padding: 0 0 18px 37px;
 }
 .service__preview {
     color: #525251;
     font-size: 10px;
-    margin: 0 0 0 36px;
-    padding-left: 5px;
+    margin: 0 0 11px 36px;
+    padding-left: 12px;
     position: relative;
 }
 .service__preview:before {
@@ -505,19 +517,25 @@ a.btn_4:hover:after{
     background: url("../img/point.png") repeat-y;
     background-size: contain;
     width: 2px;
-    height: 100%;
+    bottom: 10px;
     position: absolute;
     top: 0;
     left: 0;
 }
+.service__preview .site__title {
+    padding: 0 0 5px 0;
+    text-align: left;
+}
 .service__preview p {
     font-family: "panton-regular-italic", sans-serif;
+    line-height: 15px;
 }
 .service__wrap {
     position: relative;
     color: #525251;
     max-width: 320px;
-    margin: 0 auto;
+    margin: -5px auto 0;
+    z-index: 2;
 }
 .service__wrap:after {
     content: '';
@@ -574,7 +592,8 @@ a.btn_4:hover:after{
     height: 120px;
     text-align: center;
     font-size: 9px;
-    padding: 0 15px;
+    padding: 0 20px;
+    line-height: 13px;
 }
 .service__item > span:before {
     content: attr(data-num);
@@ -582,7 +601,7 @@ a.btn_4:hover:after{
     color: #ffba00;
     font-size: 10px;
     text-align: center;
-    padding: 8px 0;
+    padding: 6px 0;
     background: url("../img/services-circle.png") no-repeat;
     background-size: contain;
     width: 25px;
@@ -592,7 +611,43 @@ a.btn_4:hover:after{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+.service__hide {
+    display: none;
+}
 /* --------------- /service --------------- */
+
+/* --------------- steps --------------- */
+.steps {
+    background: #ebece7 url("../img/line1.png") no-repeat 0 0;
+    min-height: 500px;
+    position: relative;
+    margin-bottom: 100px;
+}
+.steps:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: url("../img/deco-footer.png") repeat-x 50% 0;
+}
+.steps:after {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: url("../img/deco-footer.png") repeat-x 50% 0;
+}
+.steps .site__title {
+    max-width: 220px;
+    margin: 0 auto;
+}
+/* --------------- /steps --------------- */
 
 /* --------------- complaisance --------------- */
 .complaisance{
@@ -759,8 +814,6 @@ a.btn_4:hover:after{
     /* --------------- site --------------- */
 
     .site_air .site__content:before {
-        /*width: 77px;*/
-        /*height: 276px;*/
         width: 52px;
         height: 187px;
         top: 204px;
@@ -771,7 +824,8 @@ a.btn_4:hover:after{
     }
     .site__title {
         font-size: 25px;
-        padding: 44px 0 36px;
+        line-height: 35px;
+        padding: 35px 0 28px;
     }
     .site__wrap {
         padding: 0 30px;
@@ -893,13 +947,27 @@ a.btn_4:hover:after{
 
     /* --------------- service --------------- */
     .service {
-
+        padding: 37px 0 0 0;
+    }
+    .service__title {
+        font-size: 50px;
+        padding: 0 0 37px 74px;
     }
     .service__preview {
+        font-size: 20px;
+        margin: 0 0 26px 72px;
+        padding-left: 24px;
     }
     .service__preview:before {
+        width: 4px;
+        top: 4px;
+        bottom: 20px;
+    }
+    .service__preview .site__title {
+        padding: 0 0 9px 0;
     }
     .service__preview p {
+        line-height: 30px;
     }
     .service__wrap {
         max-width: 580px;
@@ -928,11 +996,12 @@ a.btn_4:hover:after{
         margin-top: -20px;
         height: 190px;
         font-size: 18px;
+        line-height: 26px;
     }
     .service__item > span:before {
         content: attr(data-num);
         font-size: 20px;
-        padding: 16px 0;
+        padding: 14px 0;
         width: 50px;
         height: 50px;
         margin: 0 auto 10px;
@@ -1042,6 +1111,12 @@ a.btn_4:hover:after{
         width: 125px;
         height: 191px;
         top: 197px;
+    }
+    .site_air .site__content:before {
+        width: 77px;
+        height: 276px;
+        top: 34px;
+        left: 41px;
     }
     .site__header {
         height: 209px;
@@ -1162,16 +1237,41 @@ a.btn_4:hover:after{
 
     /* --------------- service --------------- */
     .service {
-
+        padding: 62px 0 0 0;
+    }
+    .service__title {
+        font-size: 60px;
+        padding: 0 10px 37px 101px;
+        display: inline-block;
+        vertical-align: top;
+        width: 330px;
+        overflow: hidden;
     }
     .service__preview {
+        font-size: 20px;
+        margin: 0 0 22px 0;
+        padding: 5px 0 0 51px;
+        display: inline-block;
+        vertical-align: top;
+        width: 800px;
     }
     .service__preview:before {
+        width: 4px;
+        top: 20px;
+        bottom: 20px;
+    }
+    .service__preview .site__title {
+        padding: 0 0 9px 0;
     }
     .service__preview p {
+        line-height: 30px;
+    }
+    .service__hide {
+        display: inline;
     }
     .service__wrap {
         max-width: 1260px;
+        margin: 32px 0 56px 0;
     }
     .service__wrap:after {
     }
@@ -1211,10 +1311,11 @@ a.btn_4:hover:after{
         margin: 0;
     }
     .service__item > span {
-        padding: 0 35px;
+        padding: 0 50px;
         margin: 0;
     }
     .service__item > span:before {
+        margin-bottom: 32px;
     }
     /* --------------- /service --------------- */
 
