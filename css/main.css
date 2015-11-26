@@ -127,7 +127,17 @@
 .site__footer {
     position: relative;
     padding-top: 14px;
+    background-color: #ebece7;
     z-index: 2;
+}
+.site__footer:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: 5px;
+    background: url("../img/deco-footer.png") repeat-x 50% 0;
 }
 .site__footer-layout {
     width: 320px;
@@ -382,6 +392,38 @@ a.btn:hover {
 }
 /* --------------- /solutions --------------- */
 
+/* --------------- complaisance --------------- */
+.complaisance{
+    position: relative;
+    background-color: #d9ecf0;
+}
+.complaisance .site__title{
+    padding-bottom: 16px;
+    text-align: left;
+}
+.complaisance .btn{
+    position: absolute;
+}
+.complaisance__img{
+    position: absolute;
+    top: -9px;
+    right: -65px;
+    width: 220px;
+    height: 156px;
+    background: url("../img/bg-complaisance.png") no-repeat center/cover;
+}
+.complaisance__content{
+    margin-right: 148px;
+    font: normal 9px/12px 'panton-regular-italic', sans-serif;
+    text-align: left;
+}
+.complaisance__author{
+    padding-top: 13px;
+    color: #9da7a8;
+    font: 7px/10px "panton", sans-serif;
+}
+/* --------------- /complaisance --------------- */
+
 /* --------------- footer --------------- */
 .footer__info{
     display: inline-block;
@@ -527,6 +569,18 @@ a.btn:hover {
     }
     /* --------------- /strategy --------------- */
 
+    /* --------------- complaisance --------------- */
+    .complaisance__img{
+        top: -17px;
+        right: -130px;
+        width: 439px;
+        height: 312px;
+    }
+    .complaisance__content{
+        margin-right: 314px;
+    }
+    /* --------------- /complaisance --------------- */
+
     /* --------------- copyright --------------- */
     .copyright{
         line-height: 14px;
@@ -577,7 +631,7 @@ a.btn:hover {
         bottom: 0;
         height: 320px;
         padding-top: 77px;
-        background: url("../img/bg-footer.png") no-repeat -115px 100%;
+        background: url("../img/bg-footer.png") no-repeat -115px 100% #ebece7;
     }
     .site__title {
         font-size: 25px;
@@ -671,6 +725,18 @@ a.btn:hover {
         width: 620px;
     }
     /* --------------- /strategy --------------- */
+
+    /* --------------- complaisance --------------- */
+    .complaisance__img{
+        top: -38px;
+        right: 0;
+        width: 855px;
+        height: 606px;
+    }
+    .complaisance__content{
+        margin-right: 620px;
+    }
+    /* --------------- /complaisance --------------- */
 
     /* --------------- copyright --------------- */
     .copyright{
