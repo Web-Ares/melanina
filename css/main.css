@@ -366,6 +366,10 @@ a.btn:hover {
     background: #ebece7 url("../img/line1.png") no-repeat;
     text-align: center;
 }
+.solutions__wrap {
+    margin: 0 auto;
+    padding: 0 15px;
+}
 .solutions .site__title {
     padding-bottom: 21px;
 }
@@ -379,6 +383,66 @@ a.btn:hover {
     color: #88b900;
     font-family: "panton-bold", sans-serif;
     font-weight: 400;
+}
+.solutions__inform {
+    text-align: justify;
+    padding-top: 19px;
+}
+.solutions__inform:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+.solutions__ban {
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.solutions__ban img {
+    display: block;
+    max-width: 139%;
+    float: right;
+}
+.solutions__indicators {
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 5px;
+    color: #535251;
+    position: relative;
+}
+.solutions__indicators:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.solutions__indicators:after {
+    content: '';
+    background: url("../img/solutions-inform-bg.png") no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    z-index: 1;
+}
+.solutions__indicators li {
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding: 18px 0;
+    position: relative;
+    z-index: 2;
+}
+.solutions__indicators strong {
+    font-family: "panton-bold", sans-serif;
+    font-size: 18px;
+    color: #d8533d;
+    display: block;
+    padding: 9px 0;
+    letter-spacing: -1px;
 }
 /* --------------- /solutions --------------- */
 
@@ -540,8 +604,6 @@ a.btn:hover {
         line-height: 36px;
         margin-bottom: 48px;
     }
-    .strategy strong {
-    }
     .strategy__btns {
         font-size: 20px;
         margin-bottom: 50px;
@@ -557,6 +619,22 @@ a.btn:hover {
         font-size: 27px;
         line-height: 36px;
         margin-bottom: 48px;
+    }
+    .solutions__indicators {
+        font-size: 10px;
+    }
+    .solutions__inform {
+        padding-top: 39px;
+    }
+    .solutions__ban img {
+        max-width: 136%;
+    }
+    .solutions__indicators li {
+        padding: 35px 0;
+    }
+    .solutions__indicators strong {
+        font-size: 36px;
+        padding: 12px 0 22px;
     }
     /* --------------- /strategy --------------- */
 
@@ -650,33 +728,44 @@ a.btn:hover {
     /* --------------- /menu --------------- */
 
     /* --------------- solutions --------------- */
-    .solutions {
-    }
     .solutions p {
         font-size: 30px;
         line-height: 45px;
         margin-bottom: 42px;
     }
-    .solutions strong {
-    }
     .solutions .site__title {
         padding-bottom: 50px;
     }
-    .solutions .site__wrap {
+    .solutions__wrap {
         max-width: 1000px;
+    }
+    .solutions__inform {
+        padding-top: 34px;
+    }
+    .solutions__ban img {
+        float: none;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .solutions__indicators li {
+        padding: 75px 0;
+    }
+    .solutions__indicators strong {
+        font-size: 50px;
+        padding-bottom: 8px;
+    }
+    .solutions__indicators:after {
+        top: 15%;
+        left: 15%;
+        right: 15%;
+        bottom: 15%;
     }
     /* --------------- /solutions --------------- */
 
     /* --------------- strategy --------------- */
-    .strategy {
-    }
-    .strategy__wrap {
-    }
     .strategy p {
         font-size: 35px;
         line-height: 50px;
-    }
-    .strategy strong {
     }
     .strategy__btns {
         width: 620px;
