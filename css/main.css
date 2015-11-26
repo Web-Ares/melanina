@@ -126,16 +126,16 @@
 }
 .site__footer {
     position: relative;
-    padding-top: 14px;
+    padding: 14px 0 20px;
     background-color: #ebece7;
     z-index: 2;
 }
 .site__footer:before{
     content: '';
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    bottom: 100%;
     height: 5px;
     background: url("../img/deco-footer.png") repeat-x 50% 0;
 }
@@ -193,6 +193,7 @@ a.btn:visited {
     color: #525251;
     font-family: "panton-bold", sans-serif;
     padding: 11px 19px;
+    text-align: center;
 }
 a.btn:hover {
     background: #fff;
@@ -459,7 +460,17 @@ a.btn:hover {
 /* --------------- complaisance --------------- */
 .complaisance{
     position: relative;
-    background-color: #d9ecf0;
+    padding-bottom: 20px;
+    background: url("../img/bg-decorate.jpg") repeat-x 0 100%/auto 37px #d9ecf0;
+}
+.complaisance:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: 5px;
+    background: url("../img/deco-complaisance.png") repeat-x 50% 0;
 }
 .complaisance .site__title{
     padding-bottom: 16px;
@@ -467,6 +478,11 @@ a.btn:hover {
 }
 .complaisance .btn{
     position: absolute;
+    left: 147px;
+    bottom: -9px;
+    width: 113px;
+    padding-top: 10px;
+    cursor: pointer;
 }
 .complaisance__img{
     position: absolute;
@@ -477,16 +493,30 @@ a.btn:hover {
     background: url("../img/bg-complaisance.png") no-repeat center/cover;
 }
 .complaisance__content{
-    margin-right: 148px;
+    margin-right: 145px;
+    margin-bottom: 58px;
     font: normal 9px/12px 'panton-regular-italic', sans-serif;
     text-align: left;
 }
 .complaisance__author{
+    position: relative;
     padding-top: 13px;
     color: #9da7a8;
     font: 7px/10px "panton", sans-serif;
 }
 /* --------------- /complaisance --------------- */
+
+/* --------------- mini-blog --------------- */
+.mini-blog{
+
+}
+/* --------------- /mini-blog --------------- */
+
+/* --------------- copyright --------------- */
+.copyright span{
+    display: block;
+}
+/* --------------- /copyright --------------- */
 
 /* --------------- footer --------------- */
 .footer__info{
@@ -648,23 +678,43 @@ a.btn:hover {
     /* --------------- /strategy --------------- */
 
     /* --------------- complaisance --------------- */
+    .complaisance{
+        background: url("../img/bg-decorate.jpg") repeat-x 0 100%/auto 134px, url("../img/bg-mini-blog.png") no-repeat 50% 100% #d9ecf0;
+    }
+    .complaisance .site__title{
+        padding-bottom: 30px;
+    }
+    .complaisance .btn{
+        left: 290px;
+        bottom: -20px;
+        width: 220px;
+        padding-top: 17px;
+        font-size: 14px;
+    }
+    .complaisance__content{
+        margin-bottom: 114px;
+        font-size: 18px;
+        line-height: 24px;
+    }
     .complaisance__img{
         top: -17px;
-        right: -130px;
+        right: -145px;
         width: 439px;
         height: 312px;
     }
     .complaisance__content{
-        margin-right: 314px;
+        margin-right: 273px;
+    }
+    .complaisance__author {
+        padding-top: 26px;
+        font-size: 14px;
+        line-height: 20px;
     }
     /* --------------- /complaisance --------------- */
 
     /* --------------- copyright --------------- */
     .copyright{
         line-height: 14px;
-    }
-    .copyright span{
-        display: block;
     }
     /* --------------- /copyright --------------- */
 
@@ -709,6 +759,7 @@ a.btn:hover {
         bottom: 0;
         height: 320px;
         padding-top: 77px;
+        padding-bottom: 0;
         background: url("../img/bg-footer.png") no-repeat -115px 100% #ebece7;
     }
     .site__title {
@@ -816,14 +867,33 @@ a.btn:hover {
     /* --------------- /strategy --------------- */
 
     /* --------------- complaisance --------------- */
+    .complaisance{
+        padding-top: 58px;
+        background: url("../img/bg-decorate.jpg") repeat-x 0 100%/auto, url("../img/bg-mini-blog.png") no-repeat 50% 100% #d9ecf0;
+    }
+    .complaisance .btn {
+        left: 318px;
+        bottom: -8px;
+        width: 235px;
+        padding-top: 19px;
+    }
+    .complaisance .site__title{
+        text-align: center;
+    }
     .complaisance__img{
         top: -38px;
-        right: 0;
+        right: -133px;
         width: 855px;
         height: 606px;
     }
     .complaisance__content{
-        margin-right: 620px;
+        margin-bottom: 123px;
+        font-size: 30px;
+        line-height: 45px;
+        margin-right: 600px;
+    }
+    .complaisance__author {
+        padding-top: 54px;
     }
     /* --------------- /complaisance --------------- */
 
