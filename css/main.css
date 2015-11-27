@@ -429,7 +429,8 @@ a.btn_4:hover:after{
     position: absolute;
     bottom: 0;
     z-index: 1;
-    background: #B8DBE6;
+    background: url("../img/strategy-bg.jpg") no-repeat;
+    background-size: cover;
 }
 #swiffycontainer:before {
     content: '';
@@ -445,6 +446,7 @@ a.btn_4:hover:after{
     position: absolute !important;
     top: 0;
     left: 0;
+    display: none;
 }
 /* --------------- /swiffycontainer --------------- */
 
@@ -1879,6 +1881,9 @@ a.btn_4:hover:after{
     }
     .strategy__btns {
         width: 620px;
+    }
+    #swiffycontainer > div {
+        display: block;
     }
     /* --------------- /strategy --------------- */
 

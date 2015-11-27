@@ -1,10 +1,18 @@
 $(function(){
 
     if ($('.strategy').length) {
-        var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
-            swiffyobject, {  });
 
-        stage.start();
+        $(window).on({
+            'load':function(){
+                if($(this).width() > 640) {
+                    var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
+                        swiffyobject, {  });
+
+                    stage.start();
+                }
+            }
+        });
+
     }
 
     $('.menu__btn').on({
