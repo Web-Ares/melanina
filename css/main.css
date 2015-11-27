@@ -1007,9 +1007,11 @@ a.btn_4:hover:after{
 }
 .contacts__callback .btn-wrap .btn{
     margin-right: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px;
     font-family: "panton-extrabold", sans-serif;
+}
+.contacts__callback .btn-wrap a.btn{
+    padding-top: 11px;
 }
 .contacts__callback-textarea{
     position: relative;
@@ -1652,7 +1654,6 @@ a.btn_4:hover:after{
     .contacts__callback .btn-wrap .btn{
         width: auto;
         margin-right: 30px;
-        padding-top: 20px;
         padding-left: 40px;
         padding-right: 40px;
         border: 2px solid #fff;
@@ -2205,6 +2206,9 @@ a.btn_4:hover:after{
     }
     .contacts__callback .btn-wrap .btn{
         margin-right: 40px;
+    }
+    .contacts__callback .btn-wrap a.btn{
+        padding-top: 22px;
     }
     /* --------------- /contacts --------------- */
 
