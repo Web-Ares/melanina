@@ -736,6 +736,7 @@ a.btn_4:hover:after{
 .reviews .site__wrap {
     background: url("../img/sky.png") no-repeat center;
     background-size: contain;
+    min-height: 166px;
 }
 .reviews .swiper-container {
     width: 290px;
@@ -747,7 +748,6 @@ a.btn_4:hover:after{
 .reviews__item p {
     font-size: 10px;
     line-height: 14px;
-    text-align: justify;
     font-family: "panton-regular-italic", sans-serif;
     margin-bottom: 29px;
 }
@@ -758,6 +758,8 @@ a.btn_4:hover:after{
     background: #b6e2eb;
     border-radius: 50%;
     margin-top: -37px;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
 }
 .reviews .swiper-button-prev {
     left: 0;
@@ -780,6 +782,10 @@ a.btn_4:hover:after{
 .reviews .swiper-button-next:before {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+.reviews .swiper-button-prev:hover,
+.reviews .swiper-button-next:hover {
+    opacity: .8;
 }
 .reviews__author {
     font-size: 7px;
@@ -1227,6 +1233,54 @@ a.btn_4:hover:after{
     }
     /* --------------- /steps --------------- */
 
+    /* --------------- reviews --------------- */
+    .reviews {
+        padding: 75px 0 60px 0;
+    }
+    .reviews .site__wrap {
+        min-height: 330px;
+    }
+    .reviews .site__title {
+        padding: 35px 0 19px;
+        margin-left: 91px;
+    }
+    .reviews .swiper-container {
+        width: 580px;
+    }
+    .reviews__item {
+        padding: 0 100px;
+    }
+    .reviews__item p {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 32px;
+    }
+    .reviews .swiper-button-prev,
+    .reviews .swiper-button-next {
+        width: 80px;
+        height: 80px;
+        margin-top: -62px;
+    }
+    .reviews .swiper-button-prev:before,
+    .reviews .swiper-button-next:before {
+        width: 16px;
+        height: 44px;
+        margin: -22px 0 0 -8px;
+    }
+    .reviews__author {
+        font-size: 13px;
+        line-height: 17px;
+        padding-left: 33px;
+    }
+    .reviews__author-ava {
+        width: 40px;
+        height: 40px;
+    }
+    .reviews__author-info {
+        padding: 5px 0 0 16px;
+    }
+    /* --------------- /reviews --------------- */
+
     /* --------------- complaisance --------------- */
     .complaisance{
         padding-bottom: 204px;
@@ -1351,7 +1405,7 @@ a.btn_4:hover:after{
         background: url("../img/bg-footer.png") no-repeat -115px 100% #ebece7;
     }
     .site__title {
-        font-size: 25px;
+        font-size: 30px;
         padding: 55px 0 35px;
     }
     .site__title > span {
@@ -1543,6 +1597,8 @@ a.btn_4:hover:after{
 
     /* --------------- steps --------------- */
     .steps {
+        background: url("../img/line1.png") no-repeat, url("../img/line3.png") no-repeat bottom left;
+        background-color: #ebece7;
         padding: 50px 0 54px 0;
     }
     .steps .site__title {
@@ -1606,6 +1662,47 @@ a.btn_4:hover:after{
         min-width: 330px;
     }
     /* --------------- /steps --------------- */
+
+    /* --------------- reviews --------------- */
+    .reviews {
+        padding: 120px 0 0 0;
+    }
+    .reviews .site__wrap {
+        min-height: 559px;
+    }
+    .reviews .site__title {
+        padding: 56px 0 68px;
+        margin-left: 120px;
+    }
+    .reviews .swiper-container {
+        width: 1140px;
+    }
+    .reviews__item {
+        padding: 0 200px;
+    }
+    .reviews__item p {
+        font-size: 25px;
+        line-height: 45px;
+        margin-bottom: 40px;
+    }
+    .reviews .swiper-button-prev,
+    .reviews .swiper-button-next {
+        margin-top: -108px;
+    }
+    .reviews__author {
+        padding-left: 0;
+        margin-left: -9px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .reviews__author-ava {
+        width: 55px;
+        height: 55px;
+    }
+    .reviews__author-info {
+        padding: 5px 0 0 40px;
+    }
+    /* --------------- /reviews --------------- */
 
     /* --------------- complaisance --------------- */
     .complaisance{

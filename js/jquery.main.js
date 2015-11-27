@@ -38,7 +38,7 @@ var Slider = function (obj) {
     //private methods
     var _init = function () {
         var swiper = new Swiper(_obj, {
-            autoplay: 5000,
+            //autoplay: 5000,
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
             loop: true,
