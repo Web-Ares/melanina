@@ -58,6 +58,7 @@
 
                     <h1>Контакты</h1>
 
+                    <!-- address -->
                     <div class="address">
                         <address>
                             <a href="https://www.google.com.ua/maps/place/Покровский+б-р,+4%2F17с1,+Москва,+Росія,+109028">
@@ -66,17 +67,24 @@
                         </address>
                         <a href="tel:+79315554554">+7 931 555 45 54</a>
                         <a href="mailto:hello@melanina.ru">hello@melanina.ru</a>
+                        <!-- address__social -->
                         <div class="address__social">
                             <a href="#"></a>
                             <a href="#"></a>
                             <a href="#"></a>
                         </div>
+                        <!-- /address__social -->
                     </div>
+                    <!-- /address -->
 
+                    <!-- contacts__callback -->
                     <div class="contacts__callback">
+
+                        <!-- site__title -->
                         <div class="site__title">
-                            Обраная связь
+                            Обратная связь
                         </div>
+                        <!-- /site__title -->
 
                         <form method="get" action="#">
                             <fieldset>
@@ -87,31 +95,43 @@
                                 <label for="callback__email">Эл. почта</label>
                                 <input type="text" name="callback__email" id="callback__email"/>
                             </fieldset>
+                            <!-- contacts__callback-phone -->
                             <fieldset class="contacts__callback-phone">
                                 <label for="callback__phone" class="contacts__callback-mobile">Телефон</label>
                                 <label for="callback__phone" class="contacts__callback-desktop">или телефон</label>
                                 <input type="text" name="callback__phone" id="callback__phone" value="+7 "/>
                             </fieldset>
+                            <!-- /contacts__callback-phone -->
+
+                            <!-- contacts__callback-textarea -->
                             <fieldset class="contacts__callback-textarea">
-                                <label for="callback__message" class="contacts__callback-mobile">Опишите задачу</label>
-                                <label for="callback__message" class="contacts__callback-desktop">Сообщение</label>
+                                <label for="callback__message">Сообщение</label>
                                 <textarea name="callback__message" id="callback__message"></textarea>
                             </fieldset>
+                            <!-- /contacts__callback-textarea -->
+
+                            <!-- contacts__callback-mobile -->
                             <fieldset class="contacts__callback-mobile">
                                 <label for="callback__file">Прикрепить файл</label>
+                                <!-- contacts__callback-file -->
                                 <div class="contacts__callback-file">
                                     <input type="file" name="callback__file" id="callback__file" value="+7 "/>
                                 </div>
+                                <!-- contacts__callback-file -->
                             </fieldset>
+                            <!-- /contacts__callback-mobile -->
+
+                            <!-- btn-wrap -->
                             <div class="btn-wrap">
-                                <input type="submit" name="callback__send" class="btn contacts__callback-mobile" id="callback__inquiry" value="Отправить запрос"/>
-                                <input type="submit" name="callback__send" class="btn contacts__callback-desktop" id="callback__send" value="Отправить сообщение"/>
+                                <input type="submit" name="callback__send" class="btn" id="callback__send" value="Отправить сообщение"/>
                                 <a class="btn btn_3">Узнать стоимость</a>
                             </div>
+                            <!-- /btn-wrap -->
 
                         </form>
                     </div>
 
+                    <!-- download -->
                     <ul class="download">
                         <li>
                             <a href="#">Бриф на разработку сайта</a>
@@ -126,6 +146,7 @@
                             <a href="#">Бриф на проведение e-mail рассылок</a>
                         </li>
                     </ul>
+                    <!-- /download -->
 
                 </div>
                 <!-- /site__wrap -->

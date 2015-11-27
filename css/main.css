@@ -1003,12 +1003,12 @@ a.btn_4:hover:after{
 .contacts__callback .btn-wrap{
     margin-bottom: 39px;
     padding-top: 24px;
-    text-align: center;
+    text-align: left;
 }
 .contacts__callback .btn-wrap .btn{
-    margin: 0 4px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-family: "panton-extrabold", sans-serif;
 }
 .contacts__callback-textarea{
@@ -1651,14 +1651,15 @@ a.btn_4:hover:after{
     }
     .contacts__callback .btn-wrap .btn{
         width: auto;
-        margin: 0 15px;
-        padding-left: 50px;
-        padding-right: 50px;
+        margin-right: 30px;
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
         border: 2px solid #fff;
         border-radius: 50px;
     }
     .contacts__callback .btn-wrap a.btn{
-        padding-top: 24px;
+        padding-top: 22px;
     }
     /* --------------- /contacts --------------- */
 
@@ -2188,6 +2189,8 @@ a.btn_4:hover:after{
         display: inline-flex;
         vertical-align: top;
         width: 637px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     .contacts__callback-mobile{
         display: none!important;
@@ -2197,10 +2200,10 @@ a.btn_4:hover:after{
     }
     .contacts__callback .btn-wrap{
         margin-bottom: 100px;
+        padding-left: 165px;
         padding-top: 0;
     }
     .contacts__callback .btn-wrap .btn{
-        margin-left: 30px;
         margin-right: 40px;
     }
     /* --------------- /contacts --------------- */
@@ -2230,6 +2233,9 @@ a.btn_4:hover:after{
     }
     .download li a{
         color: #525251;
+    }
+    .download li a:hover{
+        text-decoration: underline;
     }
     /* --------------- /download --------------- */
 
