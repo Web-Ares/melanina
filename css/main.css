@@ -60,6 +60,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: "panton-extrabold";
+    src: url("../fonts/panton-extrabold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: "ph_500_regular_caps";
     src: url("../fonts/ph_500_regular_caps.woff") format("woff");
     font-weight: normal;
@@ -78,6 +84,10 @@
     background: #B8DBE6 url("../img/bg-site.png") no-repeat top center;
     background-size: contain;
 }
+.site_contacts{
+    background: url("../img/bg-site.png") no-repeat top left/193% auto,
+    url("../img/bg-contacts.jpg") no-repeat 0 47px/233% auto #b6e2eb;
+}
 .site_main {
     background: #B8DBE6;
 }
@@ -93,6 +103,10 @@
 }
 .site_main:before {
     display: none;
+}
+.site_contacts:before{
+    top: 69px;
+    width: 32px;
 }
 .site__content {
     position: relative;
@@ -117,6 +131,22 @@
     position: absolute;
     top: 13px;
     left: 38px;
+    background-size: contain;
+}
+.site_contacts.site_bird .site__content:after{
+    top: 45px;
+    left: 17px;
+    width: 54px;
+    height: 27px;
+}
+.site_contacts .site__content:before {
+    content: '';
+    background: url("../img/icons-place.png") no-repeat;
+    width: 24px;
+    height: 30px;
+    position: absolute;
+    top: 245px;
+    left: 228px;
     background-size: contain;
 }
 .site__header {
@@ -203,8 +233,9 @@ a.btn:visited {
     padding: 11px 19px;
     text-align: center;
     background: #ebece7;
+    cursor: pointer;
 }
-a.btn:hover {
+.btn:hover {
     background: #fff;
 }
 .btn_2 {
@@ -929,6 +960,190 @@ a.btn_4:hover:after{
 }
 /* --------------- /mini-blog --------------- */
 
+/* --------------- contacts --------------- */
+.contacts{
+    padding-top: 16px;
+}
+.contacts h1{
+    margin-bottom: 30px;
+    color: #82c500;
+    font: 25px "panton-semibold", sans-serif;
+    text-align: center;
+}
+.contacts .site__title{
+    padding-bottom: 25px;
+    font-size: 16px;
+}
+.contacts__callback{
+    width: 290px;
+    padding-left: 11px;
+    margin: auto;
+}
+.contacts__callback fieldset{
+    margin-bottom: 13px;
+}
+.contacts__callback label{
+    display: inline-block;
+    width: 75px;
+    font-size: 9px;
+    vertical-align: middle;
+}
+.contacts__callback fieldset input,
+.contacts__callback fieldset textarea{
+    width: 190px;
+    height: 27px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    font: 10px "panton-semibold", sans-serif;
+}
+.contacts__callback .btn-wrap{
+    margin-bottom: 39px;
+    padding-top: 24px;
+    text-align: center;
+}
+.contacts__callback .btn-wrap .btn{
+    margin: 0 4px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: "panton-extrabold", sans-serif;
+}
+.contacts__callback-textarea{
+    position: relative;
+    padding: 7px 0 14px;
+}
+.contacts__callback-textarea:after,
+.contacts__callback-textarea:before{
+    content: '';
+    position: absolute;
+}
+.contacts__callback-textarea:before{
+    top: 0;
+    right: 20px;
+    width: 38px;
+    height: 31px;
+    background: url("../img/bird3.png") no-repeat;
+    background-size: cover;
+}
+.contacts__callback-textarea:after{
+    right: 14px;
+    bottom: -7px;
+    width: 56px;
+    height: 22px;
+    background: url("../img/bg-patch.png") no-repeat 85% 100%;
+}
+.contacts__callback-textarea label{
+    margin-bottom: 15px;
+}
+.contacts__callback fieldset textarea{
+    display: block;
+    width: 270px;
+    height: 63px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.contacts__callback-file {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 90px;
+    height: 25px;
+    margin-left: 15px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+    cursor: default;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+.contacts__callback-file:hover{
+    background-color: transparent;
+}
+.contacts__callback-file:before{
+    content: 'Выбрать файл';
+    position: relative;
+    top: 1px;
+    font: 7px "panton-extrabold", sans-serif;
+    text-transform: uppercase;
+}
+.contacts__callback-file input {
+    height: 90px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    font-size: 200px;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    cursor: pointer;
+}
+.contacts__callback-desktop{
+    display: none!important;
+}
+/* --------------- /contacts --------------- */
+
+/* --------------- address --------------- */
+.address{
+    width: 270px;
+    height: 172px;
+    margin-left: -26px;
+    margin-bottom: 53px;
+    padding-top: 49px;
+    padding-left: 52px;
+    background: url("../img/bg-address.png") no-repeat 0 0/cover;
+    font: 14px/19px "panton-semibold", sans-serif;
+    color: #525251;
+}
+.address a{
+    font-size: 10px;
+    color: #525251;
+    cursor: default;
+}
+.address > a{
+    margin-right: 15px;
+}
+.address address{
+    width: 160px;
+    margin-bottom: 2px;
+    font-style: normal;
+}
+.address address a{
+    font-size: 14px;
+}
+.address__social{
+    padding-top: 11px;
+}
+.address__social a{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    background: url("../img/icons-social.png") no-repeat 0 0/auto 12px;
+    transition: transform .3s ease;
+    -webkit-transition: transform .3s ease;
+    cursor: pointer;
+}
+.address__social a:hover{
+    transform: translateY(-1px);
+    -webkit-transform: translateY(-1px);
+    height: 13px;
+}
+.address__social a+a{
+    background-position: -19px 0;
+}
+.address__social a+a+a{
+    background-position: -41px 0;
+}
+/* --------------- /address --------------- */
+
+/* --------------- download --------------- */
+.download {
+    display: none;
+}
+/* --------------- /download --------------- */
+
 /* --------------- copyright --------------- */
 .copyright span{
     display: block;
@@ -989,6 +1204,22 @@ a.btn_4:hover:after{
         height: 187px;
         top: 204px;
         left: 26px;
+    }
+    .site:before{
+        top: 139px;
+        width: 64px;
+    }
+    .site_contacts.site_bird .site__content:after{
+        top: 90px;
+        left: 31px;
+        width: 111px;
+        height: 59px;
+    }
+    .site_contacts .site__content:before{
+        top: 489px;
+        left: 455px;
+        width: 45px;
+        height: 60px;
     }
     .site__header {
         height: 100px;
@@ -1348,6 +1579,131 @@ a.btn_4:hover:after{
     }
     /* --------------- /mini-blog --------------- */
 
+    /* --------------- contacts --------------- */
+    .contacts{
+        padding-top: 31px;
+    }
+    .contacts h1{
+        margin-bottom: 61px;
+        font-size: 50px;
+    }
+    .contacts .site__title{
+        padding-bottom: 55px;
+        font-size: 29px;
+    }
+    .contacts fieldset input, .contacts textarea{
+        width: 190px;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    .contacts__callback{
+        width: 563px;
+        padding-left: 22px;
+    }
+    .contacts__callback fieldset {
+        margin-bottom: 31px;
+    }
+    .contacts__callback label {
+        width: 158px;
+        font-size: 18px;
+    }
+    .contacts__callback fieldset input,
+    .contacts__callback fieldset textarea{
+        width: 379px;
+        height: 49px;
+        padding: 0 25px;
+        font-size: 15px;
+    }
+    .contacts__callback-textarea{
+        padding: 13px 0 21px;
+    }
+    .contacts__callback-textarea:before{
+        width: 76px;
+        height: 62px;
+    }
+    .contacts__callback-textarea:after{
+        right: 23px;
+        bottom: 0;
+    }
+    .contacts__callback-textarea label{
+        margin-bottom: 27px;
+    }
+    .contacts__callback fieldset textarea{
+        width: 540px;
+        height: 130px;
+        border-radius: 15px;
+    }
+    .contacts__callback-file{
+        width: 180px;
+        height: 50px;
+        margin-left: 27px;
+    }
+    .contacts__callback-file:before{
+        top: 15px;
+        font-size: 14px;
+    }
+    .contacts__callback .btn-wrap{
+        margin-bottom: 80px;
+        padding-top: 41px;
+    }
+    .contacts__callback .btn-wrap .btn{
+        width: auto;
+        margin: 0 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        border: 2px solid #fff;
+        border-radius: 50px;
+    }
+    .contacts__callback .btn-wrap a.btn{
+        padding-top: 24px;
+    }
+    /* --------------- /contacts --------------- */
+
+    /* --------------- address --------------- */
+    .address {
+        width: 548px;
+        height: 351px;
+        margin-left: -62px;
+        margin-bottom: 98px;
+        padding-top: 98px;
+        padding-left: 113px;
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .address address{
+        width: 305px;
+        margin-bottom: 10px;
+    }
+    .address a{
+        font-size: 19px;
+    }
+    .address > a {
+        margin-right: 37px;
+    }
+    .address address a {
+        font-size: 29px;
+    }
+    .address__social{
+        padding-top: 23px;
+    }
+    .address__social a{
+        width: 20px;
+        height: 23px;
+        margin-right: 19px;
+        background-size: auto 23px;
+    }
+    .address__social a:hover{
+        height: 24px;
+    }
+    .address__social a+a{
+        background-position: -41px 0;
+    }
+    .address__social a+a+a{
+        background-position: -80px 0;
+    }
+    /* --------------- /address --------------- */
+
     /* --------------- copyright --------------- */
     .copyright{
         line-height: 14px;
@@ -1384,6 +1740,21 @@ a.btn_4:hover:after{
         width: 125px;
         height: 191px;
         top: 197px;
+    }
+    .site_contacts {
+        background: url("../img/bg-site.png") no-repeat top center/100% auto,
+        url("../img/bg-contacts.jpg") no-repeat center 216px/117% auto #b6e2eb;
+    }
+    .site_contacts .site__content:before{
+        top: 415px;
+        left: 814px;
+    }
+    .site_contacts.site_bird .site__content:after{
+        top: -28px;
+        left: 369px;
+    }
+    .site_contacts:before{
+        display: none;
     }
     .site_air .site__content:before {
         width: 77px;
@@ -1761,6 +2132,101 @@ a.btn_4:hover:after{
         line-height: 55px;
     }
     /* --------------- /mini-blog --------------- */
+
+    /* --------------- contacts --------------- */
+    .contacts h1{
+        margin-bottom: 0;
+        padding-top: 56px;
+        padding-right: 222px;
+        font-size: 59px;
+        text-align: right;
+    }
+    .contacts__callback{
+        width: 870px;
+        margin: 0;
+        padding-left: 63px;
+    }
+    .contacts .site__title{
+        padding-bottom: 33px;
+        text-align: left;
+    }
+    .contacts__callback label{
+        font-size: 15px;
+    }
+    fieldset.contacts__callback-email{
+        float: left;
+    }
+    fieldset.contacts__callback-email input{
+        width: 300px;
+    }
+    fieldset.contacts__callback-phone{
+        padding-left: 20px;
+    }
+    fieldset.contacts__callback-phone label{
+        width: auto;
+        margin-right: 8px;
+    }
+    fieldset.contacts__callback-phone input{
+        width: 220px;
+    }
+    fieldset.contacts__callback-textarea{
+        padding-top: 0;
+        margin-bottom: 10px;
+    }
+    .contacts__callback-textarea:before{
+        top: -139px;
+    }
+    .contacts__callback-textarea label{
+        padding-top: 15px;
+    }
+    .contacts__callback fieldset textarea{
+        display: inline-flex;
+        vertical-align: top;
+        width: 637px;
+    }
+    .contacts__callback-mobile{
+        display: none!important;
+    }
+    .contacts__callback-desktop{
+        display: inline-block!important;;
+    }
+    .contacts__callback .btn-wrap{
+        margin-bottom: 100px;
+        padding-top: 0;
+    }
+    .contacts__callback .btn-wrap .btn{
+        margin-left: 30px;
+        margin-right: 40px;
+    }
+    /* --------------- /contacts --------------- */
+
+    /* --------------- address --------------- */
+    .address{
+        margin-top: -85px;
+        margin-left: 47px;
+        margin-bottom: 208px;
+    }
+    /* --------------- /address --------------- */
+
+    /* --------------- download --------------- */
+    .download{
+        display: block;
+        margin-bottom: 135px;
+        padding-left: 224px;
+    }
+    .download li{
+        display: inline-block;
+        vertical-align: top;
+        width: 150px;
+        margin-right: 86px;
+        padding-top: 83px;
+        font: 15px/20px "panton-semibold", sans-serif;
+        background: url("../img/icons-document.png") no-repeat 0 0;
+    }
+    .download li a{
+        color: #525251;
+    }
+    /* --------------- /download --------------- */
 
     /* --------------- copyright --------------- */
     .copyright{
