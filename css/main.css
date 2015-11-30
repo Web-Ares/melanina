@@ -115,6 +115,7 @@
 .site_portfolio {
     background-color: #b5e2eb;
 }
+.site_about .site__content:before,
 .site_air .site__content:before {
     content: '';
     background: url("../img/air.png") no-repeat;
