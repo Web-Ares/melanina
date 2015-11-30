@@ -1271,6 +1271,55 @@ li:hover .portfolio__like:after{
 }
 /* --------------- /portfolio --------------- */
 
+/* --------------- computer-skills --------------- */
+.computer-skills{
+    position: relative;
+    padding-bottom: 25px;
+    background: url("../img/bg-computer-skills.png") repeat 0 0 #ebece7;
+    text-align: center;
+}
+.computer-skills:after,
+.computer-skills:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: 5px;
+    background: url("../img/deco-footer.png") repeat-x;
+}
+.computer-skills:after{
+    top: 100%;
+    bottom: auto;
+    background: url("../img/deco-skills.png") repeat-x;
+}
+.computer-skills dl{
+    margin-bottom: 24px;
+    padding-top: 15px;
+    font-size: 14px;
+    text-align: left;
+    color: #525251;
+}
+.computer-skills dt{
+    margin-left: 39px;
+    margin-bottom: 30px;
+    font-family: "panton-bold", sans-serif;
+    text-transform: uppercase;
+}
+.computer-skills dd{
+    font:15px/35px "panton-bold", sans-serif;
+}
+.computer-skills img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.computer-skills span{
+    margin-left: 5px;
+    font-family: "panton-regular-italic", sans-serif;
+}
+/* --------------- /computer-skills --------------- */
+
 /* --------------- copyright --------------- */
 .copyright span{
     display: block;
@@ -1841,7 +1890,14 @@ li:hover .portfolio__like:after{
     .portfolio__wrap li{
         display: inline-block;
     }
-        /* --------------- /portfolio --------------- */
+    /* --------------- /portfolio --------------- */
+
+    /* --------------- computer-skills --------------- */
+    .computer-skills dl{
+        display: inline-block;
+        width: 49%;
+    }
+    /* --------------- /computer-skills --------------- */
 
     /* --------------- copyright --------------- */
     .copyright{
@@ -2394,6 +2450,19 @@ li:hover .portfolio__like:after{
         display: inline-block;
     }
     /* --------------- /portfolio --------------- */
+
+    /* --------------- computer-skills --------------- */
+    .computer-skills{
+        padding: 42px 0 78px;
+    }
+    .computer-skills dl{
+        display: inline-block;
+        width: 24%;
+    }
+    .computer-skills .site__title{
+        padding-bottom: 51px;
+    }
+    /* --------------- /computer-skills --------------- */
 
     /* --------------- copyright --------------- */
     .copyright{
