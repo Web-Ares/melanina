@@ -5,10 +5,17 @@ $(function(){
         $(window).on({
             'load':function(){
                 if($(this).width() > 640) {
-                    var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
-                        swiffyobject, {  });
 
-                    stage.start();
+                    $.getScript(location.href + 'js/runtime.js', function(){});
+
+                    $.getScript(location.href + 'js/pic-script.js', function(){
+                        var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
+                            swiffyobject, {  });
+
+                        stage.start();
+                    });
+
+
                 }
             }
         });
