@@ -1,0 +1,98 @@
+.ares-select{
+    position: relative;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 160px;
+    height: 40px;
+    margin-right: 10px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    cursor: pointer;
+}
+.ares-select:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 38px;
+    background: url("../img/icons-select.png") no-repeat 7px 17px;
+}
+.ares-select__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    padding: 11px 40px 0 28px;
+    font: 12px "panton-extrabold", sans-serif;
+    text-transform: uppercase;
+    color: #525251;
+}
+.ares-select_mobile select {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 100%;
+    bottom: -1px;
+}
+.ares-select_custom select{
+    position: absolute;
+    left: -100000px;
+}
+.ares-select__popup {
+    position: absolute;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #fff;
+    font: 12px "panton-semibold", sans-serif;
+    overflow: hidden;
+    z-index: 10;
+}
+.ares-select__popup ul {
+    z-index: 1;
+}
+.ares-select__popup li{
+    padding: 5px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+.ares-select__popup li.active {
+    color: #000;
+    background-color: #ebece7;
+}
+.ares-select__popup li:hover{
+    background-color: #ebece7;
+}
+.ares-select__popup .iScrollVerticalScrollbar {
+    position: absolute;
+    width: 15px;
+    top: 0;
+    bottom: 0;
+    background: #ccc;
+    right: 0;
+    z-index: 3;
+    -webkit-transform: translateZ(0);
+}
+.ares-select__popup .iScrollIndicator {
+    background: #b6e2eb;
+}
+
+@media (min-width: 1320px) {
+    .ares-select{
+        width: 180px;
+    }
+}

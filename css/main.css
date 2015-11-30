@@ -112,6 +112,9 @@
     position: relative;
     z-index: 2;
 }
+.site_portfolio {
+    background-color: #b5e2eb;
+}
 .site_air .site__content:before {
     content: '';
     background: url("../img/air.png") no-repeat;
@@ -1148,6 +1151,91 @@ a.btn_4:hover:after{
 }
 /* --------------- /download --------------- */
 
+/* --------------- portfolio --------------- */
+.portfolio {
+    text-align: center;
+}
+.portfolio h1 {
+    margin-bottom: 23px;
+    padding-top: 31px;
+    color: #82c500;
+    font: 25px "panton-semibold", sans-serif;
+    text-align: center;
+}
+.portfolio a{
+    display: block;
+    padding: 0 30px;
+    color: #525251;
+    font-size: 12px;
+    font-family: "panton-regular-italic", sans-serif;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+.portfolio__wrap {
+    margin: 0 -20px;
+    text-align: center;
+}
+.portfolio__wrap li {
+    display: block;
+    vertical-align: top;
+    width: 306px;
+    height: 360px;
+    margin: 0 auto;
+    background: url("../img/bg-portfolio.png") no-repeat center #fff;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+.portfolio__wrap h3 {
+    font: normal 23px 'ph_500_regular_caps', sans-serif;
+    line-height: 35px;
+    padding: 33px 0 17px;
+    color: #525251;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+.portfolio__like{
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 33px;
+    font-size: 12px;
+    font-family: "panton-bold", sans-serif;
+    color: #fff;
+    background: url("../img/icons-like.png") no-repeat 0 0;
+}
+.portfolio__like:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../img/icons-like.png") no-repeat 0 -41px;
+}
+.portfolio__selects {
+    margin-bottom: 21px
+}
+.portfolio__selects > div:first-child{
+    display: none;
+}
+.portfolio__img {
+    width: 246px;
+    margin-bottom: 41px;
+}
+.portfolio__img img{
+    width: 100%;
+}
+.portfolio__wrap li:hover {
+    background-color: #6fba00;
+}
+.portfolio__wrap li:hover h3{
+    color: #fff;
+}
+.portfolio__wrap li:hover a{
+    color: #fff;
+}
+/* --------------- /portfolio --------------- */
+
 /* --------------- copyright --------------- */
 .copyright span{
     display: block;
@@ -1708,6 +1796,18 @@ a.btn_4:hover:after{
     }
     /* --------------- /address --------------- */
 
+    /* --------------- portfolio --------------- */
+    .portfolio h1{
+        font-size: 50px;
+    }
+    .portfolio__selects{
+        margin-bottom: 41px
+    }
+    .portfolio__wrap li{
+        display: inline-block;
+    }
+        /* --------------- /portfolio --------------- */
+
     /* --------------- copyright --------------- */
     .copyright{
         line-height: 14px;
@@ -2242,6 +2342,21 @@ a.btn_4:hover:after{
         text-decoration: underline;
     }
     /* --------------- /download --------------- */
+
+    /* --------------- portfolio --------------- */
+    .portfolio h1{
+        padding-top: 0;
+        margin-bottom: 44px;
+        padding-top: 14px;
+        font-size: 59px;
+    }
+    .portfolio__select{
+        margin-bottom: 71px
+    }
+    .portfolio__selects > div:first-child{
+        display: inline-block;
+    }
+    /* --------------- /portfolio --------------- */
 
     /* --------------- copyright --------------- */
     .copyright{
