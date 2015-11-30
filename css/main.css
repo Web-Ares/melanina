@@ -1271,6 +1271,93 @@ li:hover .portfolio__like:after{
 }
 /* --------------- /portfolio --------------- */
 
+/* --------------- about-me --------------- */
+.about-me{
+    padding: 18px 0 0 0;
+}
+.about-me__pic{
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    float: right;
+    margin-right: -52px;
+}
+.about-me__pic img{
+    width: 100%;
+    height: 100%;
+}
+.about-me__title{
+    font-size: 18px;
+    color: #82c500;
+    font-family: "panton-semibold", sans-serif;
+    font-weight: 400;
+    padding: 0 0 18px 37px;
+}
+.about-me p{
+    width: 154px;
+    font-size: 11px;
+    line-height: 14px;
+    font-family: "panton-regular-italic", sans-serif;
+    margin-bottom: 29px;
+}
+.about-me__slider{
+    position: relative;
+    width: 100%;
+}
+.slider__item{
+    margin: 0 auto;
+    width: 150px;
+    text-align: center;
+}
+.slider__item h3{
+    font-size: 7px;
+    line-height: 10px;
+    margin-bottom: 4px;
+}
+.slider__item div{
+    width: 100%;
+    height: 110px;
+}
+.slider__item div img{
+    width: 100%;
+    height: 100%;
+}
+.slider__item p{
+    font-size: 6px;
+}
+.slider__item span{
+    font-size: 7.5px;
+}
+.slider__item span strong{
+    padding-right: 4px;
+}
+.about-me .site__title{
+    display: block;
+    text-align: center;
+    padding: 32px 0 15px;
+}
+.about-me__prev{
+    position: absolute;
+    top: 50%;
+    margin-top: -47px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    background: url("../img/arron-left.png") no-repeat center;
+    background-size: contain;
+}
+.about-me__next{
+    position: absolute;
+    top: 50%;
+    margin-top: -47px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    background: url("../img/arron-right.png") no-repeat center;
+    background-size: contain;
+}
+/* --------------- /about-me --------------- */
+
 /* --------------- copyright --------------- */
 .copyright span{
     display: block;
@@ -1848,6 +1935,57 @@ li:hover .portfolio__like:after{
         line-height: 14px;
     }
     /* --------------- /copyright --------------- */
+
+    /* ---------------about-me --------------- */
+    .about-me {
+        padding: 37px 0 0 0;
+    }
+    .about-me p{
+        width: 306px;
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .about-me__pic{
+        width: 350px;
+        height: 350px;
+        margin-right: -92px;
+    }
+    .about-me__title{
+    font-size: 36px;
+    }
+    .about-me__prev{
+       width: 50px;
+        height: 50px;
+        margin-top: -80px;
+    }
+    .about-me__next{
+        width: 50px;
+        height: 50px;
+        margin-top: -80px;
+    }
+    .slider__item {
+        width: 300px;
+    }
+    .slider__item div {
+        width: 100%;
+        height: 220px;
+    }
+    .slider__item h3 {
+        font-size: 28px;
+        line-height: 37px;
+        margin-bottom: 4px;
+    }
+    .slider__item span {
+        font-size: 15px;
+    }
+    .slider__item span strong {
+        padding-right: 8px;
+    }
+    .slider__item p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    /* --------------- /about-me --------------- */
 
     /* --------------- footer --------------- */
     .footer__info{
