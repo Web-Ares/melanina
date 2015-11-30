@@ -1,7 +1,5 @@
 $(function(){
 
-    console.log()
-
     if ($('.strategy').length) {
 
         $(window).on({
