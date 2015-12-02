@@ -1271,6 +1271,64 @@ li:hover .portfolio__like:after{
 }
 /* --------------- /portfolio --------------- */
 
+/* ----------------- skills ----------------- */
+.skills{
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+.skills .site__title{
+    padding-bottom: 46px;
+    font-size: 31px;
+    line-height: 40px;
+}
+.skills img{
+    width: 100%;
+}
+.skills dl{
+    margin-bottom: 17px;
+}
+.skills dt{
+    margin-bottom: 29px;
+    padding-left: 25px;
+    font: 14px "panton-bold", sans-serif;
+    text-transform: uppercase;
+}
+.skills dd{
+    margin-bottom: 21px;
+    padding-left: 25px;
+    font-size: 13px;
+    line-height: 25px;
+    background: url("../img/icons-star.png") no-repeat 0 2px;
+}
+.skills__developments{
+    margin-bottom: 60px;
+    padding-top: 65px;
+    text-align: center;
+}
+.skills__developments li{
+    display: inline-block;
+    vertical-align: top;
+    width: 90px;
+    margin: 0 5px;
+    font-size: 10px;
+    color: #525251;
+    text-align: center;
+    text-transform: uppercase;
+}
+.skills__developments span{
+    display: block;
+    margin: 4px 0;
+    font: 50px "panton-extrabold", sans-serif;
+    color: #ff6411;
+}
+.skills__btns{
+    text-align: center;
+}
+.skills__btns-desktop{
+    display: none;
+}
+/* ---------------- /skills ----------------- */
+
 /* --------------- computer-skills --------------- */
 .computer-skills{
     position: relative;
@@ -1891,6 +1949,39 @@ li:hover .portfolio__like:after{
         display: inline-block;
     }
     /* --------------- /portfolio --------------- */
+
+    /* ----------------- skills ----------------- */
+    .skills{
+        padding-bottom: 55px;
+    }
+    .skills .site__title{
+        line-height: 18px;
+    }
+    .skills dl{
+        display: inline-block;
+        vertical-align: top;
+        width: 47%;
+        margin-left: 30px;
+    }
+    .skills dl:nth-child(even){
+        margin-left: 0;
+    }
+    .skills img{
+        float: left;
+        width: 362px;
+        margin-top: 5px;
+        margin-left: -86px;
+    }
+    .skills__developments{
+        float: right;
+        margin-right: -13px;
+    }
+    .skills__developments li {
+        width: auto;
+        margin-left: 37px;
+        margin-right: 0;
+    }
+    /* ----------------- /skills ----------------- */
 
     /* --------------- computer-skills --------------- */
     .computer-skills dl{
