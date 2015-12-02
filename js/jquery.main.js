@@ -39,11 +39,6 @@ $(function(){
         Slider($(this));
     });
 
-    $('.about-me__slider').each(function () {
-        Slider($(this));
-
-    } );
-
 } );
 
 
@@ -61,7 +56,7 @@ var Slider = function (obj) {
         _init = function () {
             _addEvents();
         };
-    if (_obj.hasClass('swiper-container')){
+    if (_obj.hasClass('reviews__slider')){
         var swiper = new Swiper(_obj, {
             autoplay: 7000,
             nextButton: '.swiper-button-next',
@@ -70,6 +65,14 @@ var Slider = function (obj) {
             loopedSlides: 3,
             slidesPerView: 'auto',
             centeredSlides: true
+        });
+    }
+    if (_obj.hasClass('experience__slider')){
+        var __swiperSlider = new Swiper(_obj, {
+            scrollbar: '.swiper-scrollbar',
+            direction: 'horizontal',
+            slidesPerView: 'auto',
+            mousewheelControl: true
         });
     }
     if (_obj.hasClass('about-me__slider')){
@@ -91,48 +94,6 @@ var Slider = function (obj) {
     }
 
 _init();
-
-
-    var myMap;
-
-    function init () {
-        myMap = new ymaps.Map('map', {
-            center: $('.map__item').eq(0).attr('data-coord').split(', '),
-            zoom: 12
-        });
-
-        $.each($('.map__item'), function(i){
-            var curElem = $(this);
-
-            if (curElem.attr('data-coord')) {
-                var coord = curElem.attr('data-coord').split(', ');
-
-                myMap.geoObjects.add(new ymaps.Placemark(
-                    [coord[0], coord[1]],
-                    {   hintContent: "Описание",
-                        balloonContentBody: curElem.find('a').text() }, {
-                        iconLayout: 'default#image',
-                        iconImageHref: 'img/map_icon.png',
-                        iconImageSize: [30, 30],
-                        iconImageOffset: [-15, -25]
-                    }
-                ));
-            }
-        });
-    }
-
-    ymaps.ready(init);
-
-    $('.map__item span').on({
-        'click':function(){
-            var coord = $(this).parent().attr('data-coord').split(', ');
-
-            myMap.setCenter(coord);
-
-            return false;
-        }
-    });
-
 
 };
 
