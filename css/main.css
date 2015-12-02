@@ -1329,7 +1329,7 @@ li:hover .portfolio__like:after{
     height: 175px;
     border-radius: 50%;
     float: right;
-    margin-right: -52px;
+    margin-right: -35px;
 }
 .about-me__pic img{
     width: 100%;
@@ -1340,30 +1340,41 @@ li:hover .portfolio__like:after{
     color: #82c500;
     font-family: "panton-semibold", sans-serif;
     font-weight: 400;
-    padding: 0 0 18px 37px;
+    padding: 0 0 14px 24px;
 }
 .about-me p{
-    width: 154px;
+    width: 137px;
     font-size: 11px;
-    line-height: 14px;
+    line-height: 15px;
+    color: #525251;
     font-family: "panton-regular-italic", sans-serif;
     margin-bottom: 29px;
 }
+.about-me .site__wrap p:last-child{
+    display: none;
+}
 .about-me__slider{
     position: relative;
-    width: 100%;
+    text-align: center;
+    max-width: 1260px;
+    overflow: hidden;
 }
 .slider__item{
+    display: inline-block;
+    vertical-align: top;
     margin: 0 auto;
     width: 150px;
     text-align: center;
 }
 .slider__item h3{
+    min-height: 20px;
     font-size: 7px;
     line-height: 10px;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
 }
 .slider__item div{
+    margin-bottom: 9px;
     width: 100%;
     height: 110px;
 }
@@ -1373,37 +1384,50 @@ li:hover .portfolio__like:after{
 }
 .slider__item p{
     font-size: 6px;
+    width: 156px;
+    line-height: 11px;
+    margin-bottom: 23px;
 }
 .slider__item span{
+    display: block;
     font-size: 7.5px;
+    margin-bottom: 4px;
 }
 .slider__item span strong{
     padding-right: 4px;
 }
 .about-me .site__title{
+    font-size: 21px;
     display: block;
     text-align: center;
-    padding: 32px 0 15px;
+    padding: 19px 0 15px;
+    letter-spacing: 0.3px;
+    color: #5d93ae;
 }
 .about-me__prev{
     position: absolute;
     top: 50%;
-    margin-top: -47px;
-    left: 10px;
+    margin-top: -34px;
+    left: 0px;
     width: 25px;
     height: 25px;
     background: url("../img/arron-left.png") no-repeat center;
     background-size: contain;
+    z-index: 5;
 }
 .about-me__next{
     position: absolute;
     top: 50%;
-    margin-top: -47px;
-    right: 10px;
+    margin-top: -34px;
+    right: 0px;
     width: 25px;
     height: 25px;
     background: url("../img/arron-right.png") no-repeat center;
     background-size: contain;
+    z-index: 5;
+}
+.about-me__points{
+    display: none;
 }
 /* --------------- /about-me --------------- */
 
@@ -1994,30 +2018,32 @@ li:hover .portfolio__like:after{
 
     /* ---------------about-me --------------- */
     .about-me {
-        padding: 37px 0 0 0;
+        padding: 40px 0 0 0;
     }
     .about-me p{
-        width: 306px;
+        width: 280px;
         font-size: 22px;
-        line-height: 28px;
+        line-height: 30px;
     }
     .about-me__pic{
         width: 350px;
         height: 350px;
-        margin-right: -92px;
+        margin-right: -87px;
     }
     .about-me__title{
-    font-size: 36px;
+        font-size: 36px;
+        padding: 0 0 23px 49px;
     }
     .about-me__prev{
        width: 50px;
         height: 50px;
-        margin-top: -80px;
+        margin-top: -67px;
     }
     .about-me__next{
         width: 50px;
         height: 50px;
-        margin-top: -80px;
+        margin-top: -67px;
+        right: -18px;
     }
     .slider__item {
         width: 300px;
@@ -2025,21 +2051,39 @@ li:hover .portfolio__like:after{
     .slider__item div {
         width: 100%;
         height: 220px;
+        margin-left: 8px;
+        margin-bottom: 18px;
     }
     .slider__item h3 {
-        font-size: 28px;
-        line-height: 37px;
-        margin-bottom: 4px;
+        min-height: 42px;
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 21px;
+        letter-spacing: 0.9px;
+        padding-left: 16px;
+    }
+    .about-me .site__title {
+        font-size: 41px;
+        display: block;
+        text-align: center;
+        padding: 65px 0 26px 24px;
+        letter-spacing: 1px;
+        color: #5d93ae;
     }
     .slider__item span {
-        font-size: 15px;
+        font-size: 13px;
+        padding-left: 17px;
+        margin-bottom: 11px;
     }
     .slider__item span strong {
         padding-right: 8px;
+        font-size: 15px;
     }
     .slider__item p {
         font-size: 12px;
-        line-height: 16px;
+        line-height: 19px;
+        width: 316px;
+        margin-bottom: 50px;
     }
     /* --------------- /about-me --------------- */
 
@@ -2571,6 +2615,118 @@ li:hover .portfolio__like:after{
         text-decoration: underline;
     }
     /* --------------- /download --------------- */
+
+    /* --------------- about-me --------------- */
+    .about-me {
+        padding: 21px 0 0 0;
+    }
+    .about-me__pic {
+        width: 524px;
+        height: 524px;
+        margin-right: 55px;
+    }
+    .about-me__title {
+        font-size: 61px;
+        padding: 80px 0 66px 160px;
+    }
+    .about-me .site__wrap p {
+        display: none;
+    }
+    .about-me .site__wrap p:last-child{
+        display: block;
+        text-align: center;
+        width: 545px;
+        font-size: 22px;
+        line-height: 35px;
+        padding-left: 0px;
+        letter-spacing: -1px;
+    }
+    .about-me .site__title {
+        text-align: left;
+        padding: 131px 0 83px 0px;
+        letter-spacing: 0.8px;
+        margin-left: -38px;
+    }
+    .about-me .site__wrap .slider__item p {
+        font-size: 12px;
+        line-height: 19px;
+        width: 100%;
+        margin-bottom: 140px;
+        text-align: left;
+    }
+    .about-me__prev{
+        display: none;
+    }
+    .about-me__next{
+        display: none;
+    }
+    .slider__item{
+        position: relative;
+        text-align: left;
+    }
+    .about-me__slider:after{
+        content: "";
+        position: absolute;
+        top: 137px;
+        left: 409px;
+        width: 4px;
+        height: 60px;
+        background: url("../img/slider-dote.png") no-repeat center;
+    }
+    .about-me__slider:before{
+        content: "";
+        position: absolute;
+        top: 137px;
+        right: 409px;
+        width: 4px;
+        height: 60px;
+        background: url("../img/slider-dote.png") no-repeat center;
+    }
+    .slider__item h3 {
+        min-height: 41px;
+        padding-left: 0;
+    }
+    .slider__item div {
+        margin-left: 0;
+    }
+    .slider__item span {
+        padding-left: 0;
+    }
+    .about-me__points {
+        position: absolute;
+        width: 100px;
+        left: 50%;
+        bottom: 24px;
+        display: block;
+        z-index: 5;
+    }
+    .newest-games__points span:hover{
+        background: #fff;
+        opacity: 1;
+    }
+    .about-me__points span {
+        width: 10px;
+        height: 10px;
+        margin-left: 4px;
+        background: #fff;
+        opacity: 1;
+    }
+    span.swiper-pagination-bullet-active:hover{
+        opacity: 1;
+        cursor: default;
+    }
+    .about-me__points span:hover {
+        background: #525251;
+        opacity: 1;
+    }
+    .about-me__points span:active {
+        background: #525251;
+        opacity: 1;
+    }
+    span.swiper-pagination-bullet-active {
+        background-color: #525251;
+    }
+    /* --------------- /about-me --------------- */
 
     /* --------------- portfolio --------------- */
     .portfolio{
