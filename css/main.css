@@ -1353,10 +1353,14 @@ li:hover .portfolio__like:after{
 .about-me .site__wrap p:last-child{
     display: none;
 }
+.about-me .site__wrap .slider__item p:last-child {
+    display: block;
+}
 .about-me__slider{
     position: relative;
     text-align: center;
-    max-width: 1260px;
+    width: 290px;
+    margin: 0 auto;
     overflow: hidden;
 }
 .slider__item{
@@ -1367,6 +1371,7 @@ li:hover .portfolio__like:after{
     text-align: center;
 }
 .slider__item h3{
+    font-family: "panton-bold", sans-serif;
     min-height: 20px;
     font-size: 7px;
     line-height: 10px;
@@ -2043,15 +2048,18 @@ li:hover .portfolio__like:after{
         width: 50px;
         height: 50px;
         margin-top: -67px;
-        right: -18px;
+        right: 0;
+    }
+    .about-me__slider {
+        width: 579px;
     }
     .slider__item {
         width: 300px;
+        margin-left: 12px;
     }
     .slider__item div {
         width: 100%;
         height: 220px;
-        margin-left: 8px;
         margin-bottom: 18px;
     }
     .slider__item h3 {
@@ -2066,14 +2074,14 @@ li:hover .portfolio__like:after{
         font-size: 41px;
         display: block;
         text-align: center;
-        padding: 65px 0 26px 24px;
-        letter-spacing: 1px;
+        padding: 65px 0 26px 17px;
+        letter-spacing: 0.8px;
         color: #5d93ae;
     }
     .slider__item span {
         font-size: 13px;
         padding-left: 17px;
-        margin-bottom: 11px;
+        margin-bottom: 10px;
     }
     .slider__item span strong {
         padding-right: 8px;
@@ -2623,11 +2631,11 @@ li:hover .portfolio__like:after{
     .about-me__pic {
         width: 524px;
         height: 524px;
-        margin-right: 55px;
+        margin-right: 49px;
     }
     .about-me__title {
         font-size: 61px;
-        padding: 80px 0 66px 160px;
+        padding: 80px 0 66px 195px;
     }
     .about-me .site__wrap p {
         display: none;
@@ -2638,12 +2646,12 @@ li:hover .portfolio__like:after{
         width: 545px;
         font-size: 22px;
         line-height: 35px;
-        padding-left: 0px;
+        margin-left: 35px;
         letter-spacing: -1px;
     }
     .about-me .site__title {
         text-align: left;
-        padding: 131px 0 83px 0px;
+        padding: 131px 0 88px 37px;
         letter-spacing: 0.8px;
         margin-left: -38px;
     }
@@ -2651,8 +2659,12 @@ li:hover .portfolio__like:after{
         font-size: 12px;
         line-height: 19px;
         width: 100%;
-        margin-bottom: 140px;
+        margin-bottom: 88px;
         text-align: left;
+        margin-left: 0;
+    }
+    .about-me .site__wrap {
+        padding: 0 15px;
     }
     .about-me__prev{
         display: none;
@@ -2663,12 +2675,16 @@ li:hover .portfolio__like:after{
     .slider__item{
         position: relative;
         text-align: left;
+        margin-left: 0;
+    }
+    .about-me__slider {
+        width: 1260px;
     }
     .about-me__slider:after{
         content: "";
         position: absolute;
-        top: 137px;
-        left: 409px;
+        top: 144px;
+        left: 389px;
         width: 4px;
         height: 60px;
         background: url("../img/slider-dote.png") no-repeat center;
@@ -2676,27 +2692,31 @@ li:hover .portfolio__like:after{
     .about-me__slider:before{
         content: "";
         position: absolute;
-        top: 137px;
-        right: 409px;
+        top: 144px;
+        right: 389px;
         width: 4px;
         height: 60px;
         background: url("../img/slider-dote.png") no-repeat center;
     }
     .slider__item h3 {
-        min-height: 41px;
+        min-height: 44px;
         padding-left: 0;
+        font-family: "panton-bold", sans-serif;
+        letter-spacing: 0.7px;
     }
     .slider__item div {
         margin-left: 0;
+        margin-bottom: 28px;
     }
     .slider__item span {
         padding-left: 0;
     }
     .about-me__points {
         position: absolute;
-        width: 100px;
+        width: 300px;
         left: 50%;
-        bottom: 24px;
+        margin-left: -161px;
+        bottom: 44px;
         display: block;
         z-index: 5;
     }
@@ -2705,9 +2725,9 @@ li:hover .portfolio__like:after{
         opacity: 1;
     }
     .about-me__points span {
-        width: 10px;
-        height: 10px;
-        margin-left: 4px;
+        width: 6px;
+        height: 6px;
+        margin-left: 21px;
         background: #fff;
         opacity: 1;
     }
