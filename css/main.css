@@ -72,7 +72,17 @@
     font-style: normal;
 }
 /* --------------- /fonts --------------- */
+#ascrail2000-hr{
+    height: 2px!important;
+}
 
+#ascrail2000-hr div{
+    top: -8px!important;
+    height: 16px!important;
+    width: 16px!important;
+    border-radius: 50%!important;
+    background-color: #ffffff!important;
+}
 /* --------------- site --------------- */
 .site {
     position: relative;
@@ -1335,6 +1345,7 @@ li:hover .portfolio__like:after{
     padding-bottom: 25px;
     background: url("../img/bg-computer-skills.png") repeat 0 0 #ebece7;
     text-align: center;
+    z-index: 2;
 }
 .computer-skills:after,
 .computer-skills:before{
@@ -1498,7 +1509,7 @@ li:hover .portfolio__like:after{
 .experience{
     font-family: "panton-bold", sans-serif;
     position: relative;
-    padding-bottom: 25px;
+    padding-bottom: 28px;
     background: url("../img/bg-experience.png") repeat 0 0 #8991c0;
 }
 .experience .site__title{
@@ -1506,24 +1517,24 @@ li:hover .portfolio__like:after{
     color:#fbd864;
     font-size: 19px;
     letter-spacing: 0.4px;
-    padding: 24px 0 35px;
+    padding: 24px 0 15px;
 }
 .experience__item{
     display: inline-block;
     vertical-align: top;
     width: 100px;
     text-align: left;
-    margin-right: 77px;
+    margin-right: 79px;
 }
 .experience__wrap{
     padding-bottom: 25px;
     background: url("../img/experience-line.png") repeat-x 0 0;
-    background-size: 375px 63px;
-    width: 3000px;
+    background-size: 375px 53px;
+    width: 1538px;
 }
 .experience__slider{
-    padding-top: 34px;
     position: relative;
+    padding-top: 43px;
 }
 .experience__item span{
     font-size: 15px;
@@ -1572,7 +1583,8 @@ li:hover .portfolio__like:after{
     font-size: 5px;
 }
 .experience__wrap .experience__item:nth-child(even){
-    margin-top: 23px;
+    margin-top: 13px;
+    margin-bottom: 33px;
  }
 .experience__wrap .experience__item:nth-child(odd){
     margin-top: -31px;
@@ -1683,24 +1695,35 @@ li:hover .portfolio__like:after{
         font-size: 11px;
     }
     .experience__wrap {
+        padding-bottom: 83px;
         padding-top: 20px;
-        background-size: 713px 130px;
+        background-size: 713px 100px;
+        background-position-y: 21px;
+        width: 3000px;
     }
     .experience__wrap .experience__item:nth-child(odd) {
         margin-top: -59px;
     }
     .experience__wrap .experience__item:nth-child(even) {
-        margin-top: 49px;
+        margin-top: 19px;
     }
     .experience__wrap .experience__item:first-child{
         margin-left: 106px;
     }
     .experience__item {
-        margin-right:  180px;
+        margin-right:  186px;
     }
     .experience .site__title {
         font-size: 38px;
-        padding: 24px 0 60px;
+        padding: 47px 0 60px;
+    }
+    #ascrail2000-hr div {
+        top: -15px !important;
+        height: 30px !important;
+        width: 30px !important;
+    }
+    .experience {
+        padding-bottom: 58px;
     }
     /* --------------- /site --------------- */
 
@@ -2334,6 +2357,9 @@ li:hover .portfolio__like:after{
         padding: 6px 10px;
         height: 24px;
         font-size: 10px;
+    }
+    .experience .site__wrap{
+        padding: 0;
     }
     /* --------------- /experience --------------- */
 
@@ -3032,7 +3058,6 @@ li:hover .portfolio__like:after{
         margin-bottom: 8px;
     }
     .experience__item h3 {
-        font-size: 7px;
         margin-bottom: 3px;
     }
     .experience__item p {
@@ -3051,6 +3076,30 @@ li:hover .portfolio__like:after{
         padding: 6px 10px;
         height: 24px;
         font-size: 10px;
+    }
+    .experience__wrap{
+        width: 3000px;
+    }
+    .experience .site__title {
+        font-size: 38px;
+        padding: 110px 0 95px;
+    }
+    .experience__wrap .experience__item:nth-child(even) {
+        margin-top: 30px;
+    }
+    .experience__wrap .experience__item:nth-child(odd) {
+        margin-top: -54px;
+    }
+    .experience__wrap {
+        padding-bottom: 105px;
+    }
+    #ascrail2000-hr div {
+        top: -10px !important;
+        height: 20px !important;
+        width: 20px !important;
+    }
+    .experience {
+        padding-bottom: 54px;
     }
     /* --------------- /experience --------------- */
 
