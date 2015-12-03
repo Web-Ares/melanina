@@ -1,3 +1,11 @@
+onload = function() {
+    var dragObjects = document.getElementById('dragObjects').getElementsByTagName('label')
+    for(var i=0; i<dragObjects.length; i++) {
+        new DragObject(dragObjects[i])
+    }
+    new DropTarget(document.getElementById('basket__purchases'))
+}
+
 $(function(){
 
     if ($('.strategy').length) {
@@ -38,6 +46,23 @@ $(function(){
     $('.reviews').each(function () {
         Slider($(this).find('.swiper-container'));
     });
+
+    $( ".callback__currency" ).buttonset();
+
+    $( ".basket dd" ).buttonset();
+
+    $( "#slider-range" ).each(function(){
+        $( "#slider-range" ).slider({
+            min: 0,
+            max: 2000000,
+            value: 100000,
+            range: "min",
+            slide: function( event, ui ) {
+                $( "#callback__budget" ).val( ui.value );
+            }
+        })
+        $( "#callback__budget" ).val($("#slider-range").slider("value"));
+    })
 
 } );
 
