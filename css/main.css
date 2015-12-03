@@ -240,7 +240,7 @@ a.btn:visited {
     cursor: pointer;
 }
 .btn:hover {
-    background: #fff;
+    background: #fff!important;
 }
 .btn_2 {
     background: #d7ebf1;
@@ -249,7 +249,7 @@ a.btn:visited {
     background: #fff;
 }
 .btn_3 {
-    background: #fff;
+    background: #fff!important;
 }
 .btn_3:hover {
     background: #d7ebf1 !important;
@@ -1090,7 +1090,90 @@ a.btn_4:hover:after{
 .contacts__callback-desktop{
     display: none!important;
 }
+.contacts__callback fieldset .callback__budget {
+    width: 110px;
+    border-radius: 5px 5px 0 0;
+}
+.callback__currency{
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.callback__currency input{
+    display: none;
+}
+.callback__currency label{
+    float: left;
+    width: 25px;
+    height: 25px;
+    padding-top: 8px;
+    border-left: 1px solid #fff;
+    background-color: #b5e2eb;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+    text-align: center;
+    font-family: "panton-semibold", sans-serif;
+}
+.callback__currency label:first-child{
+    border: none;
+}
+.callback__currency .ui-state-active{
+    background-color: #fff;
+}
+.ui-slider{
+    position: relative;
+    top: -2px;
+    left: 79px;
+    width: 110px;
+    height: 2px;
+    background-color: #fff;
+}
+.ui-slider-range{
+    height: 2px;
+    background-color: #98c400;
+}
+.ui-slider span{
+    display: block;
+    position: absolute;
+    top: -2px;
+    height: 6px;
+    width: 6px;
+    margin-left: -3px;
+    border-radius: 25px;
+    background-color: #98c400;
+    cursor: pointer;
+}
 /* --------------- /contacts --------------- */
+
+/* --------------- order --------------- */
+.order h1{
+    margin-bottom: 9px;
+    padding-top: 19px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #82c500;
+    text-align: center;
+}
+.order__note{
+    margin-bottom: 13px;
+    font-size: 8px;
+    color: #525251;
+    text-align: center;
+}
+.order .contacts__callback .site__title{
+    padding-bottom: 25px;
+}
+.order .btn-wrap{
+    padding-top: 32px;
+    text-align: center;
+}
+.order .btn-wrap .btn{
+    width: 165px;
+    margin: 0 auto;
+}
+/* --------------- /order --------------- */
 
 /* --------------- address --------------- */
 .address{
@@ -1271,6 +1354,12 @@ li:hover .portfolio__like:after{
 }
 /* --------------- /portfolio --------------- */
 
+/* --------------- basket --------------- */
+.basket{
+    display: none;
+}
+/* --------------- /basket --------------- */
+
 /* ----------------- skills ----------------- */
 .skills{
     padding-bottom: 25px;
@@ -1306,19 +1395,32 @@ li:hover .portfolio__like:after{
     text-align: center;
 }
 .skills__developments li{
+    position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 90px;
+    width: 65px;
     margin: 0 5px;
     font-size: 10px;
     color: #525251;
     text-align: center;
     text-transform: uppercase;
 }
+.skills__developments li:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 68px;
+    width: 4px;
+    height: 60px;
+    background: url("../img/slider-dote.png") no-repeat center;
+}
+.skills__developments li:first-child:before{
+    display: none;
+}
 .skills__developments span{
     display: block;
     margin: 4px 0;
-    font: 50px "panton-extrabold", sans-serif;
+    font: 34px "panton-extrabold", sans-serif;
     color: #ff6411;
 }
 .skills__btns{
@@ -2121,7 +2223,52 @@ li:hover .portfolio__like:after{
     .contacts__callback .btn-wrap a.btn{
         padding-top: 22px;
     }
+    .contacts__callback fieldset .callback__budget{
+        width: 213px;
+        margin-right: 10px;
+    }
+    .callback__currency label{
+        width: 49px;
+        height: 49px;
+        padding-top: 16px;
+    }
+    .ui-slider{
+        top: -4px;
+        left: 161px;
+        width: 213px;
+        height: 4px;
+    }
+    .ui-slider-range{
+        height: 4px;
+    }
+    .ui-slider span{
+        top: -3px;
+        height: 10px;
+        width: 10px;
+        margin-left: -5px;
+    }
     /* --------------- /contacts --------------- */
+
+    /* --------------- order --------------- */
+    .order h1{
+        margin-bottom: 17px;
+        padding-top: 37px;
+        font-size: 50px;
+    }
+    .order__note{
+        margin-bottom: 13px;
+        font-size: 17px;
+    }
+    .order .contacts__callback .site__title{
+        padding: 51px 0 53px;
+    }
+    .order .btn-wrap{
+        padding-top: 52px;
+    }
+    .order .btn-wrap .btn{
+        width: 335px;
+    }
+    /* --------------- /order --------------- */
 
     /* --------------- address --------------- */
     .address {
@@ -2209,6 +2356,14 @@ li:hover .portfolio__like:after{
         width: auto;
         margin-left: 37px;
         margin-right: 0;
+    }
+    .skills__developments li:before {
+        top: 16px;
+        left: -20px;
+        right: auto;
+    }
+    .skills__developments span {
+        font-size: 50px
     }
     /* ----------------- /skills ----------------- */
 
@@ -3007,6 +3162,47 @@ li:hover .portfolio__like:after{
     }
     /* --------------- /portfolio --------------- */
 
+    /* ----------------- skills ----------------- */
+    .skills .site__title{
+        padding-bottom: 93px;
+    }
+    .skills dl{
+        width: 23%;
+    }
+    .skills__btns-desktop{
+        display: inline-block;
+    }
+    .skills__btns-mobile{
+        display: none;
+    }
+    .skills img {
+        width: auto;
+        margin-top: -8px;
+        margin-left: 21px;
+    }
+    .skills__developments{
+        float: none;
+        margin-bottom: 100px;
+        margin-right: -69px;
+        padding-top: 102px;
+    }
+    .skills__developments li{
+        width: 90px;
+        margin: 0 83px;
+    }
+    .skills__btns{
+        text-align: right;
+    }
+    .skills__btns .btn{
+        min-width: 330px;
+        margin-left: 20px;
+    }
+    .skills__developments li:before {
+        left: auto;
+        right: 174px;
+    }
+    /* ----------------- /skills ----------------- */
+
     /* --------------- computer-skills --------------- */
     .computer-skills{
         padding: 42px 0 78px;
@@ -3053,6 +3249,155 @@ li:hover .portfolio__like:after{
         font-size: 10px;
     }
     /* --------------- /experience --------------- */
+
+    /* --------------- order --------------- */
+    .order h1{
+        margin-bottom: 18px;
+        padding-top: 63px;
+        font-size: 60px;
+    }
+    .order .site__title{
+        margin-left: 307px;
+        text-align: left;
+    }
+    .order__note{
+        margin-bottom: 59px;
+        font-size: 14px;
+    }
+    .order .btn-wrap{
+        padding-top: 32px;
+        text-align: center;
+    }
+    .order .btn-wrap .btn{
+        width: 165px;
+        margin: 0 auto;
+    }
+    /* --------------- /order --------------- */
+
+    /* --------------- basket --------------- */
+    .basket{
+        display: block;
+    }
+    .basket dl{
+        display: inline-block;
+        vertical-align: top;
+        width: 220px;
+        margin-right: 27px;
+        font: 14px/20px "panton-semibold", sans-serif;
+        color: #525251
+    }
+    .basket dl input{
+        display: none;
+    }
+    .basket dt{
+        margin-bottom: 23px;
+        color: #525251;
+        font-size: 10px;
+        line-height: 19px;
+        text-transform: uppercase;
+    }
+    .basket dd{
+        margin-bottom: 20px;
+    }
+    .basket dd label{
+        display: inline-block;
+        padding-left: 29px;
+        background: url("../img/icons-cheker.png") no-repeat 0 -45px;
+    }
+    .basket dd .ui-state-active{
+        background-position: 0 1px;
+    }
+    .basket__helper{
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: #98c400;
+        color: #fff;
+        width: 12px;
+        height: 12px;
+        margin-left: 5px;
+        font: 10px "panton-bold", sans-serif;
+        line-height: 12px;
+        border-radius: 25px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .basket__helper span{
+        position: absolute;
+        bottom: 100%;
+        left: -20px;
+        width: 250px;
+        margin-bottom: 10px;
+        padding: 5px 10px 8px;
+        border-radius: 5px;
+        background-color: #98c400;
+        color: #fff;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease, visibility .3s ease;
+        -webkit-transition: opacity .3s ease, visibility .3s ease;
+        z-index: 3;
+    }
+    .basket__helper span:after {
+        top: 100%;
+        left: 20px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(152, 196, 0, 0);
+        border-top-color: #98c400;
+        border-width: 6px;
+    }
+    .basket__helper:hover span{
+        opacity: 1;
+        visibility: visible;
+    }
+    .basket__frame{
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        width: 200px;
+        height: 272px;
+        margin-left: -11px;
+        margin-right: 113px;
+        padding-top: 9px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .basket__frame:before,
+    .basket__frame:after{
+        content: '';
+        top: 0;
+        left: 0;
+    }
+    .basket__frame:before{
+        position: relative;
+        display: block;
+        height: 224px;
+        width: 200px;
+        background: url(../img/img-basket.png) no-repeat 0 0;
+        z-index: 2;
+    }
+    .basket__frame:after{
+        position: absolute;
+        top: 25px;
+        left: 55px;
+        width: 112px;
+        height: 82px;
+        background: url("../img/img-gifts.png") no-repeat 0 0;
+        opacity: 0;
+        transition: opacity .3s ease;
+        -webkit-transition: opacity .3s ease;
+        z-index: 1;
+    }
+    /* --------------- /basket --------------- */
 
     /* --------------- copyright --------------- */
     .copyright{
