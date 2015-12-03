@@ -63,6 +63,8 @@ $(function(){
         })
         $( "#callback__budget" ).val($("#slider-range").slider("value"));
     })
+    
+
 
 } );
 
@@ -92,14 +94,6 @@ var Slider = function (obj) {
             centeredSlides: true
         });
     }
-    if (_obj.hasClass('experience__slider')){
-        var __swiperSlider = new Swiper(_obj, {
-            scrollbar: '.swiper-scrollbar',
-            direction: 'horizontal',
-            slidesPerView: 'auto',
-            mousewheelControl: true
-        });
-    }
     if (_obj.hasClass('about-me__slider')){
         var _swiperSlider = new Swiper(_obj, {
             nextButton: '.about-me__next',
@@ -121,4 +115,48 @@ var Slider = function (obj) {
 _init();
 
 };
+var Review = function (obj) {
 
+    var _obj = obj,
+        _scroll = null,
+        _window = $(window);
+
+    var _addEvents = function () {
+
+            _window.on({
+                'resize': function(){
+                    _scroll.resize();
+
+                },
+                'load': function(){
+                    _addScroll();
+
+                }
+            });
+
+        },
+        _addScroll = function(){
+            _scroll = _obj.niceScroll({
+                cursorcolor:"#dbdbdb",
+                cursoropacitymin: "0",
+                cursorborderradius: "0",
+                cursorborder: false,
+                cursorwidth: "15px",
+                cursorheight: "15px",
+                autohidemode: false,
+                touchbehavior: 'cursor-drag',
+                background: "#efefef",
+                railpadding: {
+                    top: 0,
+                    right: 0,
+                    left: 0,
+                    bottom: 0
+                }
+            });
+        },
+        _init = function () {
+            _addEvents();
+        };
+
+    _init();
+};
