@@ -1115,6 +1115,10 @@ a.btn_4:hover:after{
     -webkit-transition: background-color .3s ease;
     text-align: center;
     font-family: "panton-semibold", sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .callback__currency label:first-child{
     border: none;
@@ -1148,6 +1152,9 @@ a.btn_4:hover:after{
 /* --------------- /contacts --------------- */
 
 /* --------------- order --------------- */
+.order{
+    background: url("../img/line3.png") no-repeat 50% 100%;
+}
 .order h1{
     margin-bottom: 9px;
     padding-top: 19px;
@@ -1362,7 +1369,21 @@ li:hover .portfolio__like:after{
 
 /* ----------------- skills ----------------- */
 .skills{
+    position: relative;
     padding-bottom: 25px;
+    background: url("../img/line3.png") no-repeat 50% 0 #d9ecf0;
+    z-index: 2;
+}
+.skills:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: 5px;
+    background: url("../img/deco-complaisance.png") repeat-x;
+}
+.skills > div {
     overflow: hidden;
 }
 .skills .site__title{
@@ -1437,6 +1458,7 @@ li:hover .portfolio__like:after{
     padding-bottom: 25px;
     background: url("../img/bg-computer-skills.png") repeat 0 0 #ebece7;
     text-align: center;
+    z-index: 2;
 }
 .computer-skills:after,
 .computer-skills:before{
@@ -1584,7 +1606,7 @@ li:hover .portfolio__like:after{
     position: absolute;
     top: 50%;
     margin-top: -34px;
-    right: 0px;
+    right: 0;
     width: 25px;
     height: 25px;
     background: url("../img/arron-right.png") no-repeat center;
@@ -1743,7 +1765,6 @@ li:hover .portfolio__like:after{
 
 @media (min-width: 640px) {
     /* --------------- site --------------- */
-
     .site_air .site__content:before {
         width: 52px;
         height: 187px;
@@ -1784,6 +1805,9 @@ li:hover .portfolio__like:after{
         width: 768px;
         font-size: 11px;
     }
+    /* --------------- /site --------------- */
+
+    /* --------------- experience --------------- */
     .experience__wrap {
         padding-top: 20px;
         background-size: 713px 130px;
@@ -1804,11 +1828,15 @@ li:hover .portfolio__like:after{
         font-size: 38px;
         padding: 24px 0 60px;
     }
-    /* --------------- /site --------------- */
+    /* --------------- /experience --------------- */
 
     /* --------------- menu --------------- */
     .menu__wrap {
         top: 100px;
+    }
+    .menu__home{
+        border-radius: 5px 5px 0 0;
+        background-color: #0098ff;
     }
     .menu__btn {
         top: 27px;
@@ -2188,7 +2216,7 @@ li:hover .portfolio__like:after{
         height: 62px;
     }
     .contacts__callback-textarea:after{
-        right: 23px;
+        right: 30px;
         bottom: 0;
     }
     .contacts__callback-textarea label{
@@ -2927,9 +2955,9 @@ li:hover .portfolio__like:after{
         text-align: right;
     }
     .contacts__callback{
-        width: 870px;
+        width: 940px;
         margin: 0;
-        padding-left: 63px;
+        padding-left: 125px;
     }
     .contacts .site__title{
         padding-bottom: 33px;
@@ -3260,6 +3288,20 @@ li:hover .portfolio__like:after{
         margin-left: 307px;
         text-align: left;
     }
+    .order .contacts__callback .site__title{
+        margin-left: 0;
+        padding: 79px 0 47px;
+        text-align: left;
+    }
+    .order fieldset.contacts__callback-textarea{
+        display: inline-block;
+    }
+    .order .contacts__callback-textarea:before{
+        top: -59px;
+    }
+    .order .contacts__callback fieldset textarea{
+        width: 540px;
+    }
     .order__note{
         margin-bottom: 59px;
         font-size: 14px;
@@ -3269,7 +3311,11 @@ li:hover .portfolio__like:after{
         text-align: center;
     }
     .order .btn-wrap .btn{
-        width: 165px;
+        display: block;
+        width: 325px;
+        margin: 0;
+    }
+    .order .contacts__callback{
         margin: 0 auto;
     }
     /* --------------- /order --------------- */
@@ -3277,6 +3323,7 @@ li:hover .portfolio__like:after{
     /* --------------- basket --------------- */
     .basket{
         display: block;
+        position: relative;
     }
     .basket dl{
         display: inline-block;
@@ -3303,9 +3350,22 @@ li:hover .portfolio__like:after{
         display: inline-block;
         padding-left: 29px;
         background: url("../img/icons-cheker.png") no-repeat 0 -45px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
     .basket dd .ui-state-active{
         background-position: 0 1px;
+    }
+    .basket:after{
+        content: '';
+        position: absolute;
+        bottom: -34px;
+        right: 493px;
+        width: 516px;
+        height: 105px;
+        background-image: url("../img/deco-basket.png");
     }
     .basket__helper{
         position: relative;
@@ -3396,6 +3456,9 @@ li:hover .portfolio__like:after{
         transition: opacity .3s ease;
         -webkit-transition: opacity .3s ease;
         z-index: 1;
+    }
+    .basket__frame.full:after{
+        opacity: 1;
     }
     /* --------------- /basket --------------- */
 
