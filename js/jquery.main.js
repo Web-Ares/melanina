@@ -47,6 +47,10 @@ $(function(){
         Slider($(this));
     });
 
+    $.each( $('.experience__slider'), function(){
+        new Review ( $(this) );
+    } );
+
     $( ".callback__currency" ).buttonset();
 
     $( ".basket dd" ).buttonset();
@@ -137,21 +141,16 @@ var Review = function (obj) {
         },
         _addScroll = function(){
             _scroll = _obj.niceScroll({
-                cursorcolor:"#dbdbdb",
+                cursorcolor:"#fff",
                 cursoropacitymin: "0",
-                cursorborderradius: "0",
+                cursorborderradius: "50%",
                 cursorborder: false,
-                cursorwidth: "15px",
-                cursorheight: "15px",
+                cursorwidth: 15,
+                cursorminheight: 15,
                 autohidemode: false,
-                touchbehavior: 'cursor-drag',
-                background: "#efefef",
-                railpadding: {
-                    top: 0,
-                    right: 0,
-                    left: 0,
-                    bottom: 0
-                }
+                touchbehavior: false,
+                background: "#fff",
+                railpadding: {top:0,right:200,left:200,bottom:0}
             });
         },
         _init = function () {

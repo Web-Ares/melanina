@@ -77,11 +77,20 @@
 }
 
 #ascrail2000-hr div{
-    top: -8px!important;
-    height: 16px!important;
-    width: 16px!important;
-    border-radius: 50%!important;
-    background-color: #ffffff!important;
+    position: relative;
+    background-color: transparent !important;
+}
+#ascrail2000-hr div:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: -9px 0 0 -10px;
+    z-index: 1;
 }
 /* --------------- site --------------- */
 .site {
@@ -1627,12 +1636,14 @@ li:hover .portfolio__like:after{
     width: 100px;
     text-align: left;
     margin-right: 79px;
+    white-space: normal;
 }
 .experience__wrap{
     padding-bottom: 25px;
     background: url("../img/experience-line.png") repeat-x 0 0;
     background-size: 375px 53px;
-    width: 1538px;
+    white-space: nowrap;
+    display: inline-block;
 }
 .experience__slider{
     position: relative;
@@ -1818,11 +1829,6 @@ li:hover .portfolio__like:after{
     .experience .site__title {
         font-size: 38px;
         padding: 47px 0 60px;
-    }
-    #ascrail2000-hr div {
-        top: -15px !important;
-        height: 30px !important;
-        width: 30px !important;
     }
     .experience {
         padding-bottom: 58px;
@@ -2514,7 +2520,7 @@ li:hover .portfolio__like:after{
         font-size: 10px;
     }
     .experience .site__wrap{
-        padding: 0;
+        padding: 0 15px;
     }
     /* --------------- /experience --------------- */
 
@@ -3288,11 +3294,6 @@ li:hover .portfolio__like:after{
     }
     .experience__wrap {
         padding-bottom: 105px;
-    }
-    #ascrail2000-hr div {
-        top: -10px !important;
-        height: 20px !important;
-        width: 20px !important;
     }
     .experience {
         padding-bottom: 54px;
