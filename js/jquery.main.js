@@ -98,6 +98,15 @@ var Slider = function (obj) {
             centeredSlides: true
         });
     }
+    if (_obj.hasClass('list-works__slider')){
+        var __swiper = new Swiper(_obj, {
+            autoplay: 7000,
+            pagination: '.list-works__points',
+            paginationClickable: true,
+            loop: false,
+            centeredSlides: true
+        });
+    }
     if (_obj.hasClass('about-me__slider')){
         var _swiperSlider = new Swiper(_obj, {
             nextButton: '.about-me__next',
