@@ -1882,6 +1882,45 @@ li:hover .portfolio__like:after{
     margin-top: 6px;
 }
 /* --------------- list-works__slider --------------- */
+.list-works__slider-wrap span {
+    line-height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.list-works__like .portfolio__like:before,
+.list-works__like .portfolio__like:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:url("../img/heart-green.png") no-repeat center;
+    background-size: 33px 30px;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+    z-index: -1;
+}
+.list-works__like .portfolio__like:after {
+    opacity: 0;
+    background:url("../img/heart-white.png") no-repeat center;
+    background-size: 33px 30px;
+}
+.list-works__like {
+    position: absolute;
+    top: 38px;
+    left: 72px;
+    cursor: pointer;
+}
+.list-works__like:hover .portfolio__like:before {
+    opacity: 0;
+}
+.list-works__like:hover .portfolio__like:after {
+    opacity: 1;
+}
+.list-works__like:hover .portfolio__like {
+    color: #89b900;
+}
 .list-works__slider-wrap{
     position: relative;
     padding-top: 57px;
@@ -1890,6 +1929,16 @@ li:hover .portfolio__like:after{
     height: 240px;
     margin: 0 auto 22px;
     background: url("../img/slider-item.png") no-repeat center;
+    background-size: contain;
+}
+.list-works__slider-wrap:before{
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 9px;
+    width: 58px;
+    height: 33px;
+    background: url("../img/estimate_this.png")no-repeat center;
     background-size: contain;
 }
 .list-works__slider{
@@ -2209,8 +2258,27 @@ span.swiper-pagination-bullet-active:hover{
         right: 60px;
         bottom: 39px;
     }
-
-
+    .list-works__like {
+        position: absolute;
+        top: 81px;
+        left: 163px;
+    }
+    .list-works__like span.portfolio__like {
+        width: 67px;
+        height: 61px;
+        padding-top: 17px;
+        font-size: 18px;
+    }
+    .list-works__slider-wrap:before {
+        top: 44px;
+        left: 32px;
+        width: 115px;
+        height: 48px;
+    }
+    .list-works__like .portfolio__like:before,
+    .list-works__like .portfolio__like:after {
+        background-size: 67px 61px;
+    }
     /* --------------- /menu --------------- */
 
     /* --------------- logo --------------- */
