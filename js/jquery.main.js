@@ -4,18 +4,19 @@ $(function(){
 
         $(window).on({
             'load':function(){
-                if($(this).width() > 640) {
-
+                if($(window).width() > 640) {
                     $.getScript(location.href + 'js/runtime.js', function(){});
-
                     $.getScript(location.href + 'js/pic-script.js', function(){
                         var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
                             swiffyobject, {  });
 
                         stage.start();
+
                     });
+                    var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
+                        swiffyobject, {  });
 
-
+                    stage.start();
                 }
             }
         });
