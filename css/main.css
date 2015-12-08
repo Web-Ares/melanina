@@ -1735,7 +1735,7 @@ li:hover .portfolio__like:after{
 
 /* --------------- list-works --------------- */
 .list-works{
-    padding-bottom: 17px;
+    padding-bottom: 5px;
 }
 .list-works .site__title{
     font-family: "panton-semibold", sans-serif;
@@ -1751,6 +1751,7 @@ li:hover .portfolio__like:after{
     max-width: 320px;
     position: relative;
     margin-left: 41px;
+    margin-bottom: 31px;
 }
 .list-works__services div{
     position: absolute;
@@ -1880,6 +1881,62 @@ li:hover .portfolio__like:after{
 }
 .list-works__list div > span:before {
     margin-top: 6px;
+}
+.list-works__menu{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+ul.list-works__menu li {
+    position: relative;
+    display: inline-block;
+}
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] + label > .list-works__tab {
+    font-family: 'panton-extrabold','sans-serif';
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+    padding: 6px 7px;
+    border-radius: 30px;
+    font-size: 7px;
+    text-decoration: underline;
+}
+input[type="radio"]:checked + label > .list-works__tab {
+    background: #fff;
+    text-decoration: none;
+}
+.list-works__show {
+    max-width: 1145px;
+    height: 580px;
+    margin: 0 auto;
+}
+.list-works__show img{
+    width: 95%;
+    height: 100%;
+}
+.message-button{
+    content: "";
+    position: absolute;
+    top: -53px;
+    left: 19px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 0px 12px #525251;
+    border-radius: 50%;
+    background: #eb654f url("../img/massage-icon.png") no-repeat center;
+    background-size: 18px 14.5px;
+}
+.message-button:hover{
+    opacity: 0.7;
+}
+h3.list-works__show-title{
+    padding: initial;
+    text-align: center;
+    margin-bottom: 23px;
 }
 /* --------------- list-works__slider --------------- */
 .list-works__slider-wrap span {
@@ -2140,7 +2197,7 @@ span.swiper-pagination-bullet-active:hover{
     }
     /* --------------- /menu --------------- */
 
-    /* --------------- /menu --------------- */
+    /* --------------- list-works --------------- */
     .list-works__select {
         width: 341px;
         margin: 50px auto 20px;
@@ -2204,6 +2261,13 @@ span.swiper-pagination-bullet-active:hover{
         margin-bottom: 38px;
         padding-left: 113px;
     }
+    h3.list-works__show-title {
+        padding: initial;
+        margin-bottom: 46px;
+    }
+    .list-works__menu {
+        margin-bottom: 37px;
+    }
     .list-works__slider-wrap {
         padding-top: 114px;
         padding-left: 96px;
@@ -2235,6 +2299,7 @@ span.swiper-pagination-bullet-active:hover{
     .list-works__services {
         max-width: 640px;
         margin-left: 82px;
+        margin-bottom: 64px;
     }
     .list-works__services h4 {
         font-size: 20px;
@@ -2279,7 +2344,24 @@ span.swiper-pagination-bullet-active:hover{
     .list-works__like .portfolio__like:after {
         background-size: 67px 61px;
     }
-    /* --------------- /menu --------------- */
+    .list-works__show{
+        height: 1162px;
+    }
+    input[type="radio"] + label > .list-works__tab {
+        padding: 13px 13px;
+        font-size: 14px;
+    }
+    .message-button {
+        top: -107px;
+        left: 38px;
+        width: 100px;
+        height: 100px;
+        background-size: 36px 29px;
+    }
+    .list-works {
+        padding-bottom: 14px;
+    }
+    /* --------------- /list-works --------------- */
 
     /* --------------- logo --------------- */
     .logo {
@@ -3665,8 +3747,21 @@ span.swiper-pagination-bullet-active:hover{
     .list-works__services div {
         bottom: 51px;
     }
-
-
+    .list-works__show {
+        height: 2140px;
+    }
+    .message-button{
+        display: none;
+    }
+    .list-works__map{
+        position: relative;
+    }
+    .list-works__map{
+        width: 100%;
+        height: 613px;
+        background: url("../img/bg-map.png") no-repeat center;
+        background-size: contain;
+    }
     /* --------------- /portfolio --------------- */
 
     /* ----------------- skills ----------------- */
