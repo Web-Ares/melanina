@@ -22,9 +22,7 @@ $(function(){
                     stage.start();
                 },jqxhr.status)
             });
-
         }
-
     }
 
     $('.menu__btn').on({
