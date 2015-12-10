@@ -783,7 +783,7 @@ a.btn_4:hover:after{
 
 /* --------------- reviews --------------- */
 .reviews {
-    background: url("../img/reviews-bg.jpg") no-repeat top center;
+    background: url("../img/reviews-bg.png") no-repeat top center;
     background-size: cover;
     padding: 40px 0 32px 0;
 }
@@ -1381,7 +1381,46 @@ li:hover .portfolio__like:after{
 }
 /* --------------- /portfolio --------------- */
 
-/* --------------- basket --------------- */
+/* --------------- tabs --------------- */
+.tabs {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.tabs__controls-wrap div {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.tabs__controls-wrap div.active span {
+    background: #fff;
+    text-decoration: none;
+}
+.tabs__controls-wrap div span {
+    font-family: 'panton-extrabold','sans-serif';
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+    padding: 6px 7px;
+    border-radius: 30px;
+    font-size: 7px;
+    text-decoration: underline;
+    -webkit-transition: color 0.3s ease, background 0.3s ease;
+    transition: color 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.tabs__wrapper {
+    max-width: 1226px;
+    height: 580px;
+    margin: 0 auto;
+}
+/* --------------- /tabs --------------- */
+
 .basket{
     display: none;
 }
@@ -1893,25 +1932,8 @@ ul.list-works__menu li {
     position: relative;
     display: inline-block;
 }
-input[type="radio"] {
-    display: none;
-}
-input[type="radio"] + label > .list-works__tab {
-    font-family: 'panton-extrabold','sans-serif';
-    position: relative;
-    display: inline-block;
-    z-index: 3;
-    padding: 6px 7px;
-    border-radius: 30px;
-    font-size: 7px;
-    text-decoration: underline;
-}
-input[type="radio"]:checked + label > .list-works__tab {
-    background: #fff;
-    text-decoration: none;
-}
 .list-works__show {
-    max-width: 1145px;
+    max-width: 1226px;
     height: 580px;
     margin: 0 auto;
 }
@@ -1928,7 +1950,7 @@ input[type="radio"]:checked + label > .list-works__tab {
     height: 50px;
     box-shadow: 0px 0px 12px #525251;
     border-radius: 50%;
-    background: #eb654f url("../img/massage-icon.png") no-repeat center;
+    background: #eb654f url("../img/message-icon.png") no-repeat center;
     background-size: 18px 14.5px;
 }
 .message-button:hover{
@@ -1938,6 +1960,12 @@ h3.list-works__show-title{
     padding: initial;
     text-align: center;
     margin-bottom: 23px;
+}
+.portfolio-map{
+    display: none;
+}
+.our-staff{
+    display: none;
 }
 /* --------------- list-works__slider --------------- */
 .list-works__slider-wrap span {
@@ -2345,15 +2373,16 @@ span.swiper-pagination-bullet-active:hover{
     .list-works__like .portfolio__like:after {
         background-size: 67px 61px;
     }
+    .tabs__wrapper,
     .list-works__show{
         height: 1162px;
     }
-    input[type="radio"] + label > .list-works__tab {
+    .tabs__controls-wrap div span {
         padding: 13px 13px;
         font-size: 14px;
     }
     .message-button {
-        top: -107px;
+        top: -94px;
         left: 38px;
         width: 100px;
         height: 100px;
@@ -2361,6 +2390,9 @@ span.swiper-pagination-bullet-active:hover{
     }
     .list-works {
         padding-bottom: 14px;
+    }
+    .bag-work{
+        background: url("../img/line3.png") no-repeat 50% 0, url("../img/line3.png") no-repeat 80% 80%;
     }
     /* --------------- /list-works --------------- */
 
@@ -3700,7 +3732,7 @@ span.swiper-pagination-bullet-active:hover{
     }
     /* --------------- /portfolio --------------- */
 
-    /* --------------- /portfolio --------------- */
+    /* --------------- list-works --------------- */
     .list-works__select {
         width: 341px;
         margin: 12px auto 46px;
@@ -3752,22 +3784,48 @@ span.swiper-pagination-bullet-active:hover{
     .list-works__services div {
         bottom: 51px;
     }
+    .tabs__wrapper,
     .list-works__show {
-        height: 2140px;
+        height: 2181px;
+        margin-bottom: 62px;
     }
     .message-button{
         display: none;
     }
-    .list-works__map{
+    .portfolio-map{
         position: relative;
+        display: block;
+        margin-bottom: 61px;
     }
-    .list-works__map{
+    .portfolio-map .site__title {
+        font-size: 38px;
+        padding: 56px 0 57px;
+        letter-spacing: 1px;
+    }
+    .portfolio-map__wrap{
         width: 100%;
         height: 613px;
         background: url("../img/bg-map.png") no-repeat center;
         background-size: contain;
     }
-    /* --------------- /portfolio --------------- */
+    .list-works {
+        padding-bottom: 36px;
+    }
+    .tabs__controls-wrap div span {
+        padding: 13px 22px;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    h3.list-works__show-title {
+        font-size: 14px;
+    }
+    .list-works__menu {
+        margin-bottom: 51px;
+    }
+    .portfolio_reviews{
+        padding-bottom: 47px;
+    }
+    /* --------------- /list-works --------------- */
 
     /* ----------------- skills ----------------- */
     .skills .site__title{
@@ -3874,6 +3932,47 @@ span.swiper-pagination-bullet-active:hover{
         padding-bottom: 54px;
     }
     /* --------------- /experience --------------- */
+
+    /* --------------- our-staff --------------- */
+    .our-staff ul{
+       text-align: center;
+    }
+    .our-staff{
+        position: relative;
+        display: block;
+        margin-bottom: 38px;
+    }
+    .our-staff:before,
+    .our-staff:after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -51px;
+        right: 494px;
+        width: 4px;
+        height: 60px;
+        background: url("../img/slider-dote.png") no-repeat center;
+     }
+    .our-staff:before{
+        left: 455px;
+    }
+    .our-staff__item{
+        width: 265px;
+        font-size: 10px;
+        font-family: "panton-semibold", "sans-serif";
+        display: inline-block;
+        text-align: center;
+        margin: 0 84px 39px 48px;
+        color: #525251;
+    }
+    .our-staff__item span{
+        display: block;
+        font-size: 20px;
+        font-family: "panton", "sans-serif";
+        padding: 6px;
+    }
+
+    /* --------------- /our-staff --------------- */
 
     /* --------------- order --------------- */
     .order h1{
