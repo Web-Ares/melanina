@@ -1,10 +1,10 @@
-//onload = function() {
-//    var dragObjects = document.getElementById('dragObjects').getElementsByTagName('label')
-//    for(var i=0; i<dragObjects.length; i++) {
-//        new DragObject(dragObjects[i])
-//    }
-//    new DropTarget(document.getElementById('basket__purchases'))
-//}
+onload = function() {
+    var dragObjects = document.getElementById('dragObjects').getElementsByTagName('label')
+    for(var i=0; i<dragObjects.length; i++) {
+        new DragObject(dragObjects[i])
+    }
+    new DropTarget(document.getElementById('basket__purchases'))
+}
 
 $(function(){
 
@@ -48,9 +48,13 @@ $(function(){
         new Review ( $(this) );
     } );
 
-    //$( ".callback__currency" ).buttonset();
-    //
-    //$( ".basket dd" ).buttonset();
+    $('.callback__currency').each(function () {
+        $( this ).buttonset();
+    });
+
+    $('.basket dd').each(function () {
+        $( this ).buttonset();
+    });
 
     $( "#slider-range" ).each(function(){
         $( "#slider-range" ).slider({
@@ -63,9 +67,10 @@ $(function(){
             }
         })
         $( "#callback__budget" ).val($("#slider-range").slider("value"));
+        $('#callback__budget').on( 'input', function() {
+            $("#slider-range").slider( "value", $('#callback__budget').val() );
+        });
     })
-    
-
 
 } );
 
@@ -74,6 +79,9 @@ var Slider = function (obj) {
 
     //private properties
     var _self = this,
+        _window = $(window),
+        _windowWidth = $(window).width(),
+        _mainSlider = null,
         _obj = obj;
 
     //private methods
@@ -120,6 +128,40 @@ var Slider = function (obj) {
                 }
             }
         });
+    }
+    if (_obj.hasClass('main-slider')){
+        _window.on({
+            load: function () {
+                if (_windowWidth >= 1006) {
+                    var _mainSlider = new Swiper(_obj, {
+                        pagination: '.main-slider__points',
+                        paginationClickable: true,
+                        slidesPerView: 1,
+                        loop: true
+                    });
+                }
+            },
+            resize: function () {
+                _windowWidth = $(window).width();
+                if (_windowWidth >= 1006) {
+                    if(_mainSlider===null) {
+                        _mainSlider = new Swiper(_obj, {
+                            pagination: '.main-slider__points',
+                            paginationClickable: true,
+                            slidesPerView: 1,
+                            loop: true
+                        });
+                    }
+                } else {
+                    if(_mainSlider!==null){
+                        _mainSlider.destroy(false,true);
+                        _mainSlider = null;
+                    }
+                }
+            }
+
+        })
+
     }
 
 _init();
