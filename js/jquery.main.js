@@ -1,32 +1,29 @@
-onload = function() {
-    var dragObjects = document.getElementById('dragObjects').getElementsByTagName('label')
-    for(var i=0; i<dragObjects.length; i++) {
-        new DragObject(dragObjects[i])
-    }
-    new DropTarget(document.getElementById('basket__purchases'))
-}
+//onload = function() {
+//    var dragObjects = document.getElementById('dragObjects').getElementsByTagName('label')
+//    for(var i=0; i<dragObjects.length; i++) {
+//        new DragObject(dragObjects[i])
+//    }
+//    new DropTarget(document.getElementById('basket__purchases'))
+//}
 
 $(function(){
 
     if ($('.strategy').length) {
 
-        $(window).on({
-            'load':function(){
-                if($(this).width() > 640) {
+        if($(this).width() > 640) {
 
-                    $.getScript(location.href + 'js/runtime.js', function(){});
+            $.getScript(location.href + 'js/runtime.js', function(){});
 
-                    $.getScript(location.href + 'js/pic-script.js', function(){
-                        var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
-                            swiffyobject, {  });
+            $.getScript( location.href + 'js/pic-script.js', function( data, textStatus, jqxhr ) {
+                setTimeout(function(){
+                    var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
+                        swiffyobject, {  });
 
-                        stage.start();
-                    });
+                    stage.start();
+                },jqxhr.status)
+            });
 
-
-                }
-            }
-        });
+        }
 
     }
 
@@ -51,9 +48,9 @@ $(function(){
         new Review ( $(this) );
     } );
 
-    $( ".callback__currency" ).buttonset();
-
-    $( ".basket dd" ).buttonset();
+    //$( ".callback__currency" ).buttonset();
+    //
+    //$( ".basket dd" ).buttonset();
 
     $( "#slider-range" ).each(function(){
         $( "#slider-range" ).slider({
