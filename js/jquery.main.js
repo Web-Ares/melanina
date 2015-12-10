@@ -12,16 +12,19 @@ $(function(){
 
         if($(this).width() > 640) {
 
-            $.getScript(location.href + 'js/runtime.js', function(){});
+            //$.getScript(location.href + 'js/runtime.js', function(){});
+            //
+            //$.getScript( location.href + 'js/pic-script.js', function( data, textStatus, jqxhr ) {
+            //    console.log(jqxhr.status);
+            //    var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
+            //        swiffyobject, {  });
+            //
+            //    stage.start();
+            //});
+            var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
+                swiffyobject, {  });
 
-            $.getScript( location.href + 'js/pic-script.js', function( data, textStatus, jqxhr ) {
-                setTimeout(function(){
-                    var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
-                        swiffyobject, {  });
-
-                    stage.start();
-                },jqxhr.status)
-            });
+            stage.start();
         }
     }
 
