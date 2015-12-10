@@ -1,10 +1,10 @@
-onload = function() {
-    var dragObjects = document.getElementById('dragObjects').getElementsByTagName('label')
-    for(var i=0; i<dragObjects.length; i++) {
-        new DragObject(dragObjects[i])
-    }
-    new DropTarget(document.getElementById('basket__purchases'))
-}
+//onload = function() {
+//    var dragObjects = document.getElementById('dragObjects').getElementsByTagName('label')
+//    for(var i=0; i<dragObjects.length; i++) {
+//        new DragObject(dragObjects[i])
+//    }
+//    new DropTarget(document.getElementById('basket__purchases'))
+//}
 
 $(function(){
 
