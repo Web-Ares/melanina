@@ -3371,7 +3371,7 @@ span.swiper-pagination-bullet-active:hover{
     }
     .service__wrap {
         max-width: 1260px;
-        margin: 32px 0 56px 0;
+        margin: 32px auto 56px;
     }
     .service__wrap:after {
     }
