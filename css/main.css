@@ -3285,6 +3285,14 @@ span.swiper-pagination-bullet-active:hover{
         left: auto;
         right: -19px;
     }
+    .main-slider .swiper-slide {
+        opacity: 0;
+        -webkit-transition: opacity 1.5s ease;
+        transition: opacity 1.5s ease;
+    }
+    .main-slider .swiper-slide-active {
+        opacity: 1;
+    }
     /* --------------- main-slider --------------- */
 
     /* --------------- solutions --------------- */
