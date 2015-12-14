@@ -1,5 +1,11 @@
 $(function(){
 
+    $(function() {
+        $('.basket').each(function () {
+            game = new Choiser($(this));
+        });
+    })
+
     if ($('.strategy').length) {
 
         if($(this).width() > 640) {
@@ -55,9 +61,9 @@ $(function(){
 
     $( "#slider-range" ).each(function(){
         $( "#slider-range" ).slider({
-            min: 0,
-            max: 2000000,
-            value: 100000,
+            min: $(this).data("min"),
+            max: $(this).data("max"),
+            value: $(this).data("value"),
             range: "min",
             slide: function( event, ui ) {
                 $( "#callback__budget" ).val( ui.value );
@@ -284,6 +290,66 @@ var Review = function (obj) {
         _init = function () {
             _addEvents();
         };
+
+    _init();
+};
+
+var Choiser = function (obj) {
+    //private properties
+    var _self = this,
+        _label = obj.find($('label')),
+        _clicking = false,
+        _moving = false,
+        _site = $('site'),
+        _obj = obj;
+
+    //private methods
+    var _addEvents = function () {
+            _label.on({
+                mouseup: function(e) {
+                    // Проверка отклика
+                    $('#clone').remove();
+                    _clicking = false;
+                    if(_moving == false) return;
+                    console.log('click');
+                },
+                mousedown: function() {
+                    // Проверка отклика
+                    _clicking = true;
+                    _moving = true;
+                    console.log('down');
+                    $(this).clone().attr('id','clone').appendTo(this).parent('dd');
+                },
+                mousemove: function(e) {
+                    // Проверка отклика
+                    _moving = false;
+                    if(_clicking == false) return;
+
+                    var pos = $(this).offset(),
+                        _elem_left = pos.left,
+                        _elem_top = pos.top,
+                        _Xinner = e.pageX - _elem_left,
+                        _Yinner = e.pageY - _elem_top;
+
+                    $('#clone').css({
+                        top : _Yinner,
+                        left : _Xinner
+                    })
+
+                    console.log("X: " + _Xinner + " Y: " + _Yinner);
+                    console.log('mousedown');
+                }
+            });
+            _site.on({
+
+            });
+        },
+        _init = function () {
+            _addEvents();
+        };
+    //public properties
+
+    //public methods
 
     _init();
 };

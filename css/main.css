@@ -4245,6 +4245,9 @@ span.swiper-pagination-bullet-active:hover{
     .basket__frame.full:after{
         opacity: 1;
     }
+    #clone{
+        position: absolute;
+    }
     /* --------------- /basket --------------- */
 
     /* --------------- copyright --------------- */
