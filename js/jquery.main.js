@@ -1,10 +1,8 @@
 $(function(){
 
-    $(function() {
-        $('.basket').each(function () {
-            game = new Choiser($(this));
-        });
-    })
+    /*$('.basket').each(function () {
+        game = new Choiser($(this));
+    });*/
 
     if ($('.strategy').length) {
 
@@ -286,7 +284,31 @@ var Review = function (obj) {
     _init();
 };
 
-var Choiser = function (obj) {
+$( "dd input").change(function(){
+    if ($(this).prop("checked")){
+        $( ".basket__frame").addClass("full");
+    } else {
+        if (!$('dd input').is(":checked")){
+            $(".basket__frame").removeClass("full");
+        }
+    }
+})
+
+$( "dd label").draggable({ revert: true,
+    helper: "clone",
+    revert: "invalid"
+});
+
+$( ".basket__frame" ).droppable({
+    hoverClass: "ui-state-hover",
+    drop: function( event, ui ) {
+        $( this ).addClass( "full" );
+        $('.ui-draggable-dragging').parent('dd').children('input')
+            .prop('checked', true).button("refresh");
+    }
+});
+
+/*var Choiser = function (obj) {
     //private properties
     var _self = this,
         _label = obj.find($('label')),
@@ -300,41 +322,28 @@ var Choiser = function (obj) {
             _label.on({
                 mouseup: function(e) {
                     // Проверка отклика
-                    $('#clone').remove();
                     _clicking = false;
                     if(_moving == false) return;
+
                     console.log('click');
                 },
                 mousedown: function() {
                     // Проверка отклика
                     _clicking = true;
                     _moving = true;
+
+
                     console.log('down');
-                    $(this).clone().attr('id','clone').appendTo(this).parent('dd');
                 },
                 mousemove: function(e) {
                     // Проверка отклика
                     _moving = false;
                     if(_clicking == false) return;
-
-                    var pos = $(this).offset(),
-                        _elem_left = pos.left,
-                        _elem_top = pos.top,
-                        _Xinner = e.pageX - _elem_left,
-                        _Yinner = e.pageY - _elem_top;
-
-                    $('#clone').css({
-                        top : _Yinner,
-                        left : _Xinner
-                    })
-
-                    console.log("X: " + _Xinner + " Y: " + _Yinner);
                     console.log('mousedown');
                 }
             });
-            _site.on({
 
-            });
+
         },
         _init = function () {
             _addEvents();
@@ -344,4 +353,4 @@ var Choiser = function (obj) {
     //public methods
 
     _init();
-};
+};*/
