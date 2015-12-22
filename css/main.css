@@ -100,7 +100,7 @@
     font-family: "panton", sans-serif;
     overflow: hidden;
     z-index: 1;
-    background: #B8DBE6 url("../img/bg-site.png") no-repeat top center;
+    background: #c2e1ea url("../img/bg-site.png") no-repeat top center;
     background-size: contain;
 }
 .site_contacts{
@@ -108,7 +108,7 @@
     url("../img/bg-contacts.jpg") no-repeat 0 47px/233% auto #b6e2eb;
 }
 .site_main {
-    background: #B8DBE6;
+    background: #c2e1ea;
 }
 .site:before {
     content: '';
@@ -345,7 +345,8 @@ a.btn_4:hover:after{
     border-top: 1px solid #fff;
     padding: 10px 10px;
 }
-.menu a:hover {
+.menu a:hover,
+.menu a.active {
     text-decoration: underline;
 }
 .menu__btn {
@@ -462,12 +463,12 @@ a.btn_4:hover:after{
     position: absolute;
     bottom: 0;
     z-index: 1;
-    background: url("../img/strategy-bg.jpg") no-repeat;
-    background-size: cover;
+    background: url("../img/strategy-bg.png") no-repeat bottom center;
+    background-size: contain;
 }
 #swiffycontainer:before {
     content: '';
-    background: #B8DBE6;
+    background: #c2e1ea;
     position: absolute;
     top: 0;
     left: 0;
@@ -486,7 +487,7 @@ a.btn_4:hover:after{
 /* --------------- solutions --------------- */
 .solutions {
     padding-bottom: 65px;
-    background: #ebece7 url("../img/line1.png") no-repeat;
+    background: #ebece7 url("../img/line1.png") no-repeat 270px 0;
     text-align: center;
 }
 .solutions__wrap {
@@ -3123,7 +3124,8 @@ span.swiper-pagination-bullet-active:hover{
         width: 77px;
         height: 276px;
         top: 34px;
-        left: 41px;
+        left: 50%;
+        margin-left: -670px;
     }
     .site__header {
         height: 209px;
