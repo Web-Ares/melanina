@@ -1402,6 +1402,9 @@ li:hover .portfolio__like:after{
     display: inline-block;
     vertical-align: top;
 }
+.tabs__controls-wrap div:hover span{
+    text-decoration: none;
+}
 .tabs__controls-wrap div.active span {
     background: #fff;
     text-decoration: none;
@@ -3908,6 +3911,9 @@ span.swiper-pagination-bullet-active:hover{
         padding: 13px 22px;
         font-size: 14px;
         text-decoration: none;
+    }
+    .tabs__controls-wrap div:hover span{
+        text-decoration: underline;
     }
     h3.list-works__show-title {
         font-size: 14px;
