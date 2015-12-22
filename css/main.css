@@ -323,16 +323,16 @@ a.btn_4:hover:after{
     position: absolute;
     top: 50px;
     left: 100%;
-
     cursor: default;
     -webkit-transition: margin .3s ease;
     transition: margin .3s ease;
     width: 300px;
     background: #c2e1ea;
     border-bottom: 1px solid #fff;
+    margin-left: 30px;
 }
 .menu.active  .menu__wrap{
-    margin-left: -300px;
+    margin-left: -330px;
 }
 .menu a,
 .menu a:visited {
@@ -3086,39 +3086,6 @@ span.swiper-pagination-bullet-active:hover{
     /* --------------- /footer --------------- */
 }
 
-@media (min-width: 1024px) {
-
-    /* --------------- menu --------------- */
-    .menu {
-        top: 100px;
-    }
-    .menu__wrap {
-        left: auto;
-        top: auto;
-        background: transparent;
-        width: 638px;
-        text-align: justify;
-        position: relative;
-        border: none;
-    }
-    .menu__wrap:after {
-        content: '';
-        display: inline-block;
-        width: 100%;
-    }
-    .menu a {
-        display: inline-block;
-        vertical-align: top;
-        padding: 0;
-        border: none;
-    }
-    .menu__btn {
-        display: none;
-    }
-    /* --------------- /menu --------------- */
-
-}
-
 @media (min-width: 1320px) {
 
     /* --------------- site --------------- */
@@ -3181,6 +3148,35 @@ span.swiper-pagination-bullet-active:hover{
         padding: 0;
     }
     /* --------------- /site --------------- */
+
+    /* --------------- menu --------------- */
+    .menu {
+        top: 100px;
+    }
+    .menu__wrap {
+        left: auto;
+        top: auto;
+        background: transparent;
+        width: 638px;
+        text-align: justify;
+        position: relative;
+        border: none;
+    }
+    .menu__wrap:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+    .menu a {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0;
+        border: none;
+    }
+    .menu__btn {
+        display: none;
+    }
+    /* --------------- /menu --------------- */
 
     /* --------------- logo --------------- */
     .logo {
