@@ -1,9 +1,5 @@
 $(function(){
 
-    /*$('.basket').each(function () {
-        game = new Choiser($(this));
-    });*/
-
     if ($('.strategy').length) {
 
         if($(this).width() > 640) {
@@ -294,63 +290,20 @@ $( "dd input").change(function(){
     }
 })
 
-$( "dd label").draggable({ revert: true,
-    helper: "clone",
-    revert: "invalid"
-});
+$( ".order dd label").each(function(){
+    $(this).draggable({
+        helper: "clone",
+        revert: "invalid"
+    });
+})
 
-$( ".basket__frame" ).droppable({
-    hoverClass: "ui-state-hover",
-    drop: function( event, ui ) {
-        $( this ).addClass( "full" );
-        $('.ui-draggable-dragging').parent('dd').children('input')
-            .prop('checked', true).button("refresh");
-    }
-});
-
-/*var Choiser = function (obj) {
-    //private properties
-    var _self = this,
-        _label = obj.find($('label')),
-        _clicking = false,
-        _moving = false,
-        _site = $('site'),
-        _obj = obj;
-
-    //private methods
-    var _addEvents = function () {
-            _label.on({
-                mouseup: function(e) {
-                    // Проверка отклика
-                    _clicking = false;
-                    if(_moving == false) return;
-
-                    console.log('click');
-                },
-                mousedown: function() {
-                    // Проверка отклика
-                    _clicking = true;
-                    _moving = true;
-
-
-                    console.log('down');
-                },
-                mousemove: function(e) {
-                    // Проверка отклика
-                    _moving = false;
-                    if(_clicking == false) return;
-                    console.log('mousedown');
-                }
-            });
-
-
-        },
-        _init = function () {
-            _addEvents();
-        };
-    //public properties
-
-    //public methods
-
-    _init();
-};*/
+$(".basket__frame").each(function(){
+    $(this).droppable({
+        hoverClass: "ui-state-hover",
+        drop: function( event, ui ) {
+            $( this ).addClass( "full" );
+            $('.ui-draggable-dragging').parent('dd').children('input')
+                .prop('checked', true).button("refresh");
+        }
+    });
+})
