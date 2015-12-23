@@ -1,11 +1,8 @@
 $(function(){
 
     if ($('.strategy').length) {
-
         if($(this).width() > 640) {
-
             $.getScript(location.href + 'js/runtime.js', function(){});
-
             $.getScript( location.href + 'js/pic-script.js', function() {});
         }
     }
@@ -61,7 +58,6 @@ $(function(){
 
 } );
 
-
 var Slider = function (obj) {
 
     //private properties
@@ -105,7 +101,6 @@ var Slider = function (obj) {
             prevButton: '.about-me__prev',
             pagination: '.about-me__points',
             paginationClickable: true,
-            slidesPerView: 3,
             autoplay: 10000,
             spaceBetween: 180,
             loop: false,
@@ -126,7 +121,8 @@ var Slider = function (obj) {
                         slidesPerView: 1,
                         direction: 'vertical',
                         speed: 600,
-                        loop: true
+                        loop: true,
+                        autoplay: 10000
                     });
                 }
             },
@@ -138,7 +134,10 @@ var Slider = function (obj) {
                             pagination: '.main-slider__points',
                             paginationClickable: true,
                             slidesPerView: 1,
-                            loop: true
+                            direction: 'vertical',
+                            speed: 600,
+                            loop: true,
+                            autoplay: 10000
                         });
                     }
                 } else {
