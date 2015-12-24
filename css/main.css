@@ -309,6 +309,12 @@ a.btn_4:hover:after{
 .btn_5:hover {
     background: #ebece7 !important;
 }
+.btn_6 {
+    background: #d7ebf1 !important;
+}
+.btn_6:hover {
+    background: #fff!important;
+}
 /* --------------- /btn --------------- */
 
 /* --------------- menu --------------- */
@@ -487,7 +493,7 @@ a.btn_4:hover:after{
 /* --------------- solutions --------------- */
 .solutions {
     padding-bottom: 65px;
-    background: #ebece7 url("../img/line1.png") no-repeat 270px 0;
+    background: #ebece7 url("../img/line1.png") no-repeat 50% 0;
     text-align: center;
 }
 .solutions__wrap {
@@ -1469,6 +1475,7 @@ li:hover .portfolio__like:after{
 }
 .skills dl{
     margin-bottom: 17px;
+    color: #525251;
 }
 .skills dt{
     margin-bottom: 29px;
@@ -1515,7 +1522,7 @@ li:hover .portfolio__like:after{
     display: block;
     margin: 4px 0;
     font: 34px "panton-extrabold", sans-serif;
-    color: #ff6411;
+    color: #eb6420;
 }
 .skills__btns{
     text-align: center;
@@ -3944,7 +3951,8 @@ span.swiper-pagination-bullet-active:hover{
 
     /* ----------------- skills ----------------- */
     .skills .site__title{
-        padding-bottom: 93px;
+        padding: 101px 0 87px;
+        line-height: 31px;
     }
     .skills dl{
         width: 23%;
