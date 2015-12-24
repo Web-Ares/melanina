@@ -127,11 +127,7 @@ var Slider = function (obj) {
                         autoplay: 10000
                     });
                 } else {
-                    if(_mainSlider!==null){
-                        _mainSlider.destroy(false,true);
-                        _mainSlider = null;
-                        console.log('www')
-                    }
+                    _mainSlider = null;
                 }
             },
             resize: function () {
@@ -150,7 +146,7 @@ var Slider = function (obj) {
                     }
                 } else {
                     if(_mainSlider!==null){
-                        _mainSlider.destroy(false,true);
+                        _mainSlider.destroy(true,true);
                         _mainSlider = null;
                     }
                 }
