@@ -104,6 +104,7 @@ var Slider = function (obj) {
             autoplay: 10000,
             spaceBetween: 180,
             loop: false,
+            slidesPerView: 3,
             breakpoints: {
                 1320: {
                     slidesPerView: 1

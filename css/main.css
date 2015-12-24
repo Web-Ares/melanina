@@ -1592,7 +1592,7 @@ li:hover .portfolio__like:after{
 }
 .about-me__title{
     font-size: 18px;
-    color: #82c500;
+    color: #88b900;
     font-family: "panton-semibold", sans-serif;
     font-weight: 400;
     padding: 0 0 14px 24px;
@@ -1631,7 +1631,7 @@ li:hover .portfolio__like:after{
     font-size: 7px;
     line-height: 10px;
     margin-bottom: 10px;
-    letter-spacing: 0.3px;
+    color: #525251;
 }
 .slider__item div{
     margin-bottom: 9px;
@@ -1652,6 +1652,7 @@ li:hover .portfolio__like:after{
     display: block;
     font-size: 7.5px;
     margin-bottom: 4px;
+    color: #525251;
 }
 .slider__item span strong{
     padding-right: 4px;
@@ -3009,7 +3010,6 @@ span.swiper-pagination-bullet-active:hover{
         font-size: 14px;
         line-height: 21px;
         margin-bottom: 21px;
-        letter-spacing: 0.9px;
         padding-left: 16px;
     }
     .about-me .site__title {
@@ -3732,7 +3732,6 @@ span.swiper-pagination-bullet-active:hover{
         font-size: 22px;
         line-height: 35px;
         margin-left: 35px;
-        letter-spacing: -1px;
     }
     .about-me .site__title {
         text-align: left;
@@ -3787,7 +3786,6 @@ span.swiper-pagination-bullet-active:hover{
         min-height: 44px;
         padding-left: 0;
         font-family: "panton-bold", sans-serif;
-        letter-spacing: .7px;
     }
     .slider__item div {
         margin-left: 0;
@@ -3987,7 +3985,7 @@ span.swiper-pagination-bullet-active:hover{
 
     /* --------------- computer-skills --------------- */
     .computer-skills{
-        padding: 42px 0 78px;
+        padding: 46px 0 78px;
     }
     .computer-skills dl{
         display: inline-block;
