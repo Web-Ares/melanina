@@ -1,15 +1,8 @@
 $(function(){
 
-    /*$('.basket').each(function () {
-        game = new Choiser($(this));
-    });*/
-
     if ($('.strategy').length) {
-
         if($(this).width() > 640) {
-
             $.getScript(location.href + 'js/runtime.js', function(){});
-
             $.getScript( location.href + 'js/pic-script.js', function() {});
         }
     }
@@ -65,7 +58,6 @@ $(function(){
 
 } );
 
-
 var Slider = function (obj) {
 
     //private properties
@@ -109,10 +101,10 @@ var Slider = function (obj) {
             prevButton: '.about-me__prev',
             pagination: '.about-me__points',
             paginationClickable: true,
-            slidesPerView: 3,
             autoplay: 10000,
             spaceBetween: 180,
             loop: false,
+            slidesPerView: 3,
             breakpoints: {
                 1320: {
                     slidesPerView: 1
@@ -123,6 +115,7 @@ var Slider = function (obj) {
     if (_obj.hasClass('main-slider')){
         _window.on({
             load: function () {
+                _windowWidth = $(window).width();
                 if (_windowWidth >= 1006) {
                     var _mainSlider = new Swiper(_obj, {
                         pagination: '.main-slider__points',
@@ -130,8 +123,15 @@ var Slider = function (obj) {
                         slidesPerView: 1,
                         direction: 'vertical',
                         speed: 600,
-                        loop: true
+                        loop: true,
+                        autoplay: 10000
                     });
+                } else {
+                    if(_mainSlider!==null){
+                        _mainSlider.destroy(false,true);
+                        _mainSlider = null;
+                        console.log('www')
+                    }
                 }
             },
             resize: function () {
@@ -142,7 +142,10 @@ var Slider = function (obj) {
                             pagination: '.main-slider__points',
                             paginationClickable: true,
                             slidesPerView: 1,
-                            loop: true
+                            direction: 'vertical',
+                            speed: 600,
+                            loop: true,
+                            autoplay: 10000
                         });
                     }
                 } else {
@@ -294,63 +297,20 @@ $( "dd input").change(function(){
     }
 })
 
-$( "dd label").draggable({ revert: true,
-    helper: "clone",
-    revert: "invalid"
-});
+$( ".order dd label").each(function(){
+    $(this).draggable({
+        helper: "clone",
+        revert: "invalid"
+    });
+})
 
-$( ".basket__frame" ).droppable({
-    hoverClass: "ui-state-hover",
-    drop: function( event, ui ) {
-        $( this ).addClass( "full" );
-        $('.ui-draggable-dragging').parent('dd').children('input')
-            .prop('checked', true).button("refresh");
-    }
-});
-
-/*var Choiser = function (obj) {
-    //private properties
-    var _self = this,
-        _label = obj.find($('label')),
-        _clicking = false,
-        _moving = false,
-        _site = $('site'),
-        _obj = obj;
-
-    //private methods
-    var _addEvents = function () {
-            _label.on({
-                mouseup: function(e) {
-                    // Проверка отклика
-                    _clicking = false;
-                    if(_moving == false) return;
-
-                    console.log('click');
-                },
-                mousedown: function() {
-                    // Проверка отклика
-                    _clicking = true;
-                    _moving = true;
-
-
-                    console.log('down');
-                },
-                mousemove: function(e) {
-                    // Проверка отклика
-                    _moving = false;
-                    if(_clicking == false) return;
-                    console.log('mousedown');
-                }
-            });
-
-
-        },
-        _init = function () {
-            _addEvents();
-        };
-    //public properties
-
-    //public methods
-
-    _init();
-};*/
+$(".basket__frame").each(function(){
+    $(this).droppable({
+        hoverClass: "ui-state-hover",
+        drop: function( event, ui ) {
+            $( this ).addClass( "full" );
+            $('.ui-draggable-dragging').parent('dd').children('input')
+                .prop('checked', true).button("refresh");
+        }
+    });
+})
