@@ -115,6 +115,7 @@ var Slider = function (obj) {
     if (_obj.hasClass('main-slider')){
         _window.on({
             load: function () {
+                _windowWidth = $(window).width();
                 if (_windowWidth >= 1006) {
                     var _mainSlider = new Swiper(_obj, {
                         pagination: '.main-slider__points',
@@ -125,6 +126,12 @@ var Slider = function (obj) {
                         loop: true,
                         autoplay: 10000
                     });
+                } else {
+                    if(_mainSlider!==null){
+                        _mainSlider.destroy(false,true);
+                        _mainSlider = null;
+                        console.log('www')
+                    }
                 }
             },
             resize: function () {
