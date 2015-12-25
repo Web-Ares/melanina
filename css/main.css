@@ -308,6 +308,12 @@ a.btn_4:hover:after{
 .btn_5:hover {
     background: #ebece7 !important;
 }
+.btn_6 {
+    background: #d7ebf1 !important;
+}
+.btn_6:hover {
+    background: #fff!important;
+}
 /* --------------- /btn --------------- */
 
 /* --------------- menu --------------- */
@@ -458,7 +464,7 @@ a.btn_4:hover:after{
 /* --------------- swiffycontainer --------------- */
 #swiffycontainer {
     width: 100%;
-    padding-bottom: 53.534183%;
+    padding-bottom: 53%;
     position: absolute;
     bottom: 0;
     z-index: 1;
@@ -486,7 +492,7 @@ a.btn_4:hover:after{
 /* --------------- solutions --------------- */
 .solutions {
     padding-bottom: 65px;
-    background: #ebece7 url("../img/line1.png") no-repeat 270px 0;
+    background: #ebece7 url("../img/line1.png") no-repeat 50% 0;
     text-align: center;
 }
 .solutions__wrap {
@@ -920,6 +926,16 @@ a.btn_4:hover:after{
     width: 220px;
     height: 156px;
     background: url("../img/bg-complaisance.png") no-repeat center/cover;
+    padding: 76px 143px 101px 123px;
+}
+.complaisance__img-wrap{
+    width: 100%;
+    height: 136px;
+    overflow: hidden;
+}
+.complaisance__img img{
+    width: 100%;
+    height: 100%;
 }
 .complaisance__content{
     margin-right: 145px;
@@ -1468,6 +1484,7 @@ li:hover .portfolio__like:after{
 }
 .skills dl{
     margin-bottom: 17px;
+    color: #525251;
 }
 .skills dt{
     margin-bottom: 29px;
@@ -1514,7 +1531,7 @@ li:hover .portfolio__like:after{
     display: block;
     margin: 4px 0;
     font: 34px "panton-extrabold", sans-serif;
-    color: #ff6411;
+    color: #eb6420;
 }
 .skills__btns{
     text-align: center;
@@ -2675,7 +2692,7 @@ span.swiper-pagination-bullet-active:hover{
         padding-top: 17px;
         font-size: 14px;
     }
-    .complaisance__content{
+    .complaisance__content {
         margin-bottom: 114px;
         font-size: 18px;
         line-height: 24px;
@@ -2685,6 +2702,11 @@ span.swiper-pagination-bullet-active:hover{
         right: -145px;
         width: 439px;
         height: 312px;
+        padding: 76px 143px 101px 123px;
+    }
+    .complaisance__img-wrap{
+        height: 136px;
+
     }
     .complaisance__content{
         margin-right: 273px;
@@ -3552,6 +3574,9 @@ span.swiper-pagination-bullet-active:hover{
         padding: 58px 0 335px;
         background: url("../img/bg-decorate.jpg") repeat-x 0 100%/auto, url("../img/bg-mini-blog.png") no-repeat 50% 100% #d9ecf0;
     }
+    .complaisance .site__wrap{
+        position: static;
+    }
     .complaisance .btn_3 {
         left: 318px;
         bottom: -8px;
@@ -3563,15 +3588,22 @@ span.swiper-pagination-bullet-active:hover{
     }
     .complaisance__img{
         top: -38px;
-        right: -133px;
+        right: 0;
+        /*right: -133px;*/
         width: 855px;
         height: 606px;
+        padding: 147px 146px 199px 238px;
+    }
+    .complaisance__img-wrap{
+        height: 262px;
     }
     .complaisance__content{
+        position: relative;
         margin-bottom: 123px;
         font-size: 30px;
         line-height: 45px;
         margin-right: 600px;
+        z-index: 2;
     }
     .complaisance__author {
         padding-top: 54px;
@@ -3943,7 +3975,8 @@ span.swiper-pagination-bullet-active:hover{
 
     /* ----------------- skills ----------------- */
     .skills .site__title{
-        padding-bottom: 93px;
+        padding: 101px 0 87px;
+        line-height: 31px;
     }
     .skills dl{
         width: 23%;
