@@ -71,10 +71,9 @@
     font-style: normal;
 }
 /* --------------- /fonts --------------- */
-#ascrail2000-hr{
+#ascrail2000-hr {
     height: 2px!important;
 }
-
 #ascrail2000-hr div{
     position: relative;
     background-color: transparent !important;
@@ -1614,6 +1613,7 @@ li:hover .portfolio__like:after{
     position: relative;
     text-align: center;
     width: 290px;
+    height: 212px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -1697,6 +1697,20 @@ li:hover .portfolio__like:after{
     position: relative;
     padding-bottom: 28px;
     background: url("../img/bg-experience.png") repeat 0 0 #8991c0;
+    background-size: contain;
+}
+.experience .site__wrap{
+    max-width: inherit;
+    padding: 0;
+}
+.experience__bg-bottom{
+    width: 100%;
+    height: 57px;
+    position: absolute;
+    bottom: 16px;
+    background: rgba(132, 141, 188, 0.63);
+    white-space: nowrap;
+    z-index: 1;
 }
 .experience .site__title{
     font-family: "panton-bold", sans-serif;
@@ -2212,6 +2226,10 @@ span.swiper-pagination-bullet-active:hover{
     }
     .experience {
         padding-bottom: 58px;
+    }
+    .experience__bg-bottom {
+        height: 114px;
+        bottom: 16px;
     }
     /* --------------- /experience --------------- */
 
@@ -2994,6 +3012,7 @@ span.swiper-pagination-bullet-active:hover{
     }
     .about-me__slider {
         width: 579px;
+        height: 424px;
     }
     .slider__item {
         width: 300px;
@@ -3073,7 +3092,8 @@ span.swiper-pagination-bullet-active:hover{
         font-size: 10px;
     }
     .experience .site__wrap{
-        padding: 0 15px;
+        width: 100% !important;
+        padding:0;
     }
     /* --------------- /experience --------------- */
 
@@ -3762,6 +3782,7 @@ span.swiper-pagination-bullet-active:hover{
     }
     .about-me__slider {
         width: 1260px;
+        height: 500px;
     }
     .about-me__slider:after{
         content: "";
@@ -4031,7 +4052,7 @@ span.swiper-pagination-bullet-active:hover{
     }
     .experience .site__title {
         font-size: 38px;
-        padding: 110px 0 95px;
+        padding: 101px 0 95px;
     }
     .experience__wrap .experience__item:nth-child(even) {
         margin-top: 30px;
