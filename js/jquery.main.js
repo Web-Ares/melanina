@@ -1,27 +1,27 @@
 $(function(){
 
-    var anim = true;
+    //var anim = true;
 
-    $(window).on({
-        'load':function(){
-            if ($('.strategy').length) {
-                if($(window).width() > 640) {
-                    anim = false;
-                    console.log(1)
-                    $.getScript(location.href + 'js/runtime.js', function(){});
-                    $.getScript( location.href + 'js/pic-script.js', function() {});
-                }
-            }
-        },
-        'resize':function(){
-            if (anim) {
-                if($(window).width() > 640) {
-                    $.getScript(location.href + 'js/runtime.js', function(){});
-                    $.getScript( location.href + 'js/pic-script.js', function() {});
-                }
-            }
-        }
-    });
+    //$(window).on({
+    //    'load':function(){
+    //        if ($('.strategy').length) {
+    //            if($(window).width() > 640) {
+    //                anim = false;
+    //                console.log(1)
+    //                $.getScript(location.href + 'js/runtime.js', function(){});
+    //                $.getScript( location.href + 'js/pic-script.js', function() {});
+    //            }
+    //        }
+    //    },
+    //    'resize':function(){
+    //        if (anim) {
+    //            if($(window).width() > 640) {
+    //                $.getScript(location.href + 'js/runtime.js', function(){});
+    //                $.getScript( location.href + 'js/pic-script.js', function() {});
+    //            }
+    //        }
+    //    }
+    //});
 
     $('.menu__btn').on({
         'click':function(){
