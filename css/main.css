@@ -118,9 +118,6 @@
     right: 0;
     background-size: contain;
 }
-.site_main:before {
-    display: none;
-}
 .site_contacts:before{
     top: 69px;
     width: 32px;
@@ -3149,6 +3146,10 @@ span.swiper-pagination-bullet-active:hover{
         width: 125px;
         height: 191px;
         top: 197px;
+    }
+
+    .site_main:before {
+        display: none;
     }
     .site_contacts {
         background: url("../img/bg-site.png") no-repeat top center/100% auto,
