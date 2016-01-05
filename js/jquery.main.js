@@ -1,27 +1,33 @@
 $(function(){
 
-    //var anim = true;
+    $('.experience').each(function () {
+        $('#frame').sly({
+            mouseDragging: true,
+            touchDragging: true,
+            releaseSwing:  true,
+            elasticBounds: true,
+            slidee: null,
+            scrollBar: '.scrollbar',
+            horizontal: 1,
+            itemNav: 'basic',
+            activateOn: 'click',
+            startAt: 0,
+            scrollBy: 1,
+            dragHandle:    true,
+            dynamicHandle: false,
+            minHandleSize: 50,
+            activatePageOn: 'click',
+            speed: 500,
+            clickBar: 1
+        });
+    });
 
-    //$(window).on({
-    //    'load':function(){
-    //        if ($('.strategy').length) {
-    //            if($(window).width() > 640) {
-    //                anim = false;
-    //                console.log(1)
-    //                $.getScript(location.href + 'js/runtime.js', function(){});
-    //                $.getScript( location.href + 'js/pic-script.js', function() {});
-    //            }
-    //        }
-    //    },
-    //    'resize':function(){
-    //        if (anim) {
-    //            if($(window).width() > 640) {
-    //                $.getScript(location.href + 'js/runtime.js', function(){});
-    //                $.getScript( location.href + 'js/pic-script.js', function() {});
-    //            }
-    //        }
-    //    }
-    //});
+    if ($('.strategy').length) {
+        if($(this).width() > 640) {
+            $.getScript(location.href + 'js/runtime.js', function(){});
+            $.getScript( location.href + 'js/pic-script.js', function() {});
+        }
+    }
 
     $('.menu__btn').on({
         'click':function(){
