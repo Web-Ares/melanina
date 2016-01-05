@@ -1613,12 +1613,12 @@ li:hover .portfolio__like:after{
     padding: 0 0 14px 24px;
 }
 .about-me p{
-    width: 137px;
     font-size: 11px;
     line-height: 15px;
     color: #525251;
     font-family: "panton-regular-italic", sans-serif;
     margin-bottom: 29px;
+    min-height: 90px;
 }
 .about-me .site__wrap p:last-child{
     display: none;
@@ -3046,14 +3046,15 @@ span.swiper-pagination-bullet-active:hover{
         padding: 40px 0 0 0;
     }
     .about-me p{
-        width: 280px;
         font-size: 22px;
         line-height: 30px;
+        min-height: 208px;
     }
     .about-me__pic{
         width: 350px;
         height: 350px;
         margin-right: -87px;
+        margin-left: 40px;
     }
     .about-me__title{
         font-size: 36px;
