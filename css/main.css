@@ -3259,9 +3259,10 @@ span.swiper-pagination-bullet-active:hover{
         background: url("../img/bg-footer.png") no-repeat 0 100%;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
+        z-index: -1;
     }
-
     /* --------------- /site --------------- */
+
     /* --------------- menu --------------- */
     .menu {
         top: 100px;
