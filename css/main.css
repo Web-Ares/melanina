@@ -119,9 +119,6 @@
     background-size: contain;
     z-index: 3;
 }
-.site_main:before {
-    /*display: none;*/
-}
 .site_contacts:before{
     top: 69px;
     width: 32px;
@@ -3194,6 +3191,10 @@ span.swiper-pagination-bullet-active:hover{
         top: 197px;
     }
 
+    .site_main:before,
+    .site_main.site_bird .site__content:after{
+        display: none;
+    }
     .site_contacts {
         background: url("../img/bg-site.png") no-repeat top center/100% auto,
         url("../img/bg-contacts.jpg") no-repeat center 216px/117% auto #b6e2eb;
