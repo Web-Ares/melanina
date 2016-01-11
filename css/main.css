@@ -409,6 +409,15 @@ a.btn_4:hover:after{
 .main-slider .swiper-slide{
     width: 100%;
 }
+.main-slider_mobile .swiper-wrapper {
+    transform: translate3d(0px, 0px, 0px) !important;
+}
+.main-slider .site__title span{
+    display: none;
+}
+.main-slider .site__title span.site__title-mobile{
+    display: block;
+}
 /* --------------- /main-slider --------------- */
 
 /* --------------- strategy --------------- */
@@ -490,8 +499,9 @@ a.btn_4:hover:after{
 /* --------------- solutions --------------- */
 .solutions {
     padding-bottom: 65px;
-    background: #ebece7 url("../img/line1.png") no-repeat 50% 0;
+    background: #ebece7 url("../img/line1.png") no-repeat -2% 0;
     text-align: center;
+    background-size: 186% auto;
 }
 .solutions__wrap {
     margin: 0 auto;
@@ -894,7 +904,7 @@ a.btn_4:hover:after{
 .complaisance{
     position: relative;
     padding-bottom: 120px;
-    background: url("../img/bg-decorate.jpg") repeat-x 0 100%/auto 92px #d9ecf0;
+    background: url("../img/bg-decorate.jpg") repeat-x 0 100%/auto 92px, url("../img/bg-mini-blog.png") no-repeat 34% 100%/200% 100% #d9ecf0;
 }
 .complaisance:before{
     content: '';
@@ -910,9 +920,8 @@ a.btn_4:hover:after{
     text-align: left;
 }
 .complaisance .btn_3{
-    position: absolute;
-    left: 147px;
-    bottom: -9px;
+    display: block;
+    margin-top: 15px;
     width: 113px;
     padding-top: 10px;
     cursor: pointer;
@@ -922,9 +931,10 @@ a.btn_4:hover:after{
     top: -9px;
     right: -65px;
     width: 220px;
-    height: 156px;
+    height: 190px;
     background: url("../img/bg-complaisance.png") no-repeat center/cover;
     padding: 76px 143px 101px 123px;
+    z-index: -1;
 }
 .complaisance__img-wrap{
     width: 100%;
@@ -937,7 +947,7 @@ a.btn_4:hover:after{
 }
 .complaisance__content{
     margin-right: 145px;
-    margin-bottom: 58px;
+    margin-bottom: 28px;
     font: normal 9px/12px 'panton-regular-italic', sans-serif;
     color: #525251;
     text-align: left;
@@ -1474,7 +1484,7 @@ li:hover .portfolio__like:after{
 }
 .skills .site__title{
     padding-bottom: 46px;
-    font-size: 31px;
+    font-size: 15px;
     line-height: 40px;
 }
 .skills img{
@@ -1483,19 +1493,23 @@ li:hover .portfolio__like:after{
 .skills dl{
     margin-bottom: 17px;
     color: #525251;
+    display: inline-block;
+    vertical-align: top;
+    width: 47%;
 }
 .skills dt{
     margin-bottom: 29px;
-    padding-left: 25px;
-    font: 14px "panton-bold", sans-serif;
+    padding-left: 13px;
+    font: 7px "panton-bold", sans-serif;
     text-transform: uppercase;
 }
 .skills dd{
     margin-bottom: 21px;
     padding-left: 25px;
-    font-size: 13px;
-    line-height: 25px;
+    font-size: 7px;
+    line-height: 12px;
     background: url("../img/icons-star.png") no-repeat 0 2px;
+    background-size: 8px 8px;
 }
 .skills__developments{
     margin-bottom: 60px;
@@ -1563,9 +1577,11 @@ li:hover .portfolio__like:after{
     background: url("../img/deco-skills.png") repeat-x;
 }
 .computer-skills dl{
+    display: inline-block;
+    width: 49%;
     margin-bottom: 24px;
     padding-top: 15px;
-    font-size: 14px;
+    font-size: 7px;
     text-align: left;
     color: #525251;
 }
@@ -1576,10 +1592,11 @@ li:hover .portfolio__like:after{
     text-transform: uppercase;
 }
 .computer-skills dd{
-    font:15px/35px "panton-bold", sans-serif;
+    font:7px/17px "panton-bold", sans-serif;
 }
 .computer-skills img{
     display: inline-block;
+    width: 10px;
     vertical-align: middle;
     margin-right: 15px;
 }
@@ -1882,7 +1899,6 @@ li:hover .portfolio__like:after{
     width: 100%;
     height: 100%;
 }
-
 .list-works h3{
     font-family: "panton-semibold", sans-serif;
     font-size: 9px;
@@ -2157,6 +2173,16 @@ span.swiper-pagination-bullet-active:hover{
 }
 /* --------------- /copyright --------------- */
 
+.mail-mobile{
+    display: block;
+    position: absolute;
+    top: -54px;
+    left: 25px;
+}
+.mail-mobile img{
+    width: 50%;
+}
+
 /* --------------- footer --------------- */
 .footer__info{
     display: inline-block;
@@ -2214,43 +2240,51 @@ span.swiper-pagination-bullet-active:hover{
         top: 204px;
         left: 26px;
     }
+
     .site:before {
         width: 64px;
         height: 97px;
         top: 137px;
     }
-    .site_bird .site__content:after{
+
+    .site_bird .site__content:after {
         top: 90px;
         left: 31px;
         width: 111px;
         height: 59px;
     }
-    .site_contacts .site__content:before{
+
+    .site_contacts .site__content:before {
         top: 489px;
         left: 455px;
         width: 45px;
         height: 60px;
     }
+
     .site__header {
         height: 100px;
     }
+
     .site__title {
         font-size: 25px;
         line-height: 35px;
         padding: 35px 0 28px;
     }
+
     .site__wrap {
         padding: 0 30px;
     }
-    .site__footer{
+
+    .site__footer {
         padding-top: 30px;
     }
+
     .site__footer-layout {
         width: 768px;
         font-size: 11px;
     }
-    /* --------------- /site --------------- */
 
+    /* --------------- /site --------------- */
     /* --------------- experience --------------- */
     .experience__wrap {
         padding-bottom: 124px;
@@ -2258,109 +2292,133 @@ span.swiper-pagination-bullet-active:hover{
         background-size: 713px 100px;
         background-position: 0 57px;
     }
+
     .experience__wrap .experience__item:nth-child(odd) {
         margin-top: -59px;
     }
+
     .experience__wrap .experience__item:nth-child(even) {
         margin-top: 19px;
     }
-    .experience__wrap .experience__item:first-child{
+
+    .experience__wrap .experience__item:first-child {
         margin-left: 106px;
     }
+
     .experience__item {
-        margin-right:  186px;
+        margin-right: 186px;
     }
+
     .experience .site__title {
         font-size: 38px;
         padding: 47px 0 60px;
     }
+
     .experience__bg-bottom {
         height: 114px;
         bottom: 16px;
     }
+
     .experience .scrollbar {
         bottom: 77px;
         width: 340px;
         margin-left: -170px;
     }
+
     .experience .slidee {
         padding-top: 57px;
     }
-    /* --------------- /experience --------------- */
 
+    /* --------------- /experience --------------- */
     /* --------------- menu --------------- */
     .menu__wrap {
         top: 100px;
     }
-    .menu__home{
+
+    .menu__home {
         border-radius: 5px 5px 0 0;
         background-color: #0098ff;
     }
+
     .menu__btn {
         top: 27px;
         right: 30px;
         width: 46px;
         height: 46px;
     }
+
     .menu__btn > span {
         height: 5px;
     }
+
     .menu__btn > span:before, .menu__btn > span:after {
         height: 5px;
     }
+
     .menu__btn > span:before {
         bottom: 300%;
     }
+
     .menu__btn > span:after {
         top: 300%;
     }
-    /* --------------- /menu --------------- */
 
+    /* --------------- /menu --------------- */
     /* --------------- list-works --------------- */
     .list-works__select {
         width: 341px;
         margin: 50px auto 20px;
     }
+
     .list-works__prev, .list-works__next {
         width: 40px;
         height: 40px;
         border-radius: 50%;
     }
+
     .list-works__prev:before {
         top: 8px;
         left: 14px;
         font-size: 20px;
     }
+
     .list-works__list {
         padding: 12px 27px;
         border-radius: 18px;
         margin: 0 37px;
     }
+
     .list-works__list div {
         top: -8px;
         width: 23px;
     }
-    .list-works__list div>span {
+
+    .list-works__list div > span {
         height: 3px;
         width: 23px;
         margin-left: -12px;
     }
+
     .list-works__list div > span:before {
         margin-top: 12px;
     }
+
     .list-works__list div > span:after {
         margin-top: 6px;
     }
-    .list-works__list>span {
+
+    .list-works__list > span {
         font-size: 12px;
         padding-right: 0;
         padding-left: 14px;
     }
+
     .list-works__next:before {
         top: 8px;
         left: 16px;
         font-size: 20px;
     }
+
     .list-works .site__title {
         font-size: 60px;
         line-height: 60px;
@@ -2368,6 +2426,7 @@ span.swiper-pagination-bullet-active:hover{
         letter-spacing: -0.9px;
         padding: 25px 0 24px 110px;
     }
+
     .list-works p {
         width: 553px;
         font-size: 25px;
@@ -2375,18 +2434,22 @@ span.swiper-pagination-bullet-active:hover{
         line-height: 34px;
         margin-bottom: 27px;
     }
+
     .list-works h3 {
         font-size: 18px;
         margin-bottom: 38px;
         padding-left: 113px;
     }
+
     h3.list-works__show-title {
         padding: initial;
         margin-bottom: 46px;
     }
+
     .list-works__menu {
         margin-bottom: 37px;
     }
+
     .list-works__slider-wrap {
         padding-top: 114px;
         padding-left: 96px;
@@ -2394,14 +2457,17 @@ span.swiper-pagination-bullet-active:hover{
         height: 480px;
         margin: 0 auto 46px;
     }
+
     .list-works__slider {
         width: 370px;
         height: 209px;
     }
+
     .list-works__pic {
         width: 374px;
         height: 208px;
     }
+
     .list-works__points {
         width: 6px;
         top: 50%;
@@ -2410,25 +2476,30 @@ span.swiper-pagination-bullet-active:hover{
         display: block;
         line-height: 28px;
     }
+
     .list-works__points span {
         width: 6px;
         height: 6px;
         margin-left: 29px;
     }
+
     .list-works__services {
         max-width: 640px;
         margin-left: 82px;
         margin-bottom: 64px;
     }
+
     .list-works__services h4 {
         font-size: 20px;
         margin-bottom: 14px;
     }
+
     .list-works__services li {
         margin-left: 17px;
         font-size: 18px;
         margin-bottom: 7px;
     }
+
     .list-works__services li:before {
         top: 5px;
         left: -20px;
@@ -2436,41 +2507,49 @@ span.swiper-pagination-bullet-active:hover{
         height: 10px;
         border-radius: 50%;
     }
+
     .list-works__services div {
         width: 148px;
         height: 42px;
         right: 60px;
         bottom: 39px;
     }
+
     .list-works__like {
         position: absolute;
         top: 81px;
         left: 163px;
     }
+
     .list-works__like span.portfolio__like {
         width: 67px;
         height: 61px;
         padding-top: 17px;
         font-size: 18px;
     }
+
     .list-works__slider-wrap:before {
         top: 44px;
         left: 32px;
         width: 115px;
         height: 48px;
     }
+
     .list-works__like .portfolio__like:before,
     .list-works__like .portfolio__like:after {
         background-size: 67px 61px;
     }
+
     .tabs__wrapper,
-    .list-works__show{
+    .list-works__show {
         height: 1162px;
     }
+
     .tabs__controls-wrap div span {
         padding: 13px 13px;
         font-size: 14px;
     }
+
     .message-button {
         top: -94px;
         left: 38px;
@@ -2478,24 +2557,27 @@ span.swiper-pagination-bullet-active:hover{
         height: 100px;
         background-size: 36px 29px;
     }
+
     .list-works {
         padding-bottom: 14px;
     }
-    .bag-work{
+
+    .bag-work {
         background: url("../img/line3.png") no-repeat 50% 0, url("../img/line3.png") no-repeat 80% 80%;
     }
-    /* --------------- /list-works --------------- */
 
+    /* --------------- /list-works --------------- */
     /* --------------- logo --------------- */
     .logo {
         top: 32px;
         left: 30px;
     }
+
     .logo__mobile {
         width: auto;
     }
-    /* --------------- /logo --------------- */
 
+    /* --------------- /logo --------------- */
     /* --------------- btn --------------- */
     .btn,
     a.btn:visited {
@@ -2506,6 +2588,7 @@ span.swiper-pagination-bullet-active:hover{
         font-size: 13px;
         padding: 22px 44px;
     }
+
     a.btn_4 {
         width: 222px;
         height: 85px;
@@ -2514,34 +2597,43 @@ span.swiper-pagination-bullet-active:hover{
         font-size: 15px;
         background: url("../img/bg-patch.png") no-repeat 0 0;
     }
+
     .btn_4:hover {
         background-position: 0 0;
     }
-    a.btn_4:after{
+
+    a.btn_4:after {
         background-position: 0 -118px;
     }
-    /* --------------- /btn --------------- */
 
+    /* --------------- /btn --------------- */
     /* --------------- strategy --------------- */
     .strategy {
         min-height: 503px;
     }
+
     .strategy__wrap .site__wrap {
         max-width: 910px;
     }
+
     .strategy p {
         font-size: 27px;
         line-height: 36px;
         margin-bottom: 48px;
     }
+
     .strategy__btns {
         font-size: 20px;
         margin-bottom: 50px;
         width: 580px;
     }
-    /* --------------- /strategy --------------- */
 
+    /* --------------- /strategy --------------- */
     /* --------------- solutions --------------- */
+    .solutions {
+        background-position: 50% 0;
+        -o-background-size: auto;
+    }
     .solutions .site__title {
         padding-bottom: 38px;
     }
@@ -2742,6 +2834,7 @@ span.swiper-pagination-bullet-active:hover{
         padding-bottom: 30px;
     }
     .complaisance .btn_3{
+        position: absolute;
         left: 290px;
         bottom: -20px;
         width: 220px;
@@ -2992,13 +3085,20 @@ span.swiper-pagination-bullet-active:hover{
         padding-bottom: 55px;
     }
     .skills .site__title{
+        font-size: 31px;
         line-height: 18px;
     }
     .skills dl{
-        display: inline-block;
-        vertical-align: top;
-        width: 47%;
         margin-left: 30px;
+    }
+    .skills dt{
+        font-size: 14px;
+    }
+    .skills dd{
+        padding-left: 25px;
+        font-size: 13px;
+        line-height: 25px;
+        background-size: 16px 17px;
     }
     .skills dl:nth-child(even){
         margin-left: 0;
@@ -3030,8 +3130,14 @@ span.swiper-pagination-bullet-active:hover{
 
     /* --------------- computer-skills --------------- */
     .computer-skills dl{
-        display: inline-block;
-        width: 49%;
+        font-size: 14px;
+    }
+    .computer-skills dd{
+        font-size: 14px;
+        line-height: 35px;
+    }
+    .computer-skills img{
+        width: auto;
     }
     /* --------------- /computer-skills --------------- */
 
@@ -3425,7 +3531,12 @@ span.swiper-pagination-bullet-active:hover{
     .main-slider .swiper-slide-active {
         opacity: 1;
     }
-
+    .main-slider .site__title span{
+        display: block;
+    }
+    .main-slider .site__title span.site__title-mobile{
+        display: none;
+    }
     /* --------------- main-slider --------------- */
     /* --------------- solutions --------------- */
     .solutions p {
