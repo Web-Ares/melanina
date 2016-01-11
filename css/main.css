@@ -111,15 +111,16 @@
 .site:before {
     content: '';
     background: url("../img/sun.png") no-repeat;
-    width: 64px;
-    height: 97px;
+    width: 32px;
+    height: 49px;
     position: absolute;
-    top: 137px;
+    top: 68px;
     right: 0;
     background-size: contain;
+    z-index: 3;
 }
 .site_main:before {
-    display: none;
+    /*display: none;*/
 }
 .site_contacts:before{
     top: 69px;
@@ -153,6 +154,7 @@
     top: 13px;
     left: 38px;
     background-size: contain;
+    z-index: 1;
 }
 .site_contacts.site_bird .site__content:after{
     top: 45px;
@@ -2215,11 +2217,12 @@ span.swiper-pagination-bullet-active:hover{
         top: 204px;
         left: 26px;
     }
-    .site:before{
-        top: 139px;
+    .site:before {
         width: 64px;
+        height: 97px;
+        top: 137px;
     }
-    .site_contacts.site_bird .site__content:after{
+    .site_bird .site__content:after{
         top: 90px;
         left: 31px;
         width: 111px;
