@@ -117,6 +117,9 @@
     top: 68px;
     right: 0;
     background-size: contain;
+    z-index: 1;
+}
+.site_main:before {
     z-index: 3;
 }
 .site_contacts:before{
