@@ -1,5 +1,11 @@
 $(function(){
 
+    $(window).resize(function(){
+            $('#frame').sly('reload');
+    });
+
+    $(window).resize();
+
     $('.experience').each(function () {
         $('#frame').sly({
             mouseDragging: true,
