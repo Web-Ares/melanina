@@ -52,10 +52,6 @@ $(function(){
         Slider($(this));
     });
 
-    $.each( $('.experience__slider'), function(){
-        new Review ( $(this) );
-    } );
-
     $('.callback__currency').each(function () {
         $( this ).buttonset();
     });
@@ -245,47 +241,6 @@ var Tabs = function (obj) {
             });
             activeContent.css({
                 "display": "block"
-            });
-        },
-        _init = function () {
-            _addEvents();
-        };
-
-    _init();
-};
-
-var Review = function (obj) {
-
-    var _obj = obj,
-        _scroll = null,
-        _window = $(window);
-
-    var _addEvents = function () {
-
-            _window.on({
-                'resize': function(){
-                    _scroll.resize();
-
-                },
-                'load': function(){
-                    _addScroll();
-
-                }
-            });
-
-        },
-        _addScroll = function(){
-            _scroll = _obj.niceScroll({
-                cursorcolor:"#fff",
-                cursoropacitymin: "0",
-                cursorborderradius: "50%",
-                cursorborder: false,
-                cursorwidth: 15,
-                cursorminheight: 15,
-                autohidemode: false,
-                touchbehavior: false,
-                background: "#fff",
-                railpadding: {top:0,right:200,left:200,bottom:0}
             });
         },
         _init = function () {
