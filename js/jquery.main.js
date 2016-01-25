@@ -45,7 +45,6 @@ $(function(){
             } else {
                 curElem.addClass('active');
             }
-
         }
     });
 
