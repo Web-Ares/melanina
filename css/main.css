@@ -2178,9 +2178,15 @@ span.swiper-pagination-bullet-active:hover{
 
 .mail-mobile{
     display: block;
-    position: absolute;
-    top: -54px;
+    position: fixed;
+    bottom: 25px;
     left: 25px;
+    opacity: .8;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.mail-mobile:hover{
+    opacity: 1;
 }
 .mail-mobile img{
     width: 50%;
