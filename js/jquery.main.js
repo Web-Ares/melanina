@@ -1,32 +1,33 @@
 $(function(){
 
-    $(window).resize(function(){
-            $('#frame').sly('reload');
-    });
+    if ($('.experience').length) {
 
-    $(window).resize();
-
-    $('.experience').each(function () {
-        $('#frame').sly({
-            mouseDragging: true,
-            touchDragging: true,
-            releaseSwing:  true,
-            elasticBounds: true,
-            slidee: null,
-            scrollBar: '.scrollbar',
-            horizontal: 1,
-            itemNav: 'basic',
-            activateOn: 'click',
-            startAt: 0,
-            scrollBy: 1,
-            dragHandle:    true,
-            dynamicHandle: false,
-            minHandleSize: 50,
-            activatePageOn: 'click',
-            speed: 500,
-            clickBar: 1
+        $('.experience').each(function () {
+            $('#frame').sly({
+                mouseDragging: true,
+                touchDragging: true,
+                releaseSwing:  true,
+                elasticBounds: true,
+                slidee: null,
+                scrollBar: '.scrollbar',
+                horizontal: 1,
+                itemNav: 'basic',
+                activateOn: 'click',
+                startAt: 0,
+                scrollBy: 1,
+                dragHandle:    true,
+                dynamicHandle: false,
+                minHandleSize: 50,
+                activatePageOn: 'click',
+                speed: 500,
+                clickBar: 1
+            });
         });
-    });
+
+        $(window).resize(function(){
+            $('#frame').sly('reload');
+        });
+    }
 
     //if ($('.strategy').length) {
     //    if($(this).width() > 640) {
