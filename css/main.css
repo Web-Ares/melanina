@@ -937,7 +937,7 @@ a.btn_4:hover:after{
     height: 190px;
     background: url("../img/bg-complaisance.png") no-repeat center/cover;
     padding: 76px 143px 101px 123px;
-    z-index: -1;
+    z-index: 1;
 }
 .complaisance__img-wrap{
     width: 100%;
@@ -2837,9 +2837,6 @@ span.swiper-pagination-bullet-active:hover{
         padding-bottom: 30px;
     }
     .complaisance .btn_3{
-        position: absolute;
-        left: 290px;
-        bottom: -20px;
         width: 220px;
         padding-top: 17px;
         font-size: 14px;
