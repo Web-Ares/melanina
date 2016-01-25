@@ -3277,6 +3277,33 @@ span.swiper-pagination-bullet-active:hover{
         width: 6px;
         height: 6px;
     }
+    .footer__phone,
+    .footer__email,
+    .footer__skype{
+        display: block;
+        font-size: 15px;
+        line-height: 30px;
+        color: #525251;
+        cursor: default;
+    }
+    .footer__email{
+        font: 13px "panton", sans-serif;
+    }
+    .footer__skype{
+        position: relative;
+        margin-top: 20px;
+        padding-left: 30px;
+        font: 13px "panton", sans-serif;
+    }
+    .footer__skype:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: url("../img/icons-skype.png") no-repeat 0 0;
+    }
     /* --------------- /footer --------------- */
 }
 
