@@ -28,12 +28,12 @@ $(function(){
         });
     });
 
-    if ($('.strategy').length) {
-        if($(this).width() > 640) {
-            $.getScript(location.href + 'js/runtime.js', function(){});
-            $.getScript( location.href + 'js/pic-script.js', function() {});
-        }
-    }
+    //if ($('.strategy').length) {
+    //    if($(this).width() > 640) {
+    //        $.getScript(location.href + 'js/runtime.js', function(){});
+    //        $.getScript( location.href + 'js/pic-script.js', function() {});
+    //    }
+    //}
 
     $('.menu__btn').on({
         'click':function(){
